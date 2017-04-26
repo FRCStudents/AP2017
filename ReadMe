@@ -1,0 +1,37 @@
+
+Welcome to AP Computers. Some of the things you should
+be aware of before we start, are the following:
+
+1) What operating system are you working with?
+   * I prefer linux, and I am using linux
+   * You can use anything you like/have, but you
+	are responsible for the proper running
+	and backup of your computer
+
+2) We will be using git to share code. The git
+   repo is 'AP2017'. You can put a directory
+   there with your name. For example, there
+   is a directory AP2017/MrKrug/
+
+3) Your directory is your place to hand in work
+   and share it with me or the class. I suggest
+   you set up a directory called 'HandIn', such
+   as AP2017/MrKrug/HandIn/ - that is where I 
+   will go to find your projects and work. If
+   you put every assignment into a separate directory,
+   that would also be good... such as 
+   AP2017/MrKrug/HandIn/Assign01/HelloWorld.java
+
+
+4) We will also being doing some collaborative work 
+   there.
+
+5) The way I will check your work, is by navigating
+   to your assignment directory, and running my
+   'runJ' routine. For your edification, you can
+   see it in AP2017/MrKrug/binStuff/runJ
+
+6) Assignments must be completed on time. I will
+   assign minimum requirements - you are expected
+   to do better then the minimum. Through the course,
+   we will attempt to determine what 'better' means.

@@ -1,0 +1,56 @@
+########################################################
+# Run file for java work in AP Computers 2017
+# This is a bash file
+# Execute permissions must be set
+# In most cases, this can only be executed if it
+# resides in ~/bin
+########################################################
+
+#
+# list the directory - convenience
+#
+ls
+
+#
+# compile the program by the name entered
+# notice, the .java portion of the file name
+# can not be included by the user
+#
+javac $1.java
+
+# just for convenience
+ls
+
+# in many cases the executable class will have the same
+# name as the original file
+#
+java $1
+
+#
+# if there was a different class name - first find the class
+# and write the name into a new file: tempGo
+#
+ls -l | grep class | awk '{print $9}' | sed 's/\./ /;' | awk '{print $1}' > ~/bin/tempGo
+
+#
+# add a 'java' command to the class name - so we can execute it
+#
+cat ~/bin/tempGo | sed 's/^/java /' > ~/bin/tempGo2
+
+#
+# change permissions on the run file
+#
+chmod +x ~/bin/tempGo2
+
+#
+# convenience
+#
+echo 'Now running the program: ' $1
+
+#
+# and run the program
+tempGo2
+
+# and clean up the old executable scripts
+rm ~/bin/tempGo
+rm ~/bin/tempGo2
