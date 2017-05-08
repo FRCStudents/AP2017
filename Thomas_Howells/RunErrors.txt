@@ -1,0 +1,4 @@
+HelloWorldVariations:
+	error: Could not find or load main class HelloWorld
+
+	fix: typed name wrong

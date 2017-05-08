@@ -1,0 +1,6 @@
+
+javac: file not found: stuff.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+
+	* wrong file name handed to the compiler!
