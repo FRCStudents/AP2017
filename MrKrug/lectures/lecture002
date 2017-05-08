@@ -1,0 +1,50 @@
+
+/**************************************************************************
+ * Hello world - with some variations...
+ * 1) this is an object called 'Proj001'
+ *		- create a directory called 'Proj001'
+ *		- for each one of these prompts, write a new program
+ *				called Proj001a, Proj001b, Proj001c etc.
+ *				notice: you will have to change the file name AND
+ * 								the object (class) name
+ *
+ * 2) this object has 2 methods:
+ *			make_hello
+ *			main
+ * 3) make_hello takes one paramater -
+ *			type int
+ *			name 'n'
+ * 4) main takes one parameter -
+ *			type array of String
+ *			name 'args'
+ * 5) make_hello returns one parameter
+ *			type String
+ *			** note - we will talk about public and static later
+ * 6) main - gets started automatically when we run the program....
+ * 7) in main, we call our method 'make_hello' and pass it a value of 0
+ * Assignment (due right now):
+ *		Use this skel to write, 'compile' and run a few different programs:
+ *				a) change the function name to camelCase
+ *				b) instead of adding 3 to the parameter, square it
+ *				c) try changing 'main' to 'Main00' - what happens?
+ *				d) try removing the keyword 'static' first from make_hello,
+ *					 fix that, then from main, fix that, then from both
+ *				e) try changing '(int n)' to '(int x)'
+ *		If any of the above changes cause errors, please write the errors
+ *		in the comments at the top of the file.
+ *************************************************************************/
+class Proj001 {
+	public static String make_hello (int n){
+		// return the String
+		return "Hello, World - from a function (" + (n + 3) + ")";
+	}
+
+	// what is going on with print and println?
+	// if you put '\n' in a string - what happens?
+	public static void main (String[] args){
+		System.out.print("Hello, World");
+		System.out.print("And more stuff...");
+		System.out.println();
+		System.out.println(make_hello(7));
+	}
+}

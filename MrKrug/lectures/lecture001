@@ -1,0 +1,45 @@
+// Proj000
+
+/*************************************************************
+ * Projects:
+ * When you hand in a project - and in the beginning there
+ * will be one project every few days - it MUST be handed in
+ * on time.
+ *
+ * Please hand it in via git:
+ *      AP2017/Your-Folder/Handins/Project-Name/
+ *                                      FileName001.java
+ *                                      FileName002.java
+ *    etc.
+ *
+ *  Go to your editor (not an IDE... not yet!)
+ *  Now - let's create our HelloWorld files (or find them)
+ *  Go to your terminal.
+ *  Navigate to your directory
+ *  >> javac HelloWorld.java
+ *  >> java HelloWorld
+ *  Did it work? If not - let's get it working!
+ *    Are there errors?
+ *    Read the error messages! What do they say?
+ *    Ask your friends for help!
+ *    Google the error message
+ *    Cry.
+ *
+ *  Now let's create a new folder in your Handins directory
+ *  Copy your HelloWorld.java over to the new directory.
+ *  Open it in your editor, and make some changes
+ *  Go back to your terminal window and compile and run.
+ *
+ *  One of the most important things you are doing right
+ *  now is organizing your stuff. Organization is 100%
+ *  way, really, truely, like - I mean REALLY important!!!!
+ *
+ *  Name your program files something you will remember:
+ *		For example: don't call it 'Project001.java'
+ * 				better:    'HelloWorldVariations.java'
+ *
+ *  ALSO, as you run into errors, keep a file of them!!!!
+ *  Call one file "CompileErrors" and another "RunErrors"
+ *  I would suggest indexing them by the string the computer returns.
+ * 
+ *************************************************************/
