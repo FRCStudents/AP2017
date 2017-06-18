@@ -1,0 +1,32 @@
+
+I have created 3 different organizations of the same file:
+
+1) No organization - everything is in one directory
+	compile Furniture.java
+	compile Chair.java
+	compile useChair.java
+	run useChair 
+
+2) Directory organization
+	my useChair is in the first directory, and
+	my objects, Furniture and Chair are in a directory
+	called ./furniture
+
+	Now - I need to compile everything carefully, then
+	run my program with a classpath directive.
+
+	The class path tells 'java' where to find classes.
+
+	I have three examples of this - two bomb and one works.
+
+3) Directory and package organization
+	I have compiled my package files with a "package furniture;"
+	directive, and then I used javac -d . file_name.java
+
+	That creates a ./furniture directory, and places the .class
+	files there. I did that for both Furniture.java and Chair.java.
+
+	Next, I compile useChair.java with an 
+	"import furniture.Chair;" directive. 
+
+	Then I run it - java runChair	

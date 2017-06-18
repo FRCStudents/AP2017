@@ -1,0 +1,25 @@
+
+Not using packages... we can put everything in the 
+same directory:
+
+~/FRCS/FRCStudents/packageStudy/noPackage2 >> ls
+Chair.class  Chair.java  Furniture.class  Furniture.java  useChair.java
+~/FRCS/FRCStudents/packageStudy/noPackage2 >> vi useChair.java
+~/FRCS/FRCStudents/packageStudy/noPackage2 >> javac Furniture.java
+~/FRCS/FRCStudents/packageStudy/noPackage2 >> javac Chair.java
+~/FRCS/FRCStudents/packageStudy/noPackage2 >> javac useChair.java
+~/FRCS/FRCStudents/packageStudy/noPackage2 >> java useChair
+================
+Furniture: 
+	Legs: 4
+	Doors: 0
+	This chair is on the North side, facing the West
+==================
+Type: Chair
+Back: 36 inches
+Seat: 24 inches
+Made of: wood
+~/FRCS/FRCStudents/packageStudy/noPackage2 >> 
+
+
+NOTICE: we need to compile it in order (according to dependency).

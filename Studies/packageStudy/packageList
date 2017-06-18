@@ -1,0 +1,10 @@
+
+package animals:
+	Animal (interface)
+	MammalInt (extends interface)
+
+package furniture;
+	Furniture (abstract object)
+	Chair (extends Furniture)
+
+

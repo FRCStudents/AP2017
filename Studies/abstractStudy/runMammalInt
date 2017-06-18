@@ -1,0 +1,19 @@
+
+Animals.java - is an interface (not public)
+MammalInt.java - is an object extending the interface
+
+
+These files were compiled in the class directory, and then
+compiled using the following command:
+>> javac -d . Animals.java
+>> javac -d . MammalInt.java
+
+These commands put the resulting 'class' files in the 'animals' 
+directory - because of the line 'package animals;'.
+
+The way to run this file is:
+>> java animals/MammalInt
+
+Notice: you have to run it with the "java" command.
+Notice: you have to give it the directory created by the javac -d flag.
+

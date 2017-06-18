@@ -1,0 +1,64 @@
+
+No class path, no packages...
+We compile source files "Furniture.java" and "Chair.java" and
+useChair.java and move the first two 
+.class files to ./furniture/* - leaving useChair.class in our noPackage
+directory...
+
+
+~/FRCS/FRCStudents/packageStudy/noPackage/ls
+Chair.java  furniture  Furniture.java  readme  useChair.class  useChair.java
+~/FRCS/FRCStudents/packageStudy/noPackage >> ls furniture
+Chair.class  Furniture.class
+~/FRCS/FRCStudents/packageStudy/noPackage >> java useChair
+Exception in thread "main" java.lang.NoClassDefFoundError: Chair
+	at useChair.main(useChair.java:10)
+Caused by: java.lang.ClassNotFoundException: Chair
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 1 more
+
+
+	WELL, THAT DIDN'T WORK!
+
+This time, we will run the program, but specify the class path:
+
+Notice - this is >> java -classpath <directory_1>:<directory_2>:<directory_n> <executable object>
+if I do not specify all directories needed - the classes will not be found.
+
+example of it working:
+
+~/FRCS/FRCStudents/packageStudy/noPackage >> java -classpath .:./furniture useChair 
+===================
+Furniture: 
+	Legs: 4
+	Doors: 0
+	This chair is on the North side, facing the West
+==================
+Type: Chair
+Back: 36 inches
+Seat: 24 inches
+Made of: wood
+~/FRCS/FRCStudents/packageStudy/noPackage >> 
+
+example of it NOT working:
+
+~/FRCS/FRCStudents/packageStudy/noPackage >> java -classpath ./furniture useChair 
+Error: Could not find or load main class useChair
+
+and one final example of it NOT working!
+
+~/FRCS/FRCStudents/packageStudy/noPackage >> java -classpath . useChair 
+Exception in thread "main" java.lang.NoClassDefFoundError: Chair
+	at useChair.main(useChair.java:10)
+Caused by: java.lang.ClassNotFoundException: Chair
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 1 more
+~/FRCS/FRCStudents/packageStudy/noPackage >> 
+
+
