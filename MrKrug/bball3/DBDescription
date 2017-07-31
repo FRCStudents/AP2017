@@ -1,0 +1,38 @@
+CREATE TABLE BOOKS        (ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                          NAME TEXT NOT NULL);
+
+CREATE TABLE LEAGUES      (ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                          NAME           TEXT    NOT NULL);
+
+CREATE TABLE GAMES        (ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                          TEAM_1         TEXT    NOT NULL,
+                          TEAM_2         TEXT    NOT NULL,
+                          GAME_DATE      DATETIME,
+                          LEAGUE_ID      INT     NOT NULL);
+
+CREATE TABLE GAME_STATS   (ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                          STAT_NAME      TEXT    NOT NULL,
+                          STAT_VALUE     FLOAT   NOT NULL,
+                          GAME_ID        INT     NOT NULL);
+
+CREATE TABLE TEAMS        (ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                          NAME           TEXT    NOT NULL,
+                          SCHOOL         TEXT    NOT NULL,
+                          NOTES          TEXT);
+
+CREATE TABLE TEAM_STATS   (ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                          STAT_NAME      TEXT    NOT NULL,
+                          STAT_VALUE     FLOAT   NOT NULL,
+                          TEAM_ID        INT     NOT NULL);
+
+CREATE TABLE PLAYERS      (ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                          NAME           TEXT    NOT NULL,
+                          TEAM_ID        INT     NOT NULL,
+                          NUMBER         INT     NOT NULL,
+                          HEIGHT         FLOAT   NOT NULL,
+                          NOTES          TEXT);
+
+CREATE TABLE PLAYER_STATS (ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                          STAT_NAME TEXT    NOT NULL,
+                          STAT_VALUE FLOAT   NOT NULL,
+                          PLAYER_ID  INT     NOT NULL);
