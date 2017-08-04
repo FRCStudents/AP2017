@@ -1,6 +1,7 @@
 
 class Face{
 	public static void main(String argv[]){
+		System.out.println("\n\n");
 		for(int i=0; i < 32; i++){
 			System.out.print(' ');
 			}
