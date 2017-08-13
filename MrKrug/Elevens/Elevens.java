@@ -45,7 +45,18 @@ class Card {
     }
 
     public void showCard(){
-        System.out.print("{[" + suit + "][" + value + "]}");
+      String tab = "";
+
+        if(value == 0){
+          System.out.print("{\tEMPTY SPOT!\t\t}");
+        } else {
+          if(suit.equals("Clubs")){
+            tab = "\t\t";
+          } else {
+            tab = "\t";
+          }
+          System.out.print("{\t[" + suit + "]" + tab + "[" + value + "]\t}");
+      }
     }
 
     public int getValue(){
@@ -91,7 +102,7 @@ class Card {
 
     @Override
     public String toString(){
-        return "Card: [Value = " + this.value + "][Suit = " + this.suit + "]";
+        return "Card: [Value = " + this.value + "]\t[Suit = " + this.suit + "]";
     }
 }
 
@@ -152,8 +163,8 @@ class Deck {
 }
 
 class Game {
-    Deck gameDeck;
-    Card[] table = new Card[9];
+    protected Deck gameDeck;
+    protected Card[] table = new Card[9];
 
     public Game(){
       /* get a new shuffled deck */
@@ -182,6 +193,7 @@ class Game {
 
     public void showTable(){
       for(int i=0; i<9; i++){
+        System.out.println();
         table[i].showCard();
       }
       System.out.println();
@@ -234,9 +246,93 @@ class Game {
     }
 }
 
-public class Elevens{
+class GameInteractive extends Game {
+    Scanner reader = new Scanner(System.in);
+    public GameInteractive(){
+      super();
+    }
 
-  public static boolean playGame(){
+    @Override
+    public void showTable(){
+      for(int i=0; i<9; i++){
+        System.out.print("\n[" + (i + 1) + "]: ");
+        table[i].showCard();
+      }
+      System.out.println();
+    }
+
+    private boolean checkAndVoidElevens(int[] chosenCards){
+      int v1 = table[chosenCards[0]].getValue();
+      int v2 = table[chosenCards[1]].getValue();
+      if(v1 + v2 == 11){
+        table[chosenCards[0]].setValue(0);
+        table[chosenCards[1]].setValue(0);
+        return true;
+        }
+      return false;
+    }
+
+    private boolean checkAndVoidFaces(int[] chosenCards){
+      int v1 = table[chosenCards[0]].getValue();
+      int v2 = table[chosenCards[1]].getValue();
+      int v3 = table[chosenCards[2]].getValue();
+      if(((v1 == 11) && (v2 == 12) && (v3 == 13)) ||
+        ((v1 == 12) && (v2 == 13) && (v3 == 11)) ||
+        ((v1 == 13) && (v2 == 11) && (v3 == 12)) ||
+        ((v1 == 11) && (v2 == 13) && (v3 == 12)) ||
+        ((v1 == 12) && (v2 == 11) && (v3 == 13)) ||
+        ((v1 == 13) && (v2 == 12) && (v3 == 11))){
+          table[chosenCards[0]].setValue(0);
+          table[chosenCards[1]].setValue(0);
+          table[chosenCards[2]].setValue(0);
+          return true;
+        }
+      return false;
+    }
+
+    @Override
+    public boolean discardFaceCards(){
+      int choices = 0;
+      int[] chosenCards = new int[3];
+      boolean discarded = false;
+
+      for(int i=0; i<3; i++){
+        chosenCards[i] = 0;
+      }
+      int r = 0;
+      int cCptr = 0;
+
+      System.out.println("Please press '0' to finish each pair or triplet.\n(press '99' to quit game.)");
+      do {
+        System.out.println("Please enter the next place number you want to choose (1-9): ");
+        r = reader.nextInt();
+        choices++;
+        if(r == 99){
+          System.out.println("That time you made " + (choices + 1) + " choices... and then quit.");
+          System.exit(0);
+        }
+        if(r > 0){
+          chosenCards[cCptr] = (r - 1);
+          cCptr++;
+        }
+      } while((r > 0) && (cCptr < 3));
+
+      if(cCptr > 2)
+            discarded = checkAndVoidFaces(chosenCards);
+      else
+            discarded = checkAndVoidElevens(chosenCards);
+
+      return discarded;
+    }
+
+    @Override
+    public boolean discardElevens(){
+      return false;
+    }
+}
+
+class ElevensRun {
+  public boolean playGame(){
     Scanner reader = new Scanner(System.in);
     boolean b1 = false;
     boolean b2 = false;
@@ -250,9 +346,9 @@ public class Elevens{
     System.out.println();
     do {
       game.showTable();
-      //System.out.println("\nContinue? ");
       b1 = game.discardFaceCards();
       b2 = game.discardElevens();
+
       if(game.endOfGame()){
         System.out.println("You won... in " + turns + " turns, you devil!");
         return true;
@@ -265,17 +361,76 @@ public class Elevens{
       game.reDeal();
       turns++;
     } while(true);
-    //while(reader.next().equals("y"));
   }
 
-  public static void main(String [] argv){
+  public void run(){
     boolean r = false;
     int games = 0;
-
     while(!r){
       r = playGame();
       games++;
     }
     System.out.println("It took " + games + " attempts to actually win...");
+  }
+}
+
+class ElevensRunInteractive extends ElevensRun {
+  @Override
+  public boolean playGame(){
+    Scanner reader = new Scanner(System.in);
+    boolean b1 = false;
+    boolean b2 = false;
+
+    int turns = 0;
+
+    GameInteractive game = new GameInteractive();
+    System.out.println();
+    game.deal();
+    game.showTable();
+    System.out.println();
+    do {
+      game.showTable();
+      b1 = game.discardFaceCards();
+      b2 = game.discardElevens();
+      if(!b1){
+        System.out.println("Sorry, you lost... in " + turns + " turns!");
+        return false;
+      }
+
+      if(game.endOfGame()){
+        System.out.println("You won... in " + turns + " turns, you devil!");
+        return true;
+      }
+
+      if(!(b1 || b2)){
+        System.out.println("Sorry, you lost... in " + turns + " turns!");
+        return false;
+      }
+      game.reDeal();
+      turns++;
+    } while(true);
+  }
+}
+
+public class Elevens{
+
+  public static void main(String [] argv){
+    String s;
+    Scanner reader = new Scanner(System.in);
+    if(argv.length > 0){
+        s = argv[0];
+      } else {
+        System.out.println("Would you like to play interactively? (y/(n)): ");
+        s = reader.next();
+      }
+
+    ElevensRun ERun;
+    if(s.substring(0,1).toLowerCase().equals("y")){
+      ERun = new ElevensRunInteractive();
+    } else {
+      ERun = new ElevensRun();
+    }
+
+    ERun.run();
   }
 }
