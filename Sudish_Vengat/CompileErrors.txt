@@ -1,0 +1,10 @@
+Compile Errors:
+
+	error: class HelloWorld is public, should be declared in a file named HelloWorld.java 
+	
+	fix: I renamed the class as the name of the file (i.e. changed "HelloWorld" to "HelloWorldVariation2")
+	
+	
+	error: bad operand types for binary operator '-'
+	
+	fix: I changed '-' to '+' (i.e. changed "HelloWorlds" "-= s" to "HelloWorl" "+= d"

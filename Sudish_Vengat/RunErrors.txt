@@ -1,0 +1,10 @@
+Run Errors:
+
+	error: Could not find or load main class HelloWorldVariation2
+	
+	fix: I got rid of the ".java" (i.e. changed "java HelloWorldVariation2.java" to "java HelloWorldVariation2")
+	
+	
+	error: Could not find or load main class HelloWorldVariations3
+
+	fix: I typed the wrong name (i.e. changed "java HelloWorldVariations3" to "java HelloWorldVariation3")
