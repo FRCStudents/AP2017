@@ -3,7 +3,7 @@ package aiNet;
 import java.lang.*;
 
 public class NodeList {
-  final int LIST_SIZE = 10000;
+  private int LIST_SIZE = 1000;
   private Node[] nodeList = new Node[LIST_SIZE];
   private int currentNode;
 
@@ -12,7 +12,19 @@ public class NodeList {
   Node[] stretch = new Node[TRIAL_SIZE + 1];
 
   public NodeList(){
-    this(500);
+      this(500);
+  }
+
+  public NodeList(int fWeight){
+      this(fWeight, 1000);
+  }
+
+  public NodeList(int fWeight, int listSize){
+      LIST_SIZE = listSize;
+      FIRE_WEIGHT = fWeight;
+      for(int i=0; i < LIST_SIZE; i++){
+        nodeList[i] = new Node(fWeight);
+      }
   }
 
   public int countFired(){
@@ -26,9 +38,10 @@ public class NodeList {
   }
 
   public void fireNode(int node){
-    //System.out.println("Firing: " + nodeList[node].getRNum());
     nodeList[node].tryToFire();
+    //System.out.println("Check: " + node + ":" + nodeList[node].hasFired());
     if(nodeList[node].hasFired()){
+      //System.out.println("Firing 4 close: " + node + ":" + nodeList[node].hasEverFired());
       tryFourClosest(node);
     }
   }
@@ -61,7 +74,6 @@ public class NodeList {
   }
 
   private void tryFourClosest(int spot){
-      //System.out.print("tryFour: ");
       int oneDown = LIST_SIZE - 1;
       int tenDown = LIST_SIZE - 10;
       int first = spot - TRIAL_SIZE;
@@ -77,18 +89,11 @@ public class NodeList {
       copyStretch(first, last, spot);
       sortStretch(nodeList[spot].getRNum());
       for(int i=0; i < TRIAL_SIZE; i++){
-        //System.out.println("tryFour: " + stretch[i].hasFired() + "::" + i);
-        /* should not loop because of MAX_FIRE */
-        stretch[i].tryToFire();
+        //System.out.println("Trying to fire: " + (first + i) + ":" + stretch[i].getRNum());
+        fireNode(first + i);
       }
   }
 
-  public NodeList(int fWeight){
-    FIRE_WEIGHT = fWeight;
-    for(int i=0; i < LIST_SIZE; i++){
-      nodeList[i] = new Node(fWeight);
-    }
-  }
 
   public void reSort(){
       Node temp;

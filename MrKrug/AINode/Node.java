@@ -4,24 +4,40 @@ package aiNet;
 import java.util.Random;
 
 public class Node {
+  static int creationOrder = 0;
   private int rNum;
+  private int oNum;
+
   private int FIRE_WEIGHT;
+  private int NETWORK_SIZE;
+
   private boolean fired = false;
   private int fireCount = 0;
 
   private int MAX_FIRE = 2;
 
   public Node(){
-    this(500);
+    this(500, 1000);
   }
 
   public Node(int fWeight){
+    this(fWeight, 1000);
+  }
+
+  public Node(int fWeight, int netSize){
     FIRE_WEIGHT = fWeight;
-    rNum = randInt(1, 1000);
+    NETWORK_SIZE = netSize;
+    oNum = creationOrder;
+    rNum = randInt(1, NETWORK_SIZE);
+    creationOrder++;
   }
 
   public int getRNum(){
     return rNum;
+  }
+
+  public int getOrder(){
+    return oNum;
   }
 
   public boolean hasEverFired(){
@@ -39,8 +55,9 @@ public class Node {
   public void tryToFire(){
       if(fireCount > MAX_FIRE){
         fired = false;
+        return;
       }
-      if(rNum > FIRE_WEIGHT){
+      if(rNum < FIRE_WEIGHT){
           fired = true;
           fireCount++;
         }
