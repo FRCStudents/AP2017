@@ -5,8 +5,13 @@ import java.util.Random;
 
 public class Node {
   static int creationOrder = 0;
+
+  /*random*/
   private int rNum;
+  /*order*/
   private int oNum;
+  /*learning*/
+  private int lNum = 0;
 
   private int FIRE_WEIGHT;
   private int NETWORK_SIZE;
@@ -45,19 +50,44 @@ public class Node {
       return false;
   }
 
+  public void clearFire(){
+    fired = false;
+  }
+
   public boolean hasFired(){
       //System.out.println("Firing: " + rNum + "/" + fired);
       return fired;
   }
 
-  /* node can only fire MAX_FIRE times */
+  /*
+    feedback is simple: good/bad... or
+    true/false...
+  */
+
+  public void applyFeedback(boolean f){
+    if(f){
+      lNum+=100;
+      return;
+    }
+    lNum-=100;
+    fired = false;
+    fireCount = 0;
+    return;
+  }
+
+  /* node can only fire MAX_FIRE times.
+
+     Each time feedback comes back good -
+     lNum gets incremented - giving the node a
+     better chance to fire!
+  */
 
   public void tryToFire(){
       if(fireCount > MAX_FIRE){
         fired = false;
         return;
       }
-      if(rNum < FIRE_WEIGHT){
+      if((rNum - lNum) < FIRE_WEIGHT){
           fired = true;
           fireCount++;
         }

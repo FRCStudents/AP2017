@@ -15,10 +15,16 @@ class RunAI {
       NodeList nl = new NodeList(FIRE_WEIGHT);
 
       for(int i=0; i < cycles; i++){
-          nl.fireNode(randInt(0, LIST_SIZE - 1));
-          nl.showPattern();
-          System.out.println("Number nodes fired: " + nl.countFired());
+          int nodeToFire = randInt(0, LIST_SIZE - 1);
+          //System.out.println("Firing: " + nodeToFire);
+          nl.fireNode(nodeToFire);
+          nl.teachNodeList('A');
+          nl.clearFireList();
+          //nl.showPattern();
+          //System.out.println("Number nodes fired: " + nl.countFired());
         }
+        nl.showPattern();
+        System.out.println("Number nodes fired: " + nl.countFired());
   }
 
   public static void testNode(){
@@ -30,6 +36,6 @@ class RunAI {
 
   public static void main(String [] argv){
       System.out.println("=============== Starting New Run ================");
-      runAll(10);
+      runAll(99999);
   }
 }

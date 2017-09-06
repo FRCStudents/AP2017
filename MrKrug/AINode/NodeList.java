@@ -9,11 +9,14 @@ public class NodeList {
 
   private int TRIAL_SIZE = 40;
   private int FIRE_WEIGHT;
+  private int CLUSTER_SIZE = 0;
+
   Node[] stretch = new Node[TRIAL_SIZE + 1];
 
   public NodeList(){
       this(500);
   }
+
 
   public NodeList(int fWeight){
       this(fWeight, 1000);
@@ -24,6 +27,39 @@ public class NodeList {
       FIRE_WEIGHT = fWeight;
       for(int i=0; i < LIST_SIZE; i++){
         nodeList[i] = new Node(fWeight);
+      }
+      setClusters();
+  }
+
+  /* clusters - one for each letter in English */
+  private void setClusters(){
+      CLUSTER_SIZE = LIST_SIZE/26;
+  }
+
+  /* associate clusters to alphabet */
+  private char getAlpha(int cluster){
+      if(cluster > 26) return '0';
+
+      char rLetter = 'A';
+      for(int i=0; i<cluster; i++){
+        rLetter++;
+      }
+      return rLetter;
+  }
+
+  private int positionToCluster(int position){
+    return position / CLUSTER_SIZE;
+  }
+
+  public void teachNodeList(char letter){
+      for(int i=0; i<LIST_SIZE; i++){
+        if(nodeList[i].hasFired()){
+          if(letter == getAlpha(positionToCluster(i))){
+            nodeList[i].applyFeedback(true);
+          } else {
+            nodeList[i].applyFeedback(false);
+          }
+        }
       }
   }
 
@@ -123,6 +159,12 @@ public class NodeList {
       }
     }
     System.out.println("\n---------------------------------------");
+  }
+
+  public void clearFireList(){
+    for (int i=0; i<LIST_SIZE; i++){
+        nodeList[i].clearFire();
+      }
   }
 
   public String toString(){
