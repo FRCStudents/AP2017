@@ -1,4 +1,9 @@
 HelloWorldVariations:
 	error: Could not find or load main class HelloWorld
-
 	fix: typed name wrong
+
+carSimulator:
+	error: Main method not found in class Car, please define the main method as:
+		public static void main(String[] args)
+	fix: added main method inside the class
+	
