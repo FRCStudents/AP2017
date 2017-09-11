@@ -1,0 +1,8 @@
+
+  String CurrentDirection = "n";
+  String getCurrentDirection ( ) {
+  return CurrentDirection;
+  }
+  void SetCurretDirection (String newDirection){
+  CurrentDirection = newDirection;
+  }
