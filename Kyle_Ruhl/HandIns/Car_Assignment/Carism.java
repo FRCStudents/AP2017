@@ -1,10 +1,10 @@
 class Car{
 
-  String CurrentDirection = "n";
-  String getCurrentDirection ( ) {
-  return CurrentDirection;
+  String Current_Direction = "n";
+  String getCurrent_Direction () {
+   return Current_Direction;
   }
-  void SetCurretDirection (String newDirection){
-  CurrentDirection = newDirection;
+  void SetCurret_Direction (String newDirection){
+  Current_Direction = newDirection;
   }
 }
