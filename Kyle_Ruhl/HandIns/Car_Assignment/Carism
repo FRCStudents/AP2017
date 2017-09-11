@@ -1,3 +1,4 @@
+class Car{
 
   String CurrentDirection = "n";
   String getCurrentDirection ( ) {
@@ -6,3 +7,4 @@
   void SetCurretDirection (String newDirection){
   CurrentDirection = newDirection;
   }
+}
