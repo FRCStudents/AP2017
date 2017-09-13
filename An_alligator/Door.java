@@ -1,5 +1,5 @@
 public class Door{
-	String color;
+	String classolor;
 	boolean open;
 	int width;
 	int height;
