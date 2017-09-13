@@ -28,5 +28,8 @@ public class Door{
 	void setHeight(int New_Height){
 		Height = New_Height;
 	}
+	public String toString(){
+		return "This is a Door!";
+	}
 
 }
