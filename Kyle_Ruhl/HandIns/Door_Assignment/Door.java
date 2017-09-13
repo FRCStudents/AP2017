@@ -41,11 +41,11 @@ public class Door{
 	void setOpened(boolean New_Opened){
 		Opened = New_Opened;
 	}
-/* String toString
+  String toString;
 	public String toString(){
 	return"This Door Does Not Close";
 	}
-*/ 
+
 
 	}
 
