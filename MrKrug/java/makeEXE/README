@@ -1,0 +1,14 @@
+ Creating an exe file
+ ====================
+
+1) write the code
+2) put it in a package (package start;)
+3) compile it (javac -d . helloDemo)
+4) create manifest.mf
+Main-class: start.helloDemo
+
+5) create the .jar file 
+>jar -cmf manifest.mf helloDemo.jar start
+
+6) create a bat file (windows) or shell file (linux)
+	* helloDemo
