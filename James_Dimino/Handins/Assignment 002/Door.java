@@ -29,6 +29,4 @@ public class Door{
 		Height = New_Height;
 	}
 
-
-
 }
