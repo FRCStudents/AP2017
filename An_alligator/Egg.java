@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+
 public class Egg{
 	boolean fertilized;
 	String color="Brown";
+	ArrayList group=new ArrayList();
 
 	public void toString(String x){
 		System.out.println(x);
@@ -22,9 +25,9 @@ public class Egg{
 		color=x;
 	}
 
-	public String getRandomBoolean(){
-		Boolean v = Math.random() < 0.5;
-		String b = Boolean.toString(b);
+	public boolean getRandomBoolean(){
+		boolean v = Math.random() < 0.5;
+		return v;
 	}
 
 	public double getRandomNumber(int x){
@@ -33,9 +36,10 @@ public class Egg{
 
 	public void generateEggs(int x){
 		String colors[]={"white","blue","brown","olive"};
-		String group[][];
+		group.add(new String());
 		while(x>0){
-			//group[x-1][];
+			group.add(new String());
+			x--;
 		}
 	}
 }
