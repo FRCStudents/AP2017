@@ -14,23 +14,37 @@ class Math{
 		return num03;
 	}
 	void setNum01(int newNum01){
-		Num01 = newNum01;
+		num01 = newNum01;
 	}
 	void setNum02(int newNum02){
-		Num02 = newNum02;
+		num02 = newNum02;
 	}
 	void setNum03(int newNum03){
-		Num03 = newNum03;
+		num03 = newNum03;
 	}	
-	int add(int a, int b);
+	int add(int a, int b){
+		return a+b;
+	}
 	
-	int subtract(int a, int b);
+	int subtract(int a, int b){
+		return a-b;
+	}
 	
-	int multiply(int a, int b);
+	int multiply(int a, int b){
+		return a*b;
+	}
 	
-	double divide(int a, int b);
+	double divide(int a, int b){
+		return a/b;
+	}
 	
-	boolean isDivisibleBy(int p, int q);
+	boolean isDivisibleBy(int p, int q){
+	
+		 if (p > 1) return true; 
+		 return false;
+	}
+
+
 }
 
 	
