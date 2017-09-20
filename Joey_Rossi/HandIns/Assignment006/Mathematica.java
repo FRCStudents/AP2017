@@ -1,4 +1,4 @@
-class Math{
+class Mathematica {
 
 	int num01;
 	int num02;
@@ -35,12 +35,12 @@ class Math{
 	}
 	
 	double divide(int a, int b){
-		return a/b;
+		return (double)a/b;
 	}
 	
 	boolean isDivisibleBy(int p, int q){
 	
-		 if (p > 1) return true; 
+		 if (p % q == 0) return true; 
 		 return false;
 	}
 

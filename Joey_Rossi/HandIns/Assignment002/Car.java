@@ -12,7 +12,6 @@ class Car {
 	String getcurrent_direction() {
 		return current_direction;
 	}
-	
 
 	int getcurrent_speed() {
 		return current_speed;
@@ -26,6 +25,12 @@ class Car {
 		current_speed = newSpeed;
 	}
 
-
+	public String toString(){
+		return "Vroom";
+	}
+	public static void main(String [] argu){
+		Car c = new Car();
+		System.out.println(c);
+	}
 
 }
