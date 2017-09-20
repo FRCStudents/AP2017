@@ -25,6 +25,7 @@ class Door {
 	void setCurrentColor(String newColor){
 		color = newColor;
 	}
+	
 	void setCurrentDoorStatus(boolean closed){
 		opened = closed;
 	}

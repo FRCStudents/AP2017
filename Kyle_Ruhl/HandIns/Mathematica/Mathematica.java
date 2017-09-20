@@ -42,24 +42,21 @@ int num03;
 		return answer;
 	}
 
-	int multply(int a, int b){
+	int multiply(int a, int b){
 		int answer = a*b;
 		return answer;
 	}
 
 	double divide(int a, int b){
-		int answer = a/b;
-		return answer;
+		return (double)a/(double)b;
 	}
 
-	boolean validateNum (int n){
-	if (n >= 0) return true;
-	return false;
-	}
-	
-	//String ToString
-	String toString;
-		public String toString(){
-		return "Answers";
+	boolean isDivisibleBy(int p, int q){
+		if (p%q == 0) {
+			return true;
+		}else{
+			return false;
+		}
 	}
 }
+	

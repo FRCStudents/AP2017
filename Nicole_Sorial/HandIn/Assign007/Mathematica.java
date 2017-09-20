@@ -50,7 +50,7 @@ public class Mathematica {
 		return a * b;
 	}
 	public double divide(int a, int b) {
-		return a / b;
+		return (double)a / (double)b; // An int divided by an int results in an int. Need to convert to double to produce a double
 	}
 	public boolean isDivisibleBy(int p, int q) {
 		if ((p % q) == 0) {
@@ -61,14 +61,6 @@ public class Mathematica {
 
 	// toString
 	public String toString() {
-		return "how do you test this lol";
-		/* things to test
-		return add(num01, num02);
-		return subtract(num02, num01);
-		return multiply(num01, num02);
-		return divide(num02, num01);
-		return isDivisibleBy(num01, num02);
-		return isDivisibleBy(num02, num01);
-		*/
+		return "calculator woot woot!!";
 	}
 }
