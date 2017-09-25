@@ -29,7 +29,7 @@ class Door{
 		height = nowheight;
 	}
 	public String toString(){
-		return "LookATree";
+		return "LookADoor";
 	}
 	
 

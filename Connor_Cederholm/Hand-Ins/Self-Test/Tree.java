@@ -9,7 +9,7 @@ class Tree{
 		Height = NowHeight
 	}	
 	String getColor (){
-		return = Height
+		return = Color
 	}
 	void se
 }
