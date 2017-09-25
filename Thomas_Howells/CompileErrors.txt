@@ -1,8 +1,0 @@
-HelloWorldVariations:
-	error: class HelloWorld is public, should be declared in a file named HelloWorld.java
-
-	fix: renamed class to name of file ("HelloWorld" --> "HelloWorldV1")
-	------------------------
-	error: Class names, 'HelloWorldV4', are only accepted if annotation processing is explicitly requested
-
-	fix: Tried compiling again, worked??????? Maybe I didn't save it?????????????

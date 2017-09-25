@@ -1,6 +1,6 @@
 
 class NumSystemsWork {
-	short mask1 = 1;   
+	short mask1 = 1;
 	short mask2 = 2;
 	short mask4 = 4;
 	short mask8 = 8;
@@ -64,8 +64,33 @@ class NumSystemsWork {
 		if((num & mask4)  > 0) print("1"); else print("0");
 		if((num & mask2)  > 0) print("1"); else print("0");
 		if((num & mask1)  > 0) print("1"); else print("0");
+
+		print("\tHex Sensitive:\t\t");
+		if((num & mask16384) > 0) print("1"); else print("0");
+		if((num & mask8192) > 0) print("1"); else print("0");
+		if((num & mask4096) > 0) print("1"); else print("0");
+		print(" ");
+		if((num & mask2048) > 0) print("1"); else print("0");
+		if((num & mask1024) > 0) print("1"); else print("0");
+		if((num & mask512) > 0) print("1"); else print("0");
+		if((num & mask256) > 0) print("1"); else print("0");
+		print(" ");
+		if((num & mask128) > 0) print("1"); else print("0");
+		if((num & mask64) > 0) print("1"); else print("0");
+		if((num & mask32) > 0) print("1"); else print("0");
+		if((num & mask16) > 0) print("1"); else print("0");
+		print(" ");
+		if((num & mask8)  > 0) print("1"); else print("0");
+		if((num & mask4)  > 0) print("1"); else print("0");
+		if((num & mask2)  > 0) print("1"); else print("0");
+		if((num & mask1)  > 0) print("1"); else print("0");
 		print("\n");
+
+
 		}
+
+
+
 	}
 
 public class NumSystems {
@@ -85,4 +110,3 @@ public class NumSystems {
 			}
 		}
 }
-
