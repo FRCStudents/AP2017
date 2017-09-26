@@ -9,6 +9,15 @@ class Car {
 	//"N" "S" "E" "W"
 	String currentDirection = "N";
 
+
+	Car() {
+		System.out.println("HERRO!");
+	}
+	Car(String name) {
+		System.out.println("Herro" + name + "!!");
+	}
+
+
 	public void turnLeft(String newDirection) {
 		if(currentDirection.equals("N")) {
 			currentDirection = "W";

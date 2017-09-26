@@ -1,0 +1,27 @@
+
+
+    |=====================================|
+    |       Mathematica                   |
+    |=====================================|
+    |int num01                            |
+    |int num02                            |
+    |int num03                            |
+    |=====================================|
+    | getNum01  setNum01                  |
+    | getNum02  setNum02                  |
+    | getNum03  setNum03                  |
+    |                                     |
+    | int add(int a, int b)               |
+    | int subtract(int a, int b)          |
+    | int multiply(int a, int b)          |
+    | double divide(int a, int b)         |
+    | boolean isDivisibleBy(int p, int q) |
+    |=====================================|
+
+    Please note:
+    add - returns the sum of a and b
+    subtract - returns the difference between a and b
+    etc...
+    isDivisibleBy returns (true/false):
+        if p is evenly divisible by q then it returns true
+        otherwise, the function returns false.
