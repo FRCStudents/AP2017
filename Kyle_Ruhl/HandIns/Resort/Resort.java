@@ -1,37 +1,44 @@
 class Resort{
 	
-	int temperature = 45; 
-	
-	int getTemperature(){
-		return temperature;
+	int temp;
+		
+	int getTemp(){
+		return temp;
+	}
+	void setTemp(int newTemp){
+		temp = newTemp;
 	}
 	
-	String returnAppropriteActivity(){
-		
+	String temp(){
+			
 		//swimming
-		if ((temperature >= 80.0) && (temperature <= 95.0)){
+		if ((temp >= 80) && (temp <= 95)){
 			return "Go Swimming!";
-		}
+			}
 		
 		//Tennis
-		if ((temperature >= 60.0) && (temperature <= 80.0)){
+		if ((temp >= 60) && (temp <= 80)){
 			return "Go Play Tennis!";
-		}
-		
+			}
 		//Golf
-		if ((temperature >= 40.0) && (temperature <= 60.0)){
+		if ((temp >= 40) && (temp <= 60)){
 			return "Go Swimming!";
-		}
+			}
 		
 		//Skiing
-		if ((temperature >= 20.0) && (temperature <= 40.0)){
+		if ((temp >= 20) && (temp <= 40)){
 			return "Go Skiing!";
-		}
-		
+			}
+
 		//Shopping
-		if ((temperature > 95.0) || (temperature < 20.0)){
+		if ((temp > 95) || (temp < 20)){
 			return "Visit Our Shops!";
 		}
 		else return "Sorry, Due to Temperature Issues we are not open";
+	}
+
+	String toString;
+	public String toString(){
+	return "Go Golfing!";
 	}
 }
