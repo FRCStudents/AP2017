@@ -1,15 +1,20 @@
 class Resort{
 	
 	int temp;
+
+//getter
 		
 	int getTemp(){
 		return temp;
 	}
+//setter
 	void setTemp(int newTemp){
 		temp = newTemp;
 	}
+
+//Determining the Activity
 	
-	String temp(){
+	String determineActivity(){
 			
 		//swimming
 		if ((temp >= 80) && (temp <= 95)){
@@ -37,8 +42,9 @@ class Resort{
 		else return "Sorry, Due to Temperature Issues we are not open";
 	}
 
-	String toString;
+	/*String toString;
 	public String toString(){
 	return "Go Golfing!";
 	}
+*/
 }

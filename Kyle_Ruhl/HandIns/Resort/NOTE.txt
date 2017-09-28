@@ -1,6 +1,0 @@
-NOTE........
-
-1. Trying to get it so that user can imput the temperature...
-2. Not Running because? I dont think its reading the temperature I put in (45) When I defined it with the attributes
-
-
