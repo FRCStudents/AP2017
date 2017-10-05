@@ -3,7 +3,6 @@ public class APLine{
 private int a;
 private int b;
 private int c;
-private double slope;
 
 
 public int getA(){
@@ -24,21 +23,18 @@ public int getC(){
 public void setC(int newC){
 	c = newC;
 }
+	
 
-public setSlope(){
-	return slope;
+
+
+
+public double getSlope(){
+	return (double) -a/b;
 }
 
-public getSlope(double newSlope)
 
-public int APLine line1 = new APLine(a, b, c){
+
+public boolean isOnLine(int x, int y){
+		if(((a * x) + (b * y) ))
 }
-
-public double slope1 = line1.getSlope(){
-	return -a/b;
-}
-
-public onLine1 = line1.isOnLine(a, b)
-
-
 }
