@@ -22,4 +22,8 @@ public class Resort{
 			return "Go do something!";
 		}
 	}
+
+	public static void main(String[] args){
+		
+	}
 }
