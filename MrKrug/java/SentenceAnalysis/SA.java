@@ -17,6 +17,10 @@ public class SA {
     averageWordSize = addWordSizes()/countWords();
   }
 
+  public void promptForSentence(){
+	System.out.print("Please, enter a sentence: ");
+  }
+
   /*
    * changes currency
    * returns true/false - depending on if it is the last word or not.
