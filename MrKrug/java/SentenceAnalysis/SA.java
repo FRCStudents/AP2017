@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+/* 
+ * Please note:
+ *        SA2 is a simpler version of this project
+ *        Weird - simpler is always a bit harder
+ *                but it is easier to understand... 
+ */
+
 public class SA {
   private  String sentence = "";
   private  String currentWord = "";
