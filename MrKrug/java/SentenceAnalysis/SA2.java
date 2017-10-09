@@ -7,7 +7,30 @@ public class SA2 {
 
 
 
+  /*
+   * fixSentence
+   * this removes all repeating spaces and punctuation from the 
+   * sentence... 
+   *
+   */
 
+  public void fixSentence(){
+  	char c = ' ';
+	char prevChar;
+	String replace = "";
+
+	for(int i=0; i < sentence.length(); i++){
+		prevChar = c;
+		c = sentence.charAt(i);
+		if(((c >= 'a') && ( c <= 'z')) || ((c >= 'A') && (c <= 'Z')))
+			replace += c;
+		if((c == ' ') && (prevChar == ' ')) continue;
+		if(c == ' ')
+			replace += c;
+		}
+	sentence = replace;
+  }
+	
   /*
    * scanSentence
    * @param - none
@@ -99,6 +122,7 @@ public class SA2 {
   public  void scanAnalyzePrint(){
 	promptForSentence("");
 	scanSentence();
+	fixSentence();
 	analyzeSentence();
 	printSentence();
   }
