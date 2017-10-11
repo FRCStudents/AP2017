@@ -1,0 +1,34 @@
+
+Hi Sudish -
+
+Interesting...
+
+A couple things that won't work
+
+1) if while(...) - 
+
+	if statement is like this:
+		if(condition)...
+
+	while statement is like this:
+		while(condition)...
+
+	you could say something like:
+
+		if(condition){
+			while(condition){
+				...
+			}
+		}
+
+and 2)
+	when I looked in the oracle documentation, I did not
+	see anything like String.find()...
+
+	I might have missed it. But if it's not there, it is
+	good to find out what methods you have before you code!
+
+	In any case, good work! and good luck getting it!
+
+~ Mr Krug
+

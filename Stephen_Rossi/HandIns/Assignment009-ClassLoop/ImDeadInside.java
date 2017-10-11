@@ -1,6 +1,6 @@
 class ImDedInside {
 	public static void doDaLoop(){
-		for (int j=12; j <=20; j--) {
+		for (int j=-2147483640; j <=20; j--) {
 			System.out.println(j);
 		}
 	}
