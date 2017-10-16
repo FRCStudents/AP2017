@@ -4,6 +4,10 @@ public class GoCar{
     String Car_Forward = "\n  ____ \n /  \\_\\_ \n -0--0--";
     String Car_Backward = "\n   ____ \n _/_/  \\ \n --0--0-";
 
+        for(int b = 0; b <= 80; b++){
+            System.out.print("\n");
+        }
+
         System.out.println(Car_Forward);
 
         try{
