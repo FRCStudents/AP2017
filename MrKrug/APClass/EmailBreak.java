@@ -4,7 +4,9 @@
 import java.util.Scanner;
 
 public class EmailBreak {
-  static String part1, part2, part3;
+  static String part1 = "";
+  static String part2 = "";
+  static String part3 = "";
 
   private static boolean checkDomain(String dom){
     if (dom.equals("com")) return true;
@@ -22,6 +24,7 @@ public class EmailBreak {
     int start = 0;
     int At = email.indexOf('@');
     int dot = email.indexOf('.');
+    if(dot < 0 || At < 0) return;
     part1 = email.substring(start, At);
     part2 = email.substring(At + 1, dot);
     part3 = email.substring(dot + 1);
@@ -42,6 +45,7 @@ public class EmailBreak {
     } else {
       while(!checkDomain(part3)){
         errorPrint(1);
+	System.out.println("Please - give me another email: ");
         email = reader.next();
         parseEmail(email);
       }

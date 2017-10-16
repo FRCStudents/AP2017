@@ -27,7 +27,7 @@ public class APLine {
   public void setC(int newValue){
     c = newValue;
   }
-  public double getSlope(){
+  public     getSlope(){
     return (double)-a/b;
   }
   public boolean isOnLine(int x, int y){

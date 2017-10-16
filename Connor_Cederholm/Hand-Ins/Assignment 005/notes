@@ -1,0 +1,20 @@
+
+1) no driver - no test
+
+2) if you set the attribute as x = attrib1 + attrib2;  that
+   is usually done in the constructor. In the attribute list
+   it is a little non-effective.
+
+   imagine:
+	int a1 = 2;
+	int a2 = 3;
+	int a3 = a1 + a2;
+
+	why not just say:
+	int a3 = 5;
+
+	or maybe you want to do that in order to make
+	the code 'self documenting'  
+
+	people do that.
+
