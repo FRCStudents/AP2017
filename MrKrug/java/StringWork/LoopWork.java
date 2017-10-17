@@ -17,7 +17,7 @@ class LoopWork {
 
         public void question02(){
 					System.out.println("Question #2:");
-					for(int i=50; i >= 0; i--){
+					for(int i=12; i >= 0; i--){
 							if(i % 3 == 0){
 								System.out.print("[" + i + "]");
 							}
@@ -86,7 +86,7 @@ class LoopWork {
 				public int question07(int x){
 					return question07r(x);
 				}
-				
+
 				public String toString(){
 					return "Loop: " + a + ":" + b + ":" + c;
 				}
