@@ -36,7 +36,7 @@ class APLine {
 	double getSlope(){
 		return (double)-a/b;
 	}
-	boolean isOnline(double x,double y){
+	boolean isOnLine(double x,double y){
 		if ((a*x) + (b*y) + c == 0){
 		 	return true;
 		}else{

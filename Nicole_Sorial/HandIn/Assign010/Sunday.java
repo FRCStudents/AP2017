@@ -45,7 +45,7 @@ class Sunday {
 	}
 
 	public void moveCarRight() {
-		for (int i = 0; i < 499; i+=3) {
+		for (int i = 0; i < 475; i+=3) {
 			space = space + " ";
 			eraseScreen();
 			System.out.println(space + car1);
@@ -59,7 +59,7 @@ class Sunday {
 	}
 
 	public void moveCarLeft() {
-		for (int i = 0; i < 499; i+=3) {
+		for (int i = 0; i < 475; i+=3) {
 			if (bspace.length() >= 2) {
 				bspace = bspace.substring(1);
 			}
