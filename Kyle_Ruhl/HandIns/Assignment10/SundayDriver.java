@@ -1,5 +1,3 @@
-//This driver and car was based on Tom's through help from him but I modified it
-
 class SundayDriver {
   
 	public static void print80Lines(){
