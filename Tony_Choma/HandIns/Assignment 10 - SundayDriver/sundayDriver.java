@@ -5,7 +5,7 @@ public class sundayDriver extends Thread{
                 for (int i = 0; i < 100; i++){
                         spaces += " ";
                         Thread.sleep(200);
-                        System.out.println(spaces + car);
+                        System.out.print('\r' + spaces + car);
                         }
                 }
         }
