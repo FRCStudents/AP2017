@@ -18,15 +18,17 @@ class IntArray {
 
 	public static String[] getStringArray(){
 		String[] sArray = new String[5];
-		String s = ""; 
+		String s = "";
+		char c = 'a';
 
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 5; j++){
-				s += "[Huh-Hah]"; 
+				c++;
+				s += Character.toString(c);
 			}
 			sArray[i] = s;
 			s = "";
-		}		
+		}
 		return sArray;
 	}
 
@@ -42,5 +44,5 @@ class IntArray {
 		}
 		printArray(getStringArray());
 	}
-	
+
 }
