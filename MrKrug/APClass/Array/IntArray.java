@@ -18,7 +18,7 @@ class IntArray {
 
 	public static String[] getStringArray(){
 		String[] sArray = new String[5];
-		String s = ""; 
+		String s = "";
 		char c = 'a';
 
 		for(int i = 0; i < 5; i++){
@@ -28,7 +28,7 @@ class IntArray {
 			}
 			sArray[i] = s;
 			s = "";
-		}		
+		}
 		return sArray;
 	}
 
@@ -44,5 +44,5 @@ class IntArray {
 		}
 		printArray(getStringArray());
 	}
-	
+
 }
