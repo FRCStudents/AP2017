@@ -25,10 +25,25 @@ class SentenceAnalysis{
                 return words + 1;
         }
 
+        public int calcWordLength(){
+                int wordLength = 0;
+                for (int i = 0; i < x.length(); i++){
+                         if ((x.charAt(i) != ' ') || (x.charAt(i) != '.')){
+                                wordLength++;
+                         }
+                }
+                return wordLength;
+        }
+
+        public double calculateAverageWordLength(){
+                return ((double)calcWordLength()/calcWords());
+        }
         public static void main(String[] args){
                 SentenceAnalysis a = new SentenceAnalysis();
                 a.userInput();
                 System.out.println(a.x);
                 System.out.println("Your sentence has " + a.calcWords() + " words.");
+                System.out.println("The amount of letters in your sentence is " + a.calcWordLength());
+                System.out.println("The average length of each word is " + a.calculateAverageWordLength());
         }
 }
