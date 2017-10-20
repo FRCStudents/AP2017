@@ -24,7 +24,7 @@ class SentenceAnalysis{
                 }
                 return words + 1;
         }
-
+//Calculate word length
         public int calcWordLength(){
                 int wordLength = 0;
                 for (int i = 0; i < x.length(); i++){
@@ -34,10 +34,11 @@ class SentenceAnalysis{
                 }
                 return wordLength;
         }
-
+//Calculate average word length
         public double calculateAverageWordLength(){
                 return ((double)calcWordLength()/calcWords());
         }
+
         public static void main(String[] args){
                 SentenceAnalysis a = new SentenceAnalysis();
                 a.userInput();
