@@ -25,7 +25,7 @@ public class SentenceAnalysis {
     return averageLength;
   }
   public static void main(String[] args){
-    SentenceAnalysis s1 = new SentenceAnalysis("Whats up dad!");
+    SentenceAnalysis s1 = new SentenceAnalysis("This is a test sentence!");
     s1.getNumberOfWords();
     s1.calcAverageWordLength();
     System.out.println("Sentence: " + s1.sentence + " \n NumOfWords:" + s1.numOfWords + "\n totalCharacters:" + s1.totalCharacters + "\n averageWordLength:" + s1.averageWordLength);
