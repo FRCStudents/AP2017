@@ -1,38 +1,56 @@
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
-@SuppressWarnings("serial")
-class Game extends JPanel {
-    int x = 0;
-    int y = 0;
-    private void moveBall() {
-        x = x + 1;
-        y = y + 1;
-    }
-    @Override
-    public void paint(Graphics g) {
-        super.paint(g);
-        Graphics2D g2d = (Graphics2D) g;
-        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
-            RenderingHints.VALUE_ANTIALIAS_ON);
-        g2d.fillOval(x, y, 300, 300);
-    }
+class TrainDemo {
 
-    public static void main(String[] args) throws InterruptedException {
-        JFrame frame = new JFrame("Why it no work");
-        Game game = new Game();
-        frame.add(game);
-        frame.setSize(3000, 4000);
-        frame.setVisible(true);
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Train Demo");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        while (true) {
-            game.moveBall();
-            game.repaint();
-            Thread.sleep(10);
-        }
+        frame.setSize(800, 400);
+        frame.setLocationRelativeTo(null);
+        frame.add(new TrainCanvas());
+        frame.setVisible(true);
     }
+
+}
+
+class TrainCanvas extends JComponent {
+
+    private int lastX = 0;
+
+    public TrainCanvas() {
+        Thread animationThread = new Thread(new Runnable() {
+            public void run() {
+                while (true) {
+                    repaint();
+                    try {Thread.sleep(10);} catch (Exception ex) {}
+                }
+            }
+        });
+
+        animationThread.start();
+    }
+
+    public void paintComponent(Graphics g) {
+        Graphics2D gg = (Graphics2D) g;
+
+        int w = getWidth();
+        int h = getHeight();
+
+        int trainW = 100;
+        int trainH = 10;
+        int trainSpeed = 3;
+
+        int x = lastX + trainSpeed;
+
+        if (x > w + trainW) {
+            x = -trainW;
+        }
+
+        gg.setColor(Color.BLACK);
+        gg.fillRect(x, h/2 + trainH, trainW, trainH);
+
+        lastX = x;
+    }
+
 }
