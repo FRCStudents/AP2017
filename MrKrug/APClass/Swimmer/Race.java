@@ -14,6 +14,10 @@ public class Race {
       }
     }
 
+    public int getSwimmerCount(){
+	return SWIMMER_COUNT;
+	}
+
     public void acceptSwimmer(int swimmerIdx){
         Scanner s = new Scanner(System.in);
         swimmers[swimmerIdx].setName(s.next());
