@@ -11,9 +11,6 @@ class SundayDriver {
 
   public static void main(String [] argv){
 
-		for(int i = 0; i <= 10; i ++) {
-			waitUp(150);
-		}
     System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     for(int x = 0; x < 50; x++) {
       System.out.print("\r");
