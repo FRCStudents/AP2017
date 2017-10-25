@@ -11,18 +11,18 @@ class Swimmer{
 	private String metals;
 
 		Swimmer(String startingName, String startingGender, String startingCountry, String startingHeight, String startingWeight, int startingAge, String startingTime, String startingMetals){
-			name = startingName;
-			gender = startingGender;
-			country = startingCountry;
-			height = startingHeight;
-			weight = startingWeight;
-			age = startingAge;
-			time = startingTime;
-			metals = startingMetals;
+			setname(startingName);
+			setgender(startingGender);
+			setcountry(startingCountry);
+			setheight(startingHeight);
+			setweight(startingWeight);
+			setage(startingAge);
+			settime(startingTime);
+			setmetals(startingMetals);
 		}
 
 //Methods
-		/*public void setname(String new_name){
+		public void setname(String new_name){
 			name = new_name;
 		}
 
@@ -52,7 +52,7 @@ class Swimmer{
 
 		public void setmetals(String new_metals){
 			metals = new_metals;
-		}*/
+		}
 
 		public String toString(){
 			return "\nName: " + name + "\nGender: " + gender + "\nCountry: " + country + "\nHeight: " + height + 

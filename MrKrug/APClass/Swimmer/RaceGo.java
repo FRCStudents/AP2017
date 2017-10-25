@@ -8,7 +8,7 @@ import java.util.*;
 class RaceGo {
   public static void main(String[] argv){
     Race r = new Race();
-    for(int i = 0; i < 5; i++){
+    for(int i = 0; i < r.getSwimmerCount(); i++){
       r.acceptSwimmer(i);
     }
 
