@@ -1,7 +1,0 @@
-
-You need some way to set the attributes -
-either a constructor, or setters...
-
-Also, I don't think your getSlope is going
-to work - it seems to try to return an int,
-not a double.
