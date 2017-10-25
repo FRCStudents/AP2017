@@ -24,7 +24,7 @@ public class Race {
     }
 
     public void placeSwimmerInLane(int swimmerIdx, int lane){
-      lanes[lane-1] = s11111111111111wimmerIdx;
+      lanes[lane-1] = swimmerIdx;
     }
 
     public Swimmer getSwimmer(int i){
