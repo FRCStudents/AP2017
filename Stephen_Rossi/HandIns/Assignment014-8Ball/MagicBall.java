@@ -35,9 +35,8 @@ public class MagicBall {
           }
   }
   public static void clearScreen() {
-    System.out.print("\033[H\033[2J");
-    System.out.flush();
-  }
+      System.out.flush();
+     }
   public static void start(){
     clearScreen();
     askQuestion();
@@ -54,7 +53,7 @@ public class MagicBall {
       wait(200);
       start();
     }else if(answer == 'n'){
-      System.out.print("Have a nice day");
+      System.out.print("\n\n\n\n     Have a nice day");
       for(int i = 0; i < 3; i++){
           wait(500);
           System.out.print(".");
