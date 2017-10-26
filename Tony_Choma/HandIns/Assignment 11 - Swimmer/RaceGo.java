@@ -18,6 +18,11 @@ class RaceGo {
       System.out.println(r.getSwimmer(i).getName() + " in lane: ");
       int lane = s.nextInt();
       r.placeSwimmerInLane(i, lane);
+      System.out.print("[");
+      for(int h = 0; h < r.lanes.length; h++){
+        System.out.print(r.lanes[h] + ",");
+      }
+      System.out.print("]");
     }
 
 
