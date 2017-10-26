@@ -21,7 +21,8 @@ public void setNumberOfWords(int newNumber){
 
 //int or String m?
 public int sumOfFirstWordLength(){	 	
-	 if while(m.find()){
+	 if(m.find){
+	 	while(m.find){
 		count++;
 		system.out.println("Count word length" + m.count());
 		system.out.println("Start counting word length process" + m.start());
