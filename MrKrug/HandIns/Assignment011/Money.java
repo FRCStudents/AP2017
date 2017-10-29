@@ -16,12 +16,12 @@ class Money {
 		pennies = p;
 	}
 
-	public double addCoins(){
-		double d = 25 * quarters;
+	public int addCoins(){
+		int d = 25 * quarters;
 		d += (10 * dimes);
 		d += (5 * nickles);
 		d += pennies;
-		return d/100;
+		return d;
 	}
 
 	public void setQuarters(int q){
@@ -31,7 +31,7 @@ class Money {
 	public void setDimes(int d){
 		dimes = d;
 	}
-	
+
 	public void setNickles(int n){
 		nickles = n;
 	}
@@ -40,4 +40,3 @@ class Money {
 		pennies = p;
 	}
 }
-

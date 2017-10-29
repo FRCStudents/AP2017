@@ -38,17 +38,17 @@ class Machine {
 	}
 
 	public void loadMachine(){
-		Drink d = new Drink("Coke", 1.32);			
+		Drink d = new Drink("Coke", 132);
 		addDrink(d);
-		d = new Drink("Sprite", 1.23);
+		d = new Drink("Sprite", 123);
 		addDrink(d);
-		d = new Drink("Pepsi", .99);
+		d = new Drink("Pepsi", 99);
 		addDrink(d);
-		d = new Drink("Dr Pepper", 1.49);
+		d = new Drink("Dr Pepper", 149);
 		addDrink(d);
 	}
 
-	public double getMoney(){
+	public int getMoney(){
 		Scanner s = new Scanner(System.in);
 
 		System.out.println("Quarters: ");
@@ -56,44 +56,51 @@ class Machine {
 		money.setQuarters(response);
 		System.out.println("Dimes: ");
 		response = s.nextInt();
-                money.setDimes(response);
-                System.out.println("Nickles: ");
-                response = s.nextInt();
-                money.setNickles(response);
-                System.out.println("Pennies: ");
-                response = s.nextInt();
+    money.setDimes(response);
+    System.out.println("Nickles: ");
+    response = s.nextInt();
+    money.setNickles(response);
+    System.out.println("Pennies: ");
+    response = s.nextInt();
 		money.setPennies(response);
 		return money.addCoins();
 	}
 
 
-	public double giveChange(Stock s, double payment){
+	public int giveChange(Stock s, int payment){
 		return payment - s.getDrink().getPrice();
 	}
- 
+
 
 	public void runUserInterface(){
-	    	Scanner s = new Scanner(System.in);
+	  Scanner s = new Scanner(System.in);
 		int choice;
-		double payment;
+		int payment;
 
-		System.out.println("Would you like a drink?");
+		System.out.println("Would you like a drink? (y/n) ");
 		String response = s.next();
 		while(response.toLowerCase().indexOf("y") > -1){
 			showMachine();
 			System.out.println("Please choose a drink... ");
-			choice = s.nextInt();			
+			choice = s.nextInt();
+
+			if(!stockArray[choice - 1].drinkInStock()){
+					System.out.println("Sorry, we don't have anymore " + stockArray[choice - 1].getDrink().getName());
+					System.out.println("Would you still like a drink? (y/n) ");
+					response = s.next();
+					continue;
+				}
 
 			payment = getMoney();
-			if(payment >= stockArray[choice - 1].getDrink().getPrice()){		
-				stockArray[choice - 1].diminish();	
-				System.out.println(giveChange(stockArray[choice - 1], payment));
+			if(payment >= stockArray[choice - 1].getDrink().getPrice()){
+				stockArray[choice - 1].diminish();
+				System.out.println("Change: " + giveChange(stockArray[choice - 1], payment));
 			}
 			else {
 				System.out.println("That is not enough money!");
 			}
 			System.out.println("Would you like a drink?");
-			response = s.next(); 
+			response = s.next();
 			}
 	}
 
@@ -102,4 +109,4 @@ class Machine {
 			stockArray[i].showStock(i + 1);
 		}
 	}
-} 
+}

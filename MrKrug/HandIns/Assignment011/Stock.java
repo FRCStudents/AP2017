@@ -11,6 +11,11 @@ class Stock {
 		remaining++;
 	}
 
+	public boolean drinkInStock(){
+			if(remaining > 0) return true;
+			return false;
+	}
+
 	public Drink getDrink(){
 		return drink;
 	}
@@ -39,8 +44,23 @@ class Stock {
 		return true;
 	}
 
+	private String formatPrice(int a){
+			int d;
+			int p;
+
+			p = a % 100;
+			d = a/100;
+			if(d > 0){
+				return "" + d + "." + p;
+			}
+			return "." + p;
+	}
+
 	public void showStock(int n){
-		System.out.println(n + ") " + remaining + " Drinks: " + drink.getName() + " (" + drink.getPrice() + ")");
+		System.out.println(n + ") " + remaining +
+											" Drinks: " +
+											drink.getName() +
+											" (" + formatPrice(drink.getPrice()) + ")");
 	}
 
 }

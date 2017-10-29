@@ -1,18 +1,19 @@
 
 class Drink {
 	private String name;
-	private double price;
+	/* price is in pennies */
+	private int price;
 
-	public Drink(String n, double p){
+	public Drink(String n, int p){
 		name = n;
 		price = p;
 	}
 
 	public Drink(){
-		this("Coke", 1.25);
+		this("Coke", 125);
 	}
 
-	public double getPrice(){
+	public int getPrice(){
 		return price;
 	}
 
