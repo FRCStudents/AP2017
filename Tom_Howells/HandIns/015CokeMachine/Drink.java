@@ -32,6 +32,10 @@ class Drink {
         return num;
     }
 
+    public void decrement() {
+        num--;
+    }
+
     public String toString() {
         return name;
     }
