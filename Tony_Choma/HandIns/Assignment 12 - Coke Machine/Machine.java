@@ -6,13 +6,13 @@ public class Machine{
 
         public void returnTypes(){
                 for (int i = 0; i < drinks.length; i++){
-                        System.out.print(drinks[i]);
+                        System.out.println(drinks[i]);
                 }
         }
 
         public String userInput(){
                 Scanner s = new Scanner(System.in);
-                System.out.print("What would you like to drink? ");
+                System.out.println("What would you like to drink? ");
                 returnTypes();
                 x = s.nextLine();
                 return x;
