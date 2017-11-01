@@ -1,6 +1,6 @@
-class day{
+public class day{
 
-String[] days = {
+public String[] days = {
 
 "Monday",
 "Tuesday",
@@ -8,18 +8,19 @@ String[] days = {
 "Thursday",
 "Friday",
 "Saturday",
-"Sunday",
+"Sunday"
 	};
 
-public void forAll(String[] days) {
+public void ForwardsDays(){
   for (int i=0; i<days.length; i++) {
     System.out.println( days[i] );
   }
 }
 
-public void forAllReverse(String[] days) {
-  for (int j=6; j>days.length; j--) {
+public void ReverseDays(){
+  for (int j=days.length -1; j>=0; j--) {
     System.out.println( days[j] );
  		 }
   }
+
 }
