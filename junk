@@ -1,0 +1,60 @@
+ Julie_Hu/Hand Ins/Assignment014-Days/Days.java                                             |  13 +++++
+ Julie_Hu/Hand Ins/Assignment014-Days/DaysDriver.java                                       |   7 +++
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Medals/bronzeMedal.class       | Bin
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Medals/bronzeMedal.java        |   0
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Medals/bronzeMedalDriver.class | Bin
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Medals/bronzeMedalDriver.java  |   0
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Medals/goldMedal.class         | Bin
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Medals/goldMedal.java          |   0
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Medals/goldMedalDriver.class   | Bin
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Medals/goldMedalDriver.java    |   0
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Medals/silverMedal.class       | Bin
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Medals/silverMedal.java        |   0
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Medals/silverMedalDriver.class | Bin
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Medals/silverMedalDriver.java  |   0
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Swimmer/Race.class             | Bin
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Swimmer/Race.java              |   0
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Swimmer/RaceGo.class           | Bin
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Swimmer/RaceGo.java            |   0
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Swimmer/Swimmer.class          | Bin
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/Swimmer/Swimmer.java           |   0
+ Kyle_Ruhl/HandIns/{Assignment11Swimmer => Assign10_Swimmer}/placeholder.txt                |   0
+ Kyle_Ruhl/HandIns/Assign11_Magic8/magic8.class                                             | Bin 0 -> 2817 bytes
+ Kyle_Ruhl/HandIns/Assign11_Magic8/magic8.java                                              | 131 ++++++++++++++++++++++++++++++++++++++++++++
+ Kyle_Ruhl/HandIns/Assign11_Magic8/magic8Driver.class                                       | Bin 0 -> 795 bytes
+ Kyle_Ruhl/HandIns/Assign11_Magic8/magic8Driver.java                                        |  14 +++++
+ Kyle_Ruhl/HandIns/Assign13_Days/day.class                                                  | Bin 0 -> 757 bytes
+ Kyle_Ruhl/HandIns/Assign13_Days/day.java                                                   |  26 +++++++++
+ Kyle_Ruhl/HandIns/Assign13_Days/dayDriver.class                                            | Bin 0 -> 557 bytes
+ Kyle_Ruhl/HandIns/Assign13_Days/dayDriver.java                                             |  13 +++++
+ Nicole_Sorial/HandIn/Assign013/Days.class                                                  | Bin 0 -> 1406 bytes
+ Nicole_Sorial/HandIn/Assign013/Days.java                                                   |  31 +++++++++++
+ Nicole_Sorial/HandIn/Assign013/DaysDriver.class                                            | Bin 0 -> 360 bytes
+ Nicole_Sorial/HandIn/Assign013/DaysDriver.java                                             |   8 +++
+ Nicole_Sorial/HandIn/Assign013/SentenceEdit.class                                          | Bin 0 -> 2380 bytes
+ Nicole_Sorial/HandIn/Assign013/SentenceEdit.java                                           |  96 ++++++++++++++++++++++++++++++++
+ Nicole_Sorial/HandIn/Assign013/SentenceEditDriver.class                                    | Bin 0 -> 527 bytes
+ Nicole_Sorial/HandIn/Assign013/SentenceEditDriver.java                                     |  12 ++++
+ Nicole_Sorial/HandIn/AssignList.txt                                                        |   3 +-
+ Stephen_Rossi/HandIns/Assignment015-Vending/Curency.java                                   |  41 ++++++++++++++
+ Stephen_Rossi/HandIns/Assignment015-Vending/Machine.class                                  | Bin 0 -> 1513 bytes
+ Stephen_Rossi/HandIns/Assignment015-Vending/Machine.java                                   |  21 +++++++
+ Stephen_Rossi/HandIns/Assignment016-Two Assignments Inside/StringAnalyze/RunString.class   | Bin 0 -> 638 bytes
+ Stephen_Rossi/HandIns/Assignment016-Two Assignments Inside/StringAnalyze/RunString.java    |  12 ++++
+ Stephen_Rossi/HandIns/Assignment016-Two Assignments Inside/WeekArr/WeekArr.class           | Bin 0 -> 764 bytes
+ Stephen_Rossi/HandIns/Assignment016-Two Assignments Inside/WeekArr/WeekArr.java            |  16 ++++++
+ Stephen_Rossi/HandIns/Assignment016-Two Assignments Inside/WeekArr/WeekDriver.class        | Bin 0 -> 534 bytes
+ Stephen_Rossi/HandIns/Assignment016-Two Assignments Inside/WeekArr/WeekDriver.java         |  10 ++++
+ Sudish_Vengat/Handins/14CokeMachineAssignment in progress/CokeMachine.java                 |  36 ++++++++++++
+ Sudish_Vengat/Handins/14CokeMachineAssignment in progress/CokeMachineDriver.java           |  11 ++++
+ Sudish_Vengat/Handins/15CalenderAssignment/Calender.class                                  | Bin 0 -> 763 bytes
+ Sudish_Vengat/Handins/15CalenderAssignment/Calender.java                                   |  26 +++++++++
+ Sudish_Vengat/Handins/15CalenderAssignment/CalenderDriver.class                            | Bin 0 -> 518 bytes
+ Sudish_Vengat/Handins/15CalenderAssignment/CalenderDriver.java                             |  12 ++++
+ Tom_Howells/HandIns/015CokeMachine/Drink.class                                             | Bin 783 -> 848 bytes
+ Tom_Howells/HandIns/015CokeMachine/Drink.java                                              |   4 ++
+ Tom_Howells/HandIns/015CokeMachine/Machine.class                                           | Bin 2493 -> 4418 bytes
+ Tom_Howells/HandIns/015CokeMachine/Machine.java                                            |  63 +++++++++++++++++++--
+ Tony_Choma/HandIns/Assignment 12 - Coke Machine & 8-Ball/Machine.java                      |   3 -
+ Tony_Choma/HandIns/Assignment 12 - Coke Machine/Machine.class                              | Bin 0 -> 1017 bytes
+ Tony_Choma/HandIns/Assignment 12 - Coke Machine/Machine.java                               |  26 +++++++++
