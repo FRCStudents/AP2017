@@ -65,15 +65,18 @@ class SentenceEdit {
 
 	// changes each char in a string to be two places forward
 	public String updateString() {
-		string_no_spaces = string_no_spaces.toLowerCase();
-		for (int i = 0; i < string_no_spaces.length(); i++) {
+		original_string = original_string.toLowerCase();
+		for (int i = 0; i < original_string.length(); i++) {
 			// makes i usable in inner for loop
 			int x = i; 
 
 			// loops through whole alphabet to find char's index
 			for (int j = 0; j < 26; j++) { 
-				if (string_no_spaces.charAt(x) == alphabet[j]) {
+				if (original_string.charAt(x) == alphabet[j]) {
 					setIndex(j); 
+				}
+				if (original_string.charAt(x) == ' ') {
+					setIndex(-2);
 				}
 			}
 
@@ -82,6 +85,8 @@ class SentenceEdit {
 				string_update_char = string_update_char + 'a';
 			} else if (idx == 25) {
 				string_update_char = string_update_char + 'b';
+			} else if (idx == -2) {
+				string_update_char = string_update_char + ' ';
 			} else {
 				string_update_char = string_update_char + alphabet[idx + 2];
 			}

@@ -1,0 +1,5 @@
+Note: 
+
+SpaceABC is the second assignment where it removes the spaces and remixes the alphabet. 
+
+Days is the program that prints the days forwards and then backwards.
