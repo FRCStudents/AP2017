@@ -7,6 +7,12 @@ class SentenceObj {
         s = x;
     }
 
+
+
+    // function for determining if char is/is not letter
+
+
+
     // retrieves s
     public String readSentence(){
         return s;
