@@ -11,5 +11,6 @@ Assign008 - Resort
 Assign009 - SentenceAnalysis
 Assign010 - Sunday (SundayDriver Car Animation)
 Assign011 — Swimmer (Swimmer, Race, RaceGo)
-Assign012 - EightBall (or CokeMachine if you did that)
-Assign013 - Day and EditSentence
+Assign012 - CokeMachine
+Assign013 - EightBall
+Assign014 - Day and SentenceEdit
