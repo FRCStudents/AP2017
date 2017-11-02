@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Machine{
-        String[] drinks = new String[]{"Coca Cola, Sprite, Pepsi, Water, Fanta"};
+        String[] drinks = new String[]{"Coca Cola", "Sprite", "Pepsi", "Water", "Fanta"};
         private String x;
 
         public void returnTypes(){
