@@ -1,9 +1,10 @@
 public class APLine {
-	int a;
-	int b;
-	int c;
 
-	APline(int newerA, int newerB, int newerC){
+private	int a;
+private	int b;
+private	int c;
+
+	public void APline(int newerA, int newerB, int newerC){
 		a = newerA;
 		b = newerB;
 		c = newerC;
@@ -28,15 +29,15 @@ public class APLine {
 		c = newC;
 	}
 
-	double getSlope() {
-		return (double) -a / (double) b;
-
+	public double getSlope() {
+		return -1 * (double)-a/(double)b;
 	}
+
 	boolean isOnLine(int x, int y) {
-		if((a * x) + (b * y) + c == 0) {
+		if((a * x) + (b * y) + c == 0){
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 	}
- }
+}
