@@ -6,10 +6,21 @@ class Card {
     public Card(String v, String s) {
         value = v;
         switch (s) {
-            case "Spades": suit = 's';
-            case "Diamonds": suit = 'd';
-            case "Clubs": suit = 'c';
-            case "Hearts": suit = 'h';
+            case "Spades":
+                suit = 's';
+                break;
+            case "Diamonds":
+                suit = 'd';
+                break;
+            case "Clubs":
+                suit = 'c';
+                break;
+            case "Hearts":
+                suit = 'h';
+                break;
+            default:
+                suit = 'x';
+                break;
         }
     }
 
