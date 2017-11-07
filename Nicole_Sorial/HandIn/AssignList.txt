@@ -14,3 +14,4 @@ Assign011 — Swimmer (Swimmer, Race, RaceGo)
 Assign012 - CokeMachine
 Assign013 - EightBall
 Assign014 - Day and SentenceEdit
+Assign015 - Palindrome
