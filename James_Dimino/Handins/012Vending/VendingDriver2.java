@@ -13,6 +13,10 @@ class VendingDriver2{
 	int d = 0;
 	int repeat = 0;
 
+	for(int b = 0; b <= 80; b++){
+        System.out.print("\n");
+    }
+
 	while (repeat == 0){
 		VendingMachine2 v = new VendingMachine2(coke, pepsi, sprite);
 		System.out.print(v);
