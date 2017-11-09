@@ -25,6 +25,7 @@ public class Race {
 
     public void placeSwimmerInLane(int swimmerIdx, int lane){
       lanes[lane-1] = swimmerIdx;
+      System.out.println(swimmerIdx);
     }
 
     public Swimmer getSwimmer(int i){
