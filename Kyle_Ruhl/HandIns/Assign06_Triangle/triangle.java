@@ -40,5 +40,12 @@ public void isItATriangle(){
       System.out.println("No, Not a Triangle.");
       return;
     }
+
+    //checking to see if equilaterall
+    if ((side1 == side2) && (side2 == side3) && (side3 == side1)){
+      System.out.println("Oh hey! Your Triangle is an Equilaterall Triangle!");
+    }else{
+      System.out.print("");
+    }
   }
 }
