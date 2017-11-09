@@ -1,21 +1,25 @@
+import java.util.*;
 public class SentAna{
 
-	//the sentence for analysis is:
-	String sentence = "Hello my name is Josephine and I like to run long distances, for example, yesterday I ran one hundred miles";
-	int wordCount = 20;
-	double averageWordSize = 4.30;
-
+	String sentence; 
+	int wordCount = 0; 		//starts at zero and increases later on
+	double averageWordSize = 0;
 	
-	//calculating the word count 
-	void wordCount(String sentence){
+	//this function will calculate the word count and average word size, also includes getting the inputted sentence
+	public void wordCount(String sentence){
 	int wordStart = 0;
 	int wordFinish = 1;
 	int totalWords = 0;
 	
+		//scanner for the inputed sentence
+	Scanner hippo = new Scanner(System.in);
+	System.out.println ("Please Enter Your Sentence: ");
+	sentence = hippo.nextLine();
+	System.out.println(" ");
+	System.out.println ("Your sentence for analyzation is: " + sentence);
+	
 	String currentWord;
-	
-	//wordCount = 0;
-	
+		
 	currentWord = sentence.substring(0, sentence.indexOf(' ')).trim();
 	wordCount++;
 	
@@ -32,8 +36,6 @@ public class SentAna{
 		wordFinish = sentence.indexOf(' ', wordStart + 1);
 	}
 	
-
-
 	//getting the average word size
 	currentWord = sentence.substring(wordStart).trim();
 	wordCount++;
@@ -41,4 +43,8 @@ public class SentAna{
 	averageWordSize = totalWords / wordCount;
 	}
 	
+	/*
+	* Note: All the answers will print though the driver with the excpetion 
+	* of printing out the sentence that the user inputted.
+	*/
 }

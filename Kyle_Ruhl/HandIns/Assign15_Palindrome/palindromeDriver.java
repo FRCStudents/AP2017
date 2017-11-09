@@ -5,6 +5,5 @@ class palindromeDriver{
 		palindrome g = new palindrome();
 	
 			g.getIt();
-			g.theChecker();
  }
 }

@@ -5,9 +5,9 @@ public class SentAnaDriver{
 		
 		SentAna q = new SentAna();
 		
-		System.out.println();
+		q.wordCount(q.sentence);
 		
-		System.out.println("The Sentence is: " + q.sentence);
+		//The rest is printing out the dialouge
 		
 		System.out.println();
 		
@@ -23,7 +23,7 @@ public class SentAnaDriver{
 		
 		System.out.println();
 	
-		System.out.println("done. Thanks for letting me Analyze your sentence.");
+		System.out.println("Done. \nThanks for letting me Analyze your sentence.");
 		
 	}
 
