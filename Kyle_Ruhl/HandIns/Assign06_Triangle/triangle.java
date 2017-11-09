@@ -30,6 +30,19 @@ public void isItATriangle(){
       if(side1 + side3 > side2){
         if(side2 + side3 > side1){
           System.out.println("Yes! This is a Triangle!");
+
+          if ((side1 == side2) && (side2 == side3) && (side3 == side1)){
+            System.out.println("Oh hey! Your Triangle is an Equilaterall Triangle!");
+          }else{
+            System.out.print("");
+          }
+
+          if (((side1 == side2) && (side2 != side3)) || ((side2 == side3) && (side3 != side1)) || ((side3 == side1) && (side3 != side2))){
+            System.out.println("Wow! Your triangle is Isosoleces!");
+          }else{
+            System.out.print("");
+          }
+
         }else{
           System.out.println("No, Not a Triangle");
         }
@@ -42,10 +55,6 @@ public void isItATriangle(){
     }
 
     //checking to see if equilaterall
-    if ((side1 == side2) && (side2 == side3) && (side3 == side1)){
-      System.out.println("Oh hey! Your Triangle is an Equilaterall Triangle!");
-    }else{
-      System.out.print("");
-    }
+
   }
 }
