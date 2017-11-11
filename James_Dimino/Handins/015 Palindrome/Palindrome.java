@@ -4,7 +4,6 @@ public class Palindrome{
 	public static void main(String[] argv){
 
 		String checkSentence;
-		int placeHolder = 0;
 		int i = 0;
 		int z = 0;
 
