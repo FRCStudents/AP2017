@@ -20,7 +20,7 @@
 //-- Part 2:
 //-- Write a class that simulates a race. The class should have an attribute
 //-- for the name of the race and an array with indexes representing swim lanes.
-//-- Each lane should hold a particular swimmer. The class should also have
+//-- Each lane should hold a particular swimmer. The class should also hav-
 //-- a method to determine which swimmer should be awarded a gold, silver, or
 //-- bronze medal based on their times and increment the swimmer's current medal
 //-- count. The method should display each medalist's name, country, and total
