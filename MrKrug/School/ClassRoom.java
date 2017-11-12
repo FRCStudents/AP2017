@@ -4,6 +4,12 @@ class ClassRoom{
 	String subject;
 	Student[] students = new Student[20];
 
+	public ClassRoom(String  name, String sub, String[]students, int[] ages){  
+		teacherName = name;
+		subject = sub;
+		createStudents(students, ages);
+	}
+
 	public ClassRoom(String name, String sub){
 		teacherName = name;
 		subject = sub;
@@ -55,11 +61,31 @@ class ClassRoom{
 			}
 	}
 
+	private void createStudents(String[] sNames, int[] ages){
+		//	for(int xl=0; xl < sNames.length; xl++){
+		//		System.out.println(xl + "]" + sNames[xl] + "-" + ages[xl]);
+		//		}
+
+               boolean a = true;
+
+                for (int i=0; i < 20; i++){
+                        if(i % 4 == i % 3){
+                                a = false;
+                        }
+                        else {
+                                a = true;
+                        }
+                students[i] = new Student(sNames[i], ages[i], a);
+                }
+        }
+
+
 	public void printStudents(){
 		int absentCount = 0;
 		int presentCount = 0;
 
-		System.out.println("Name\t\t\tAge\tAbsent?");
+		System.out.println("\n\n" + getTeacherName());
+		System.out.println("\nName\t\t\tAge\tAbsent?");
 		System.out.println("===============================================");
 		for(int i=0; i<20; i++){
 			System.out.println(students[i].getName() + "\t\t" + students[i].getAge() + "\t" + students[i].isAbsent());
