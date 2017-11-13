@@ -1,26 +1,31 @@
 public class Card{
 
+
+  String Suit = "";
+  int Number = 0;
+  String Rank = "";
+  
         public String getSuit(){
-        
+            return Suit;
         }
         
         public int getNumber(){
-        
+            return Number;
         }
         
         public String getRank(){
+            return Rank;
+        }
+        
+        public void setSuit(){
         
         }
         
-        public String setSuit(){
+        public void setNumber(){
         
         }
         
-        public int setNumber(){
-        
-        }
-        
-        public String setRank(){
+        public void setRank(){
         
         }
         
