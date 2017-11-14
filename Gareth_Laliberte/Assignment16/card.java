@@ -17,15 +17,15 @@ public class Card{
             return Rank;
         }
         
-        public void setSuit(){
+        public void setSuit(String s){
         
         }
         
-        public void setNumber(){
+        public void setNumber(int n){
         
         }
         
-        public void setRank(){
+        public void setRank(String r){
         
         }
         
