@@ -4,12 +4,10 @@ public class SpaceABCDriver{
    
     SpaceABC s = new SpaceABC();
     
-	s.spaceAgain();
-    s.remixedLettersX();
-    s.remixedLettersY();
-    s.remixedLettersZ();
+	  s.spaceAgain();
+    s.remixedLetters();
 	
-	System.out.println();
+	  System.out.println();
     System.out.println("Your re-mixed sentence: " + s.mixedAgain);
     System.out.println();
   }

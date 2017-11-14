@@ -21,10 +21,11 @@ public class SpaceABC{
 
 			System.out.println();
  		   	System.out.println("Your sentence with no spaces: "+NoSpaces);
+
 					}
  
  
-			public void remixedLettersX(){
+			public void remixedLetters(){
 				
 				mixedAgain = "";
   				
@@ -38,40 +39,6 @@ public class SpaceABC{
  					 	   			}
  				  	} else {
   		 			   	mixedAgain += SentenceOriginal.charAt(b);
-      }
-	}
-  }
-  			public void remixedLettersY(){
-				
-				mixedAgain = "";
-  				
-				for(int p = 0; p < SentenceOriginal.length(); p++){
- 					if(SentenceOriginal.charAt(p) != '!') {
-  						int y = alphabet.indexOf(Character.toLowerCase(SentenceOriginal.charAt(p)));
-							if(p != 0){
-								mixedAgain += Character.toLowerCase(alphabet.charAt(y + 1));
-						}else{
- 						 	  	mixedAgain += Character.toUpperCase(alphabet.charAt(y + 1));
- 					 	   			}
- 				  	} else {
-  		 			   	mixedAgain += SentenceOriginal.charAt(p);
-      }
-	}
-  }
- 			public void remixedLettersZ(){
-				
-				mixedAgain = "";
-  				
-				for(int i = 0; i < SentenceOriginal.length(); i++){
- 					if(SentenceOriginal.charAt(i) != '!') {
-  						int z = alphabet.indexOf(Character.toLowerCase(SentenceOriginal.charAt(i)));
-							if(i != 0){
-								mixedAgain += Character.toLowerCase(alphabet.charAt(z + 0));
-						}else{
- 						 	  	mixedAgain += Character.toUpperCase(alphabet.charAt(z + 0));
- 					 	   			}
- 				  	} else {
-  		 			   	mixedAgain += SentenceOriginal.charAt(i);
       }
 	}
   }
