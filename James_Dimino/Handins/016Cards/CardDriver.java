@@ -8,7 +8,7 @@ public class CardDriver{
 	a.setSide(true);
 	a.setJoker(false);
 	a.setSuit("Spades");
-
+	
 	a.printCard();
 
 	Card b = new Card();
