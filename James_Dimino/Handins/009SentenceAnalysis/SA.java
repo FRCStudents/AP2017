@@ -1,19 +1,13 @@
-class SentenceAnalysis {
+class SA{
     private String s;
 
-
-
-    public SentenceAnalysis(String x){
+    public SA(String x){
         s = x;
     }
-
-    
 
     public String readSentence(){
         return s;
     }
-
-    
 
     public int getWordNum(){
         int wordNum = 0;
@@ -28,17 +22,12 @@ class SentenceAnalysis {
     public int sumWordLengths(){
         int wordLength = 0;
         for (int i = 0; i < s.length(); i++){
-            if (!((s.charAt(i) == ' ') || (s.charAt(i) == '.'))){
+            if ((s.charAt(i) != ' ') || (s.charAt(i) != '.')){
                 wordLength++;
             }
         }
         return wordLength;
     }
-
-    
-
-
-
 
     public double calculateAverageWordLength(){
         return ((double)sumWordLengths()/getWordNum());
