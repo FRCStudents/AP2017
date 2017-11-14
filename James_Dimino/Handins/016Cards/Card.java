@@ -5,6 +5,7 @@ public class Card{
 	boolean side; //True = Card Is Face Side Up
 	boolean joker;
 	String suit;
+	int rank;
 
 	public int getNumber(){
 		return number;
@@ -46,13 +47,22 @@ public class Card{
 		suit = new_suit;
 	}
 
+	public int getRank(){
+		return rank;
+	}
+
+	public void setRank(int new_rank){
+		rank = new_rank;
+	}
+
 	public void printCard(){
 		System.out.println("\nCard: ");
 		System.out.println("Number: " + number);
-		System.out.println("Suit: " + suit);
+		System.out.println("Suit: " + suit + " " + displaySuit(suit));
 		System.out.println("Color: " + color);
 		System.out.println("Side: " + side);
 		System.out.println("isJoker: " + joker);
+		System.out.println("Rank: " + rank);
 	}
 
 	public char displaySuit(String c) {
