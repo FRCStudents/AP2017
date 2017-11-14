@@ -28,7 +28,7 @@ class SentenceAnalysis {
     public int sumWordLengths(){
         int wordLength = 0;
         for (int i = 0; i < s.length(); i++){
-            if ((s.charAt(i) != ' ') || (s.charAt(i) != '.')){
+            if (!((s.charAt(i) == ' ') || (s.charAt(i) == '.'))){
                 wordLength++;
             }
         }
