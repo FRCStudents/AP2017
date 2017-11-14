@@ -6,6 +6,8 @@ public class Card{
 	boolean joker;
 	String suit;
 	int rank;
+	boolean checkA;
+	boolean checkB;
 
 	public int getNumber(){
 		return number;
@@ -78,5 +80,45 @@ public class Card{
               }
               return ' ';
       }
+
+    public boolean isEqual(Card c){
+        if (c.getSuit() == suit){
+            boolean checkA = true;
+        } else {
+        	boolean checkA = false;
+        }
+
+        if (c.getNumber() == number){
+             boolean checkB = true;
+        } else {
+        	boolean checkB = false;
+        }
+
+        if (checkA && checkB){
+            return true;
+        } else {
+        	return false;
+        }
+    }
+
+    public boolean isHigher(Card c){
+        if (c.getSuit() > suit){
+            boolean checkA = true;
+        } else {
+        	boolean checkA = false;
+        }
+
+        if (c.getNumber() > number){
+             boolean checkB = true;
+        } else {
+        	boolean checkB = false;
+        }
+
+        if (checkA && checkB){
+            return true;
+        } else {
+        	return false;
+        }
+    }
 
 }
