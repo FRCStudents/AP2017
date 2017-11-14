@@ -46,6 +46,27 @@ public class Card{
 		suit = new_suit;
 	}
 
+	public void printCard(){
+		System.out.println("\nCard: ");
+		System.out.println("Number: " + number);
+		System.out.println("Suit: " + suit);
+		System.out.println("Color: " + color);
+		System.out.println("Side: " + side);
+		System.out.println("isJoker: " + joker);
+	}
 
+	public char displaySuit(String c) {
+              switch (c) {
+                  case "Spades":
+                      return ((char)'\u2660');
+                  case "Diamonds":
+                      return ((char)'\u2666');
+                  case "Clubs":
+                      return ((char)'\u2663');
+                  case "Hearts":
+                      return ((char)'\u2764');
+              }
+              return ' ';
+      }
 
 }

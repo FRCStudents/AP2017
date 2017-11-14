@@ -1,19 +1,25 @@
 public class CardDriver{
 	public static void main(String[] argv){
 
-	Card c = new Card();
+	Card a = new Card();
 
-	c.setNumber(5);
-	c.setColor("Black");
-	c.setSide(true);
-	c.setJoker(false);
-	c.setSuit("Spades");
+	a.setNumber(5);
+	a.setColor("Black");
+	a.setSide(true);
+	a.setJoker(false);
+	a.setSuit("Spades");
 
-	System.out.println("Number: " + c.getNumber());
-	System.out.println("Color: " + c.getColor());
-	System.out.println("Side: " + c.getSide());
-	System.out.println("isJoker: " + c.getJoker());
-	System.out.println("Suit: " + c.getSuit());
+	a.printCard();
+
+	Card b = new Card();
+
+	b.setNumber(4);
+	b.setColor("Red");
+	b.setSide(true);
+	b.setJoker(false);
+	b.setSuit("Hearts");
+
+	b.printCard();
 
 	}
 }
