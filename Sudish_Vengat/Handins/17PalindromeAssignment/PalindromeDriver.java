@@ -4,6 +4,5 @@ public class PalindromeDriver{
 	
 		Palindrome p = new Palindrome();
 		p.getTheInput();
-		System.out.println("Success!");
    }
 }

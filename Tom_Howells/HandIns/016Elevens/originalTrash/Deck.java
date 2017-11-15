@@ -30,7 +30,7 @@ class Deck {
         for(int i = 0; i < deck.length; i++) {
             // get random index past current index
             int randomVal = i + rand.nextInt(deck.length - i);
-            // set shuffled array idx to randomly selected Card from deck
+            // swaps randomly selected card with card at index i
             Card swap = deck[randomVal];
             deck[randomVal] = deck[i];
             deck[i] = swap;

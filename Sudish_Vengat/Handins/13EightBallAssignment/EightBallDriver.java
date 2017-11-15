@@ -10,9 +10,10 @@ public class EightBallDriver {
 		EightBall e = new EightBall();
 
 		for(String b = e.continue_on; b.equals("Yes"); b = e.continue_on) {
-			e.getResponse();
 			e.askQuestion();
+			e.getResponseOne();
 			e.yesOrNoQuestion(e.anotherQuestion());
+			e.getResponseTwo();
 		}
 	}	
 }

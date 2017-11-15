@@ -1,46 +1,75 @@
-import java.util.*;
-
 class Card {
-    private String value = "";
-    private String suit;
-    private boolean isFaceUp;
+    // attributes
+    private String suit; // "Hearts", "Spades", etc.
+    private String name; // "2", "King", "Ace", "10"
+    private int value; // 2, -1, 1, 10 (respectively)
 
-    public Card(String v, String s, boolean f) {
-        value = v;
+    // constructor
+    public Card(String s, String n, int v) {
         suit = s;
-        isFaceUp = f;
+        name = n;
+        value = v;
     }
-
     public Card() {
-        value = "2";
         suit = "Hearts";
-        isFaceUp = true;
+        name = "5";
+        value = 5;
     }
 
-    public void flip() {
-        isFaceUp = !isFaceUp;
+    // getters and setters
+    public void setSuit(String s) {
+        suit = s;
     }
-
-    public String toString() {
-        if(isFaceUp){
-            return value + suit;
-        } else {
-            return "Facedown";
-        }
+    public String getSuit() {
+        return suit;
     }
-
-    // used to get the actual value of the card (like if its a 2 or 5)
-    // returns -1 if it's a king, queen, or jack
-    // aces are 1 in elevens
+    public void setName(String n) {
+        name = n;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setValue(int v) {
+        value = v;
+    }
     public int getValue() {
-        try {
-            return Integer.parseInt(value);
-        } catch (Exception e){
-            if(value.equals("Ace")){
-                return 1;
-            } else {
-                return -1;
+        return value;
+    }
+
+    // displaySuit()
+    public char displaySuit() {
+        switch (suit) {
+            case "Spades": return (char)'\u2660';
+            case "Diamonds": return (char)'\u2666';
+            case "Clubs": return (char)'\u2663';
+            case "Hearts": return (char)'\u2764';
+        }
+        return 'N';
+    }
+
+    // isEqual()
+    public boolean isEqual(Card c) {
+        return ((c.getSuit().equals(suit)) && (c.getName().equals(name)) && (c.getValue() == value));
+    }
+
+    // printCard()
+    public void printCard() {
+        System.out.println(name + displaySuit());
+    }
+
+    // isHigher() will return true if the passed card is lower than this instantiation
+    public boolean isHigher(Card c) {
+        if (c.getValue() < value) {
+            if ((int)c.displaySuit() < (int)this.displaySuit()) {
+                return true;
             }
         }
+        return false;
+
+    }
+
+    // toString()
+    public String toString() {
+        return name + " of " + suit;
     }
 }
