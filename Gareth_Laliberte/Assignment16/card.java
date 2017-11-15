@@ -13,7 +13,7 @@ public class Card{
         public int getNumber(){
             return Number;
         }
-        
+                
         public String getRank(){
             return Rank;
         }
