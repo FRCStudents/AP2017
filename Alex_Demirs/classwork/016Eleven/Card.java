@@ -5,43 +5,58 @@ private	String Suit;
 private	int Rank;
 
 public Card(){
-	int Number = 2;
-	String Suit = "none";
-	int Rank = 1;
+	Number = 2;
+	Suit = "Spades";
+	Rank = 1;
 }
 
 //setters and getters
 public int getNumber(){
 	return Number;
 }
-public void setNumber(int Number){
+public void setNumber(int currentNumber){
 	Number = currentNumber;
 }
 public String getSuit(){
 	return Suit;
 }
-public void setSuit(String Suit){
+public void setSuit(String currentSuit){
 	Suit = currentSuit;
 }
 
 public int getRank(){
 	return Rank;
 }
-public void setRank(int Rank){
+public void setRank(int currentRank){
 	Rank = currentRank;
 }
 
 
 
-public void displaySuit(int Suit){
-	return currentSuit;
-}
+public char displaySuit(String c) {
+              switch (c) {
+                  case "Spades":
+                      return ((char)'S');
+                  case "Diamonds":
+                      return ((char)'D');
+                  case "Clubs":
+                      return ((char)'C');
+                  case "Hearts":
+                      return ((char)'H');
+              }
+              return ' ';
+      }
 
-public boolean isEqual(int Number){
+public boolean isEqual(Card c){
+	if ((c.getNumber &&  c.getSuit))
 	return getNumber() == Number;
 }
+
 public void printCard(){
-	return Card;
+	System.out.println("Suit" + " " + displaySuit(Suit) + " " + Suit);
+	System.out.println("Rank" + " " + Rank);
+	System.out.println("Number" + " " + Number);
+
 }
 public boolean ishigher(int Rank){
 	return getRank() > Rank;
