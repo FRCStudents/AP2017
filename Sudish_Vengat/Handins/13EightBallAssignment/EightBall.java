@@ -17,7 +17,7 @@ public class EightBall {
     	"Yes, Definitely",
     	"You May Rely On It"};
 
-    private int random_response = (int)(1 + Math.random() * 10); 
+    private Random random = new Random();
     private String question; 
     public String continue_on = "Yes";
 
@@ -29,7 +29,7 @@ public class EightBall {
 
 	    public void getResponseOne(){
 	    	for(int i=0; i<responses.length; i++);
-	    	System.out.println(responses[(random_response)]);
+	    	System.out.println(responses[random.nextInt(responses.length - 1)]);
 	    }
 
 	    public String anotherQuestion() {
@@ -51,8 +51,9 @@ public class EightBall {
 			yesOrNoQuestion(anotherQuestion());
 			}
 		}
-	    public void getResponseTwo(){
-		   	for(int i=0; i<responses.length; i++);
-	    	System.out.println(responses[(random_response)]);
+
+	   public void getResponseTwo(){
+	    	for(int i=0; i<responses.length; i++);
+	    	System.out.println(responses[random.nextInt(responses.length - 1)]);
 	    }
 }
