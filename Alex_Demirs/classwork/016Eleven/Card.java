@@ -48,8 +48,14 @@ public char displaySuit(String c) {
       }
 
 public boolean isEqual(Card c){
-	if ((c.getNumber &&  c.getSuit))
-	return getNumber() == Number;
+	boolean a;
+	boolean b;
+	if ((c.setNumber() == Number))
+		return  a = true;
+	if 
+
+	}
+	return false;
 }
 
 public void printCard(){
