@@ -11,7 +11,7 @@ public class Lion extends Feline {
       }
 
     public String toString(){
-      return super.toString() + super.getColor() + ": LION in the " + super.getHabitat() +
+      return super.toString() + "is a " + super.getColor() + " LION in the " + super.getHabitat() +
           "\nProtected: " + this.protectedString;
       }
 }

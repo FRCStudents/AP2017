@@ -1,0 +1,7 @@
+
+This is a lesson on composite objects:
+
+School -> 
+	ClassRoom ->
+		Student
+

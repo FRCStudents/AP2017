@@ -21,7 +21,7 @@ public class Feline {
   }
 
   public String toString(){
-    return "This Feline is: ";
+    return "This Feline ";
   }
 
   protected int getWeight(){

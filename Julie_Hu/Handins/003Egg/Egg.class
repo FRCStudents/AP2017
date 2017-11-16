@@ -1,0 +1,20 @@
+class Egg {
+	boolean Fertilized;
+	String color;
+
+boolean getFertilized(){
+	return Fertilized;
+}
+
+void setFertilized(String new_Fertilized){
+	Fertilized= new_Fertilized;
+}
+
+String getcolor(){
+	return Fertilized;
+}
+
+void setcolor(String new_color){
+	color= new_color;
+}
+
