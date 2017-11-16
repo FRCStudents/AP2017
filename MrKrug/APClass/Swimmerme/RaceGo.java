@@ -7,10 +7,13 @@ import java.util.*;
 
 class RaceGo {
   public static void main(String[] argv){
+
     Race r = new Race();
+       r.dropinSwimmerCount();
     for(int i = 0; i < r.getSwimmerCount(); i++){
       r.acceptSwimmer(i);
     }
+    
 
     Scanner s = new Scanner(System.in);
 
@@ -18,6 +21,7 @@ class RaceGo {
       System.out.println(r.getSwimmer(i).getName() + " in lane: ");
       int lane = s.nextInt();
       r.placeSwimmerInLane(i, lane);
+
     }
 
 
