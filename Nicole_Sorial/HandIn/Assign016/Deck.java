@@ -87,6 +87,8 @@ class Deck {
 		chosen_value_ranks = value_ranks;
 	}
 
+	// excellent!
+	
 	public void createDeck(String[] suits, String[] values, String[] suit_ranks, String[] value_ranks) {
 		setChosen(suits, values);
 		setRanks(suit_ranks, value_ranks);
@@ -158,6 +160,7 @@ class Deck {
 	public boolean isHigher(Card first_card, Card second_card) {
 		return compareValue(first_card, second_card);
 	}
+
 
 	public void shuffleDeck(Card[] d) { // should use deck2 so that original deck isn't shuffled
 		List<Card> list = Arrays.asList(d);

@@ -1,14 +1,9 @@
-public class CokeMachineDriver {
+public class CokeMachineDriver{
 
-	public static void main (String [] args){
+	public static void main (String[] argv){
 
 		CokeMachine c = new CokeMachine();
-
-		c.Sprite();
-		c.Fanta();
-		c.Pepsi();
-
-
-		System.out.println("Purchase Completed");
-	}
+		
+		c.buySoda();
+ 	}
 }

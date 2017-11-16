@@ -6,13 +6,13 @@ public static void main (String[] argv){
 	//System.out.println(a.isEqual(b));
   System.out.println("Information for Card 'A'");
   a.displaySuit(a);
-  a.isEqual(a);
+//  a.isEqual(a);
   a.printCard();
   a.toString();
  
   System.out.println("Information for Card 'B'");
   b.displaySuit(b);
-  b.isEqual(b);
+  b.isEqual(a);
   b.printCard();
   b.toString();
   

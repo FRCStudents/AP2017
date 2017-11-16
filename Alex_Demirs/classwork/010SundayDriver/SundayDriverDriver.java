@@ -6,7 +6,7 @@ class SundayDriverDriver {
             s.moveCarRight();
             s.moveCarLeft();
             s.eraseScreen();
-                 System.out.println("You Ran Out of Gas! Repeat to Refill.");
+            System.out.println("You Ran Out of Gas! Repeat to Refill.");
         }
 
     }

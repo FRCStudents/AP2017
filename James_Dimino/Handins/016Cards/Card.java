@@ -81,6 +81,13 @@ public class Card{
               return ' ';
       }
 
+	//
+	// nice
+	// remember - compare Strings with the isEqual method on Strings
+	// 		not == 
+	//		c.getSuit().isEqual(suit)...
+	//	
+
     public boolean isEqual(Card c){
         if (c.getSuit() == suit){
             boolean checkA = true;
@@ -94,7 +101,9 @@ public class Card{
         	boolean checkB = false;
         }
 
-        if (checkA && checkB){
+	// this could have been:
+	// return checkA && checkB; 
+       if (checkA && checkB){
             return true;
         } else {
         	return false;
@@ -102,6 +111,10 @@ public class Card{
     }
 
     public boolean isHigher(Card c){
+	//
+	// if suit is a String, what does it mean if one
+	// is greater than the other?
+	//
         if (c.getSuit() > suit){
             boolean checkA = true;
         } else {
@@ -114,6 +127,10 @@ public class Card{
         	boolean checkB = false;
         }
 
+	// do both number and suit have to be higher?
+	// which is higher, the 10 of hearts or the 10 of spades?
+	// which is higher, the 2 of hearts or the 10 of clubs?
+	//
         if (checkA && checkB){
             return true;
         } else {
