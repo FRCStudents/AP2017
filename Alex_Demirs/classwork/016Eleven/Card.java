@@ -48,7 +48,6 @@ public char displaySuit(String c) {
       }
 
 public boolean isEqual(Card c){
-	if ((c.getNumber &&  c.getSuit))
 	return getNumber() == Number;
 }
 
