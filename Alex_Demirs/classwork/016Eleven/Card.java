@@ -3,6 +3,7 @@ public class Card{
 private	int Number;
 private	String Suit;
 private	int Rank;
+private Boolean Value;
 
 public Card(){
 	Number = 2;
@@ -31,7 +32,13 @@ public void setRank(int currentRank){
 	Rank = currentRank;
 }
 
+public boolean getValue(){
+	return Value;
+}
 
+public void setValue(boolean currentValue){
+	Value = currentValue;
+}
 
 public char displaySuit(String c) {
               switch (c) {
@@ -47,16 +54,11 @@ public char displaySuit(String c) {
               return ' ';
       }
 
-public boolean isEqual(Card c){
-	boolean a;
-	boolean b;
-	if ((c.setNumber() == Number))
-		return  a = true;
-	if 
 
-	}
-	return false;
-}
+public boolean isEqual(Card c) {
+        return ((c.getSuit().equals(Suit)) && (c.getNumber().equals(Number)) && (c.getValue() == Value));
+        System.out.Println(Value);
+    }
 
 public void printCard(){
 	System.out.println("Suit" + " " + displaySuit(Suit) + " " + Suit);
