@@ -1,3 +1,6 @@
+//very nice!
+//very nice!
+//
 class card{
 int number;
 String suit;
@@ -59,10 +62,19 @@ public char displaySuit(card c) {
               return ' ';
       }
 
+// the way i was thinking about this, is that
+// the rank would number from 1 - 52... but that
+// doesn't necessarily mean no two cards are 
+// equal... 
+// in spades, for example, a 10 of Hearts = 10 of Clubs... 
+//  
 boolean isEqual(card c){
   return c.getRank().equals(getRank()) && c.getSuit().equals(getSuit()) && c.getNumber() == getNumber();
 }
 
+//
+// excellent
+//
 void printCard(){
   String p;
   int w = getNumber();

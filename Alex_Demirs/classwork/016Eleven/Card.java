@@ -55,10 +55,19 @@ public char displaySuit(String c) {
       }
 
 
-public boolean isEqual(Card c) {
-        return ((c.getSuit().equals(Suit)) && (c.getNumber().equals(Number)) && (c.getValue() == Value));
-        System.out.Println(Value);
-    }
+	public boolean isEqual(Card c){
+		if (c.getSuit() == Suit){
+			boolean a = true;
+		}boolean a = false;
+		
+		if (c.getNumber() == Number){
+			 boolean b = true;
+		}boolean b = false;
+
+		if (a && b){
+			return true;
+		}return false;
+	}
 
 public void printCard(){
 	System.out.println("Suit" + " " + displaySuit(Suit) + " " + Suit);

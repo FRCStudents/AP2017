@@ -1,3 +1,10 @@
+//
+// Nicole - this is brilliant... really!
+// 
+// I never imagined a high school kid arranging a test harness
+// like this - you're ready for the big times...
+// awesome!
+//
 class TestDeck { // Tests both Card and Deck objects
 	public static void main(String[] argv) {
 
