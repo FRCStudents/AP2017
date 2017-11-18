@@ -4,12 +4,17 @@ private	int Number;
 private	String Suit;
 private	int Rank;
 private Boolean Value;
-
-public Card(){
-	Number = 2;
-	Suit = "Spades";
-	Rank = 1;
-}
+//constructor (modified)
+public Card(String s, int n, int r) {
+        Suit = s;
+        Number = n;
+        Rank = r;
+    }
+    public Card() {
+        Suit = "Hearts";
+        Number = 5;
+        Rank = 5;
+    }
 
 //setters and getters
 public int getNumber(){
