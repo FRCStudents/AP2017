@@ -75,9 +75,11 @@ public void printCard(){
 	System.out.println("Number" + " " + Number);
 
 }
-public boolean ishigher(int Rank){
-	return getRank() > Rank;
-}
+	public boolean isHigher(Card c){
+		if (c.getRank()==Rank){
+			return true;
+		}return false;
+	}
 
 public String toString(){
 	return "Card" + " " + "Suit:" + " " + Suit + " " + "Number:" + " " + Number + " " + "Rank:" + " " + Rank;
