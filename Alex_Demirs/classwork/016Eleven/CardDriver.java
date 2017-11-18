@@ -1,8 +1,7 @@
 class CardDriver {
     public static void main(String[] args){
 
-Card a = new Card();
-
+		Card a = new Card();
 		a.setRank(1);
 		a.setSuit("Spades");
 		a.setNumber(12);

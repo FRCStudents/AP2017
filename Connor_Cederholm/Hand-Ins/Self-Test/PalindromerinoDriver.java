@@ -3,6 +3,6 @@ class PalindromerinoDriver{
 		Palindromerino p = new Palindromerino ();
 
 		p.setString("raccar");
-		p.palindromer();
+		System.out.print(p.palindromer());
 	}
 }

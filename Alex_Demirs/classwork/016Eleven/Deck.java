@@ -68,3 +68,5 @@ public class Deck {
 		deck[0].printCard();
 	}
  }
+ //used http://java2novice.com/java-collections-and-util/arraylist/swap/ to help me figure out how to random
+ //
