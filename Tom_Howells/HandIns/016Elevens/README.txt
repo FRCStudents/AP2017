@@ -1,1 +1,1 @@
-NOTE: the files inside the two folders are not for the class assignments. They are my original interpretation of what to do.
+NOTE: The classes Card, Deck, and Playarea are pretty much complete, but Elevens is far from it.
