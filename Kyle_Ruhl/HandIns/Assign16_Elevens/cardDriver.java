@@ -1,21 +1,11 @@
-class cardDriver{
-public static void main (String[] argv){
+public class CardDriver{
+	public static void main(String[] args) {
 
-	card a = new card();
-	card b = new card();
-	//System.out.println(a.isEqual(b));
-  System.out.println("Information for Card 'A'");
-  a.displaySuit(a);
-//  a.isEqual(a);
-  a.printCard();
-  a.toString();
- 
-  System.out.println("Information for Card 'B'");
-  b.displaySuit(b);
-  b.isEqual(a);
-  b.printCard();
-  b.toString();
-  
-  
+		Card c = new Card();
+		Card a = new Card();
+		System.out.println("Card is: ");
+		c.printCard();
+		a.printCard();
+		
  }
 }
