@@ -115,12 +115,6 @@ public class Card{
 	// if suit is a String, what does it mean if one
 	// is greater than the other?
 	//
-        if (c.getSuit() > suit){
-            boolean checkA = true;
-        } else {
-        	boolean checkA = false;
-        }
-
         if (c.getNumber() > number){
              boolean checkB = true;
         } else {
