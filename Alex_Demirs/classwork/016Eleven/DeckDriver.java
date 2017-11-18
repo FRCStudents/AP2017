@@ -1,10 +1,11 @@
-class DeckDriver {
-    public static void main(String[] args){
+class DeckDriver{
+	public static void main (String [] argv){
+		Deck a = new Deck();
 
-    Deck a = new Deck();
-    Deck b = new Deck();
-
-  	a.getNextCard();
-
-   }
-  }
+		a.createDeck();
+		a.displayDeck();
+		a.shuffleDeck();
+		a.displayDeck();
+		a.dealCard();
+	}
+}

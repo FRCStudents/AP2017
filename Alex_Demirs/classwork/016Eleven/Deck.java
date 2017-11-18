@@ -1,72 +1,72 @@
+import java.util.Random;
 import java.util.*;
 
-class Deck {
-    
-    final String[] suitArr = {"Spades", "Diamonds", "Clubs", "Hearts"};
-    final int[] numArr = {2, 3, 4, 5, 6, 7, 8, 9, 10};
-    final int[] rankArr = {2, 3, 4, 5, 6, 7, 8, 9, 10, -1, -1, -1, 1};
-    private Card[] deck = new Card[suitArr.length * rankArr.length];
-    public int nextCard; 
-   
-    public Deck(boolean shuffled) {
-        for (int i = 0; i < suitArr.length; i++) {
-            for (int j = 0; j < rankArr.length; j++) {
-                deck[(i * rankArr.length) + j] = new Card(suitArr[i], numArr[j], rankArr[j]);
-            }
-        }
-        nextCard = 0;
 
-        if (shuffled) {
-           
-            shuffle();
-            shuffle();
-            shuffle();
-        }
-    }
+public class Deck {
+	private Card[] deck;
+	private ArrayList<Card> deckk = new ArrayList <Card>();
+	private Random rand = new Random();
 
+	public Deck(){
+		deck = new Card[52];
+	}
 
-    public void shuffle() {
-        Random rand = new Random();
-        for(int i = 0; i < deck.length; i++) {
-            
+	public Card[] getDeck(){
+		return deck;
+	}
+	
+	public void createDeck(){
+		for (int i = 0; i < deck.length; i ++){
+			deck [i] = new Card();
+			if (i <= 12){
+				deck[i].setSuit("Spades");
+				deck[i].setNumber(i + 1);
+			}
+			if (12 < i && i <= 25){
+				deck[i].setSuit("Clubs");
+				deck[i].setNumber(i - 13);
+			}
+			if (25 < i && i <= 38){
+				deck[i].setSuit("Diamonds");
+				deck[i].setNumber(i - 26);  
+			}
+			if (38 < i && i <= 52){
+				deck[i].setSuit("Hearts");
+				deck[i].setNumber(i - 38);
+			}
+		}
+	}
+
+	public void displayDeck(){
+		for (int i = 0; i < deck.length; i ++){
+			System.out.print("Card " + (i+1) + ":\n" );
+			deck[i].printCard();
+		} 
+	}
+
+	public void shuffleDeck(){
+		 for(int i = 0; i < deck.length; i++) {
             int randomVal = i + rand.nextInt(deck.length - i);
-            Card swap = deck[randomVal];
+         
+           Card swap = deck[randomVal];
             deck[randomVal] = deck[i];
             deck[i] = swap;
-        }
-    }
+		}
+	}
 
-    
-    public Card getNextCard() {
-        if (nextCard > 51) {
-            return new Card("Something", 2, 0);
-        } else {
-            nextCard++;
-            return deck[nextCard - 1];
-        }
-    }
-    	    
-    public int spaces;
-    private Card[] theArray;
+	public boolean sameOrder(Deck d){
+		for (int i = 0; i < deck.length; i ++){
+			if (deck[i] == d.deck[i]){
+				return true;
+			}
+			return false;
+		}
+		return false;
+	}
 
-    
-
-    
-    public void replace(int idx, Card newCard) {
-        theArray[idx - 1] = newCard;
-    }
-
-   
-    public void display() {
-        for (int i = 1; i <= theArray.length; i++) {
-            System.out.println(i + ": " + theArray[i - 1]);
-        }
-    }
-
-    
-    public Card getCard(int idx) {
-        return theArray[idx - 1];
-    }
-
-    
-}
+	public void dealCard(){
+		deck[0].printCard();
+	}
+ }
+ //used http://java2novice.com/java-collections-and-util/arraylist/swap/ to help me figure out how to random
+ //
