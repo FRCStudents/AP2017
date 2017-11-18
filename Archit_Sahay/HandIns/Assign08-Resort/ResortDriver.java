@@ -3,7 +3,7 @@ public class ResortDriver{
 
     Resort r = new Resort();
     r.temp = 81;
-    System.out.println(r.returnActivity ());
+    System.out.println(r.activity());
 
     }
 }
