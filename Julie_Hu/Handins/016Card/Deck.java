@@ -1,13 +1,16 @@
-public class Deck{
-	final int[] Number = {"2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"};
-	final String[] Suit = {"Spades","Hearts","Clubs","Diamonds"};
-	
-	public Card[] deck = new Card[Suit.length * Number.length];
+import java.util.*;
 
-	 public Deck(boolean shuffled) {
-        for (int i = 0; i < suitArr.length; i++) {
-            for (int j = 0; j < valueArr.length; j++) {
-                deck[(i * valueArr.length) + j] = new Card(suitArr[i], nameArr[j], valueArr[j], false);
+class Deck {
+    final String[] SuitArr = {"Spades", "Diamonds", "Clubs", "Hearts"};
+    final String[] nameArr = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
+    final int[] NumberArr = {2, 3, 4, 5, 6, 7, 8, 9, 10, -1, -1, -1, 1};
+    private Card[] Deck = new Card[SuitArr.length * NumberArr.length];
+    public int nextCard; 
+
+    public Deck(boolean shuffled) {
+        for (int i = 0; i < SuitArr.length; i++) {
+            for (int j = 0; j < NumberArr.length; j++) {
+                Deck[(i * NumberArr.length) + j] = new Card(SuitArr[i], nameArr[j], NumberArr[j], false);
             }
         }
         nextCard = 0;
@@ -21,18 +24,20 @@ public class Deck{
 
     public void shuffle() {
         Random rand = new Random();
-        for(int i = 0; i < deck.length; i++) {
-            int randomVal = i + rand.nextInt(deck.length - i);
-            Card swap = deck[randomVal];
-            deck[randomVal] = deck[i];
-            deck[i] = swap;
+        for(int i = 0; i < Deck.length; i++) {
+            int randomVal = i + rand.nextInt(Deck.length - i);
+            Card swap = Deck[randomVal];
+            Deck[randomVal] = Deck[i];
+            Deck[i] = swap;
         }
     }
+
     public Card getNextCard() {
         if (nextCard > 51) {
             return new Card("Blank", "Blank", 0, true);
         } else {
             nextCard++;
-            return deck[nextCard - 1];
+            return Deck[nextCard - 1];
         }
     }
+}
