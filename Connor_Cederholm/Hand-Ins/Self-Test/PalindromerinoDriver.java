@@ -4,7 +4,7 @@ class PalindromerinoDriver{
 
 		p.setString("raxccar");
 		System.out.println(p.palindromer());
-		p.setString("Racecar");
+		p.setString("RacecaR");
 		System.out.println(p.palindromer());
 		p.setString("This is wrongT");
 		System.out.print(p.palindromer());

@@ -121,6 +121,10 @@ class Deck{
     }
   }
 
+  public int deckSize(){
+    return nextCard;
+  }
+
   public Card dealCard(){
       if(nextCard < 0) return null;
       nextCard--;

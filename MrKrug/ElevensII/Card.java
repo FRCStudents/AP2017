@@ -42,7 +42,9 @@ class Card {
       }
 
       public boolean isEqual(Card c){
-        return c.getRank().equals(getRank()) && c.getSuit().equals(getSuit()) && c.getValue() == getValue();
+        return c.getRank().equals(getRank()) &&
+                c.getSuit().equals(getSuit()) &&
+                c.getValue() == getValue();
       }
 
       public void printCard(){
@@ -54,9 +56,9 @@ class Card {
           if(v == 1) s = "A";
 
           if((v > 1) && (v < 11))
-              System.out.println("" + v + displaySuit(this));
+              System.out.print("\t" + v + displaySuit(this));
           else
-              System.out.println("" + s + displaySuit(this));
+              System.out.print("\t" + s + displaySuit(this));
       }
 
       public String toString(){
