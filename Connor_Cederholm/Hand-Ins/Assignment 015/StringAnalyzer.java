@@ -6,8 +6,8 @@ class StringAnalyzer{
 		System.out.println(b);
 	}
 
-	public void printString(){
-		b.replaceAll('//s';'');
+	public void despaceString(){
+		b.replaceAll(" ";"");
 		System.out.println(b);
 	}
 	public void reveal(){

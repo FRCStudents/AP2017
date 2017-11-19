@@ -9,7 +9,7 @@ class Loopy{
 	}
 	public int saucy(){
 		for (saucyboi = 0; saucyboi < 4; saucyboi+= 2){
-			System.out.println(5- saucyboi);
+			 return 5- saucyboi;
 		}
 		return 0;
 	}

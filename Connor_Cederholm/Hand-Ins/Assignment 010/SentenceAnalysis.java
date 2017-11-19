@@ -1,21 +1,39 @@
-import java.util.scanner
+import java.util.*;
 public class SentenceAnalysis{
-	Scanner S = new Scanner (System.in);
-	String sentence = S.nextline();
+	String sentence;
 
-	String readSentence(){
+	public void readSentence(){
 		System.out.println(sentence);
 	}
 
-	String getSentence(){
-		return sentence;
+	public void setSentence(){
+	System.out.println("Enter your sentence:");	
+	Scanner s = new Scanner (System.in);
+	sentence = s.next();
+
 	}
 
-	void setSentence(String ss){
-	sentence = ss;
-	}
+	public int findWordCount(){
+        int wordCount = 0;
+        for (int i = 0; i < sentence.length(); i++){
+            if ((sentence.charAt(i) != ' ') || (sentence.charAt(i) != '.')){
+                wordCount++;
+            }
+        }
+        return wordCount;
+    }
 
-	int calcAverageWordLength(){
-		
-	}
+    public int sumWordLengths(){
+        int wordLength = 0;
+        for (int i = 0; i < sentence.length(); i++){
+            if ((sentence.charAt(i) != ' ') || (sentence.charAt(i) != '.')){
+                wordLength++;
+            }
+        }
+        return wordLength;
+    }
+
+    public double calculateAverageWordLength(){
+        return ((double)sumWordLengths()/findWordCount());
+    }
 }

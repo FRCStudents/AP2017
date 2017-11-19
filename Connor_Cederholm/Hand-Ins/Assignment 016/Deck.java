@@ -24,15 +24,15 @@ public class Deck {
 			}
 			if (12 < i && i <= 25){
 				deck[i].setSuit("Clubs");
-				deck[i].setNumber(i - 13);
+				deck[i].setNumber(i - 12);
 			}
 			if (25 < i && i <= 38){
 				deck[i].setSuit("Diamonds");
-				deck[i].setNumber(i - 26);  
+				deck[i].setNumber(i - 25);  
 			}
 			if (38 < i && i <= 52){
 				deck[i].setSuit("Hearts");
-				deck[i].setNumber(i - 38);
+				deck[i].setNumber(i - 37);
 			}
 		}
 	}
