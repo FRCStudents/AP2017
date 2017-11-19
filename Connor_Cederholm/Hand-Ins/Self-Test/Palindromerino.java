@@ -1,5 +1,6 @@
 class Palindromerino{
 String string;
+int m;
 public String setString(String s){
 	string = s;
 	return string;
@@ -7,9 +8,12 @@ public String setString(String s){
 public String palindromer(){
 for (int i = 0; i < string.length(); i++){
 	if (string.charAt(i) == string.charAt(string.length() - i-1)){
-	return "Palindrome, BABY";
+	m ++;
 	}
-	return "No palindrome here";
+	if (m == string.length()){
+	return "Palindrome";
+     }
+     return "Not a palindrome";
 	}
 	return " ";
 }
