@@ -4,12 +4,17 @@ private	int Number;
 private	String Suit;
 private	int Rank;
 private Boolean Value;
-
-public Card(){
-	Number = 2;
-	Suit = "Spades";
-	Rank = 1;
-}
+//constructor (modified)
+public Card(String s, int n, int r) {
+        Suit = s;
+        Number = n;
+        Rank = r;
+    }
+    public Card() {
+        Suit = "Hearts";
+        Number = 5;
+        Rank = 5;
+    }
 
 //setters and getters
 public int getNumber(){
@@ -55,10 +60,19 @@ public char displaySuit(String c) {
       }
 
 
-public boolean isEqual(Card c) {
-        return ((c.getSuit().equals(Suit)) && (c.getNumber().equals(Number)) && (c.getValue() == Value));
-        System.out.Println(Value);
-    }
+	public boolean isEqual(Card c){
+		if (c.getSuit() == Suit){
+			boolean a = true;
+		}boolean a = false;
+		
+		if (c.getNumber() == Number){
+			 boolean b = true;
+		}boolean b = false;
+
+		if (a && b){
+			return true;
+		}return false;
+	}
 
 public void printCard(){
 	System.out.println("Suit" + " " + displaySuit(Suit) + " " + Suit);
@@ -66,9 +80,11 @@ public void printCard(){
 	System.out.println("Number" + " " + Number);
 
 }
-public boolean ishigher(int Rank){
-	return getRank() > Rank;
-}
+	public boolean isHigher(Card c){
+		if (c.getRank()==Rank){
+			return true;
+		}return false;
+	}
 
 public String toString(){
 	return "Card" + " " + "Suit:" + " " + Suit + " " + "Number:" + " " + Number + " " + "Rank:" + " " + Rank;

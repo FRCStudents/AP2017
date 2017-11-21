@@ -1,0 +1,1 @@
+placeholder. Elevens Assignment Folder in this folder contains work from the original elevens submission, however it contains errors that were patched with my better revised copy of Card.java in the Handins folder. 

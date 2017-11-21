@@ -8,8 +8,8 @@ public class Plane{
 		return wingspan;
 	}	
 
-	public void int setWingspan(int wingspan){
-		wingspan = newwingspan;
+	public void setWingspan(int newWingspan){
+		wingspan = newWingspan;
 	}
 
 
@@ -17,16 +17,16 @@ public class Plane{
 		return weight;
 	}
 
-	public void int setWeight(int newWeight){
-		weight = newWeigjht;
+	public void setWeight(int newWeight){
+		weight = newWeight;
 	} 
 
 	public String getBrand(){
-		return Brand;
+		return brand;
 	}
 
 	public void setBrand(String newBrand){
-		wrand = newBrand;
+		brand = newBrand;
 	}
 
 	public String toString(){
