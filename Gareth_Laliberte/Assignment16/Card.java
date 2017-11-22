@@ -13,7 +13,7 @@ public class Card{
         public int getNumber(){
             return Number;
         }
-        
+                
         public String getRank(){
             return Rank;
         }
@@ -72,11 +72,12 @@ public class Card{
             System.out.println("Side: " + Face);
         }
       
-	//  
+	//
 	// how do you want to compare Strings?
 	//
         boolean isHigher(Card c){
 		return true;
         }
             
+           
 }
