@@ -1,4 +1,4 @@
-class SA {
+class SentenceObj {
     // vars
     private String s;
 
