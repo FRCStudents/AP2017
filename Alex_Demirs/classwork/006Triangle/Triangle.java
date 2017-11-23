@@ -1,31 +1,38 @@
+import java.util.Scanner;
 public class Triangle{
-	
-	int Side1;
-	int Side2;
-	int Side3;
+
+public void isItATriangle(){
+ 
+  Scanner firstSide = new Scanner(System.in);
+  System.out.println("Side 1 length");
+  int side1 = firstSide.nextInt();
+
+  Scanner secondSide = new Scanner(System.in);
+  System.out.println("Side 2 length");
+  int side2 = secondSide.nextInt();
+
+  Scanner thirdSide = new Scanner(System.in);
+  System.out.println("Side 3 length");
+  int side3 = thirdSide.nextInt();
 
 
-	int getCurrentSide1(){
-		return Side1;
-	}
+    if(side1 + side2 > side3){
+      if(side1 + side3 > side2){
+        if(side2 + side3 > side1){
+          System.out.println("Yes");
 
-	void setCurrentSide1(int newSide1){
-	 Side1 = newSide1;
-	}
+          if ((side1 == side2) && (side2 == side3) && (side3 == side1)){
+            System.out.println("Tis' Equalateral");
+          }
 
-	int getCurrentSide2(){
-		return Side2;
-	}
+          if (((side1 == side2) && (side2 != side3)) || ((side2 == side3) && (side3 != side1)) || ((side3 == side1) && (side3 != side2))){
+            System.out.println("Tis' Isosoleces!");
+          }
 
-	void setCurrentSide2(int newSide2){
-	 Side2 = newSide2;
-	}
+          System.out.println("");
+    }
 
-	int getCurrentSide3(){
-		return Side3;
-	}
-
-	void setCurrentSide3(int newSide3){
-	 Side3 = newSide3;
-	}
+    }
+}
+}
 }

@@ -18,8 +18,7 @@ class VendingDriver2{
     }
 
 	while (repeat == 0){
-		VendingMachine2 v = new VendingMachine2(coke, pepsi, sprite);
-		System.out.print(v);
+		System.out.println("Coke\nPepsi\nSprite");
 
 			Scanner scanner1 = new Scanner(System.in);
 			System.out.println("\n What Would You Like To Buy? \n\n 1 -> Coke = $1.00 \n 2 -> Pepsi = $1.05 \n 3 -> Sprite = $.95");

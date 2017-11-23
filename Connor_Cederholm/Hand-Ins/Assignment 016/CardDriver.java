@@ -8,13 +8,13 @@ public class CardDriver{
 		a.printCard();
 
 		Card b = new Card ();
-		b. setRank(2);
-		b.setSuit("Diamonds");
-		b.setNumber(8);
+		b. setRank(1);
+		b.setSuit("Spades");
+		b.setNumber(12);
 		b.printCard();
 
 		a.isEqual(b);
-		if (a.isEqual){ System.out.println("Yeeahhh its Equal");}
+		if (a.isEqual(b)){ System.out.println("Yeeahhh its Equal");}
 			else {System.out.println("Not quite Equal");}
 	}
 }

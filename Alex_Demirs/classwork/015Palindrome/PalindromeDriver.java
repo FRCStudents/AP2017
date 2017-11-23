@@ -1,8 +1,8 @@
-class palindromeDriver{
+class PalindromeDriver{
 
 	public static void main (String[] argv){
 	
-		palindrome m = new palindrome();
+		Palindrome m = new Palindrome();
 	
 			m.getPalindrome();
  }

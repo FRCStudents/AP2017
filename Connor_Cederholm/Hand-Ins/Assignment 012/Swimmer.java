@@ -25,7 +25,7 @@ class Swimmer{
 		gender = gooby;
 	}
 	int getHeight(){
-		return name;
+		return height;
 	}
 	void setHeight(int heep){
 		height = heep;
@@ -39,7 +39,7 @@ class Swimmer{
 	int getWeight(){
 		return weight;
 	}
-	int setWeight(int woup){
+	void setWeight(int woup){
 		weight = woup;
 	}
 	String getCountry(){
@@ -69,6 +69,24 @@ class Swimmer{
 	int getGoldTime(){
 		return goldTime;
 	}
-	void 
+	void setGoldTime(int gooltool){
+		goldTime = gooltool;
+	}
+
+	int getSilverTime(){
+		return silverTime;
+	}
+
+	void setSilverTime(int simtim){
+		silverTime = simtim;
+	}
+
+	int getBronzeTime(){
+		return bronzeTime;
+	}
+
+	void setBronzeTime(int m){
+		bronzeTime = m;
+	}
 
 }

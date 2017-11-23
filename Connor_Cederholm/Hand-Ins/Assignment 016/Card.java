@@ -23,14 +23,18 @@ public class Card{
 	}
 
 	public boolean isEqual(Card c){
-		if (c.getSuit() == suit){
-			boolean a = true;
-		}boolean a = false;
-		
+		boolean a;
+		boolean b;
+		if (c.getSuit().equals(suit)){
+			 a = true;
+		}else {
+			a = false;
+		}
 		if (c.getNumber() == number){
-			 boolean b = true;
-		}boolean b = false;
-
+			  b = true;
+		}else{
+			 b = false;
+			}
 		if (a && b){
 			return true;
 		}return false;
@@ -51,13 +55,13 @@ public class Card{
 	private char displaySuit(String c) {
               switch (c) {
                   case "Spades":
-                      return ((char)'\uS');
+                      return ('S');
                   case "Diamonds":
-                      return ((char)'\uD');
+                      return ('D');
                   case "Clubs":
-                      return ((char)'\uC');
+                      return ('C');
                   case "Hearts":
-                      return ((char)'\uH');
+                      return ('H');
               }
               return ' ';
       }
