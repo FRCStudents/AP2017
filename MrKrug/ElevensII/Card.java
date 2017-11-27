@@ -11,6 +11,10 @@ class Card {
         value = v;
       }
 
+      public Card(Card c){
+	this(c.getRank(), c.getSuit(), c.getValue());
+      }
+
       public Card(){
         this("Ace", "Spades", 1);
       }

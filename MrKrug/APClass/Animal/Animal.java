@@ -70,5 +70,12 @@ public class Animal {
   protected void setSpeed(int s){
     speed = s;
   }   
- 
+
+  public void speak(){
+	System.out.println("This animal says... " + getSpeech());
+  } 
+
+  public void speak(String s){
+	System.out.println("This animal says... " + s);
+  }
 }

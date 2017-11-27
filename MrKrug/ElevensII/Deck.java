@@ -7,7 +7,7 @@ class Deck{
   private int [] valueArray = new int[13];
   private Card[] cards = new Card[52];
 
-  //this pointer allows us to deal the next card
+  //this pointer allows us to  the next card
   private int nextCard = 0;
 
   //these pointers allow us to manipulate arrays without
@@ -128,6 +128,8 @@ class Deck{
   public Card dealCard(){
       if(nextCard < 0) return null;
       nextCard--;
+      System.out.println("\nDealing: "); 
+      cards[nextCard + 1].printCard();
       return cards[nextCard+1];
   }
 
@@ -169,11 +171,11 @@ class Deck{
   // get the first card
   // get a random card
   // swap the cards...
-  private Card getFirst(){
+  public Card getFirst(){
     return cards[0];
   }
 
-  private Card getCard(int position){
+  public Card getCard(int position){
     return cards[position];
   }
 
