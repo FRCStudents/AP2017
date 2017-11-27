@@ -1,14 +1,12 @@
 class SundayDriverDriver {
 
 	public static void main(String[] argv) {
-		
-		SundayDriver x = new SundayDriver();
-
-		for (int i = 3; i < 8; i++) {
-			
-			x.Forwards();
-			x.Backwards();
-				System.out.println("It's now Monday :(");
-		}		
-	}
+		SundayDriver s = new SundayDriver();
+		for (int i = 1; i < 100; i+=5) {
+			s.moveForward();
+			s.moveBackward();
+		}
+	
+	System.out.println("It's now Monday :(");
+}
 }

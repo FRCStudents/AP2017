@@ -11,16 +11,16 @@ public class Resort{
 
 		String activity(){
 			if (temp >= 80){
-				return "Swimming";
+				return "Go Swimming";
 			}
 			else if ((60 <= temp) && (temp < 80)){
-				return "Tennis";
+				return "Do Tennis";
 			}
 			else if ((40 <= temp) && (temp < 60)){
-				return "Golf";
+				return "Go Golf";
 			}
 			else if (temp < 40){
-				return "Skiing";
+				return "Go Skiing";
 			}
 			return "";
 		}
