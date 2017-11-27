@@ -12,6 +12,7 @@ public class TicTacToe{
 									{"-","-","-"},
 									{"-","-","-"}};
 
+	private int drawCheckCounter = 0;
 	private int winner = 0;
 	private int p1Choice = 0;
 	private int p2Choice = 0;
@@ -68,6 +69,11 @@ public class TicTacToe{
 				if (!(checkWinnerO())){
 
 				spaceMaker();
+
+				if (drawCheckCounter == -1){
+						drawCheckCounter++;
+						System.out.println("It's A Tie\n");
+					}
 
 				scorePrinter();
 				showDemoBoard();
@@ -166,6 +172,14 @@ public class TicTacToe{
 						p1Score++;
 						break;
 					}
+
+				drawCheckCounter++;
+
+			if (drawCheckCounter == 9){
+				resetGame();
+				drawCheckCounter--;
+				continue;
+				}
 
 				while (p2Choice == 0){
 				if (!(checkWinnerX())){
@@ -269,6 +283,9 @@ public class TicTacToe{
 						p2Score++;
 						break;
 					}
+
+				drawCheckCounter++;
+
 			}
 		}
 
@@ -355,6 +372,8 @@ public class TicTacToe{
 			gameBoard[0][2] = "-";
 			gameBoard[1][2] = "-";
 			gameBoard[2][2] = "-";
+
+			drawCheckCounter = 0;
 
 		}
 
