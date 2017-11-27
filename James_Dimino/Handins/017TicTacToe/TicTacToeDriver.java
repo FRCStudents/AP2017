@@ -10,13 +10,13 @@ public class TicTacToeDriver{
 
 		while (repeatGame == 0){
 			
-			t.scorePrinter();
 			t.playGame();
+			t.scorePrinter();
 
 			while (determine == 0){
 			
 			Scanner scanner009 = new Scanner(System.in);
-			System.out.println("Would You Like To Play Again?\n\n1 -> Play Again\n2 -> End Program");
+			System.out.println("\nWould You Like To Play Again?\n\n1 -> Play Again\n2 -> End Program");
 			int determineRepeat = scanner009.nextInt();
 
 				if (determineRepeat == 1){
@@ -25,6 +25,9 @@ public class TicTacToeDriver{
 				}
 
 				if (determineRepeat == 2){
+					t.spaceMaker();
+					System.out.println("\nFinal Score:");
+					t.scorePrinter();
 					System.out.println("Ending Program...");
 					repeatGame++;
 					determine++;
