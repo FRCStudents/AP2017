@@ -1,4 +1,4 @@
-class SentenceDriver {
+class SADriver {
     public static void main(String[] args){
         SentenceObj a = new SentenceObj(args[0]);
 

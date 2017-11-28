@@ -1,33 +1,35 @@
-public class SundayDriver {
+class SundayDriver{
 
-	private	String forward_car = " _________\n"
-	 						   + " ||_| |_|  )___\n"
-							   + " |  _      _   )]\n"
-							   + " `-(O)----(O)--\n";
+	// Attributes
+	private String car1 = "  ______";
+	private String car2 = "  |_||__|_";
+	private String car3 = "	 |_______]";
+	private String car4 = "	  @=@ @=@";
 	private String space = " ";
 
-	private String backward_car = "      ________\n"
-	 							 + "  ___( |_| |_||\n"
-	 							 + " (  _      _  |\n"
-								 + " '-(O)----(O)-'\n";
+	private String bcar1 = "      ______";
+	private String bcar2 = " 	_|__||_|";
+	private String bcar3 = "   [_______|";
+	private String bcar4 = "	@=@	@=@";
 	private String bspace = space;
 
 
-	void Car() {
-		String forward_car = " _________\n"
-	 					   + " ||_| |_|  )___\n"
-						   + " |  _      _   )]\n"
-						   + " `-(O)----(O)--\n";
-	 	String space = " ";
-	 	String backward_car = "      ________\n"
-	 						 + "  ___( |_| |_||\n"
-	 						 + " (  _      _  |\n"
-							 + " '-(O)----(O)-'\n";
-	 	String bspace = space;
-	 	
+	// Constructor
+	SundayDriver() {
+		String car1 = "  ______";
+		String car2 = "  |_||__|_";
+		String car3 = "	 |_______]";
+		String car4 = "	  @=@ @=@";
+		String space = " ";
+		String bcar1 = "      ______";
+		String bcar2 = " 	_|__||_|";
+		String bcar3 = "   [_______|";
+		String bcar4 = "	@=@	@=@";
+		String bspace = space;
 	}
 
-	public void newScreen() {
+	
+	public void eraseScreen() {
 		for(int i = 0; i < 80; i++) {
 			System.out.println();
 		}
@@ -35,33 +37,41 @@ public class SundayDriver {
 
 	public void waitUp() {
 		try {
-			Thread.sleep(100);
+			Thread.sleep(50);
 		}
 		catch(InterruptedException ex) {
 			Thread.currentThread().interrupt();
 		}
 	}
 
-	public void goingForward() {
-		for (int i = 0; i < 80; i++) {
+	public void moveForward() {
+		for (int i = 0; i < 99; i+=3) {
 			space = space + " ";
-			newScreen();
-			System.out.println(space + forward_car);
+			eraseScreen();
+			System.out.println(space + car1);
+			System.out.println(space + car2);
+			System.out.println(space + car3);
+			System.out.println(space + car4);
 			waitUp();
 		}
 		bspace = space;
 		space = " ";
 	}
 
-	public void moveBackwards() {
-		for (int i = 0; i < 80; i++) {
+	public void moveBackward() {
+		for (int i = 0; i < 99; i+=3) {
 			if (bspace.length() >= 2) {
 				bspace = bspace.substring(1);
 			}
-			newScreen();
-			System.out.println(bspace + backward_car);
+			eraseScreen();
+			System.out.println(bspace + bcar1);
+			System.out.println(bspace + bcar2);
+			System.out.println(bspace + bcar3);
+			System.out.println(bspace + bcar4);
 			waitUp();
 		}
 		bspace = space;
 	}
+
+
 }

@@ -50,8 +50,12 @@ public class Mathematica {
 	}
 
 		
-	boolean isDividedBy(int p, int q ){
-		return p % q == 0;	
-	}
-
+	 public boolean isDivisibleBy(int p, int q){
+        if (p % q == 0) {
+            return true;
+            }
+            else{ return false;
+            }
+      } 
+   
 }
