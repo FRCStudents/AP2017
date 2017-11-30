@@ -24,7 +24,7 @@ class SundayCar{
 		}
 	}
 
-	public void moveCarRight() {
+	public void goRight() {
 		for (int i = 0; i < 475; i+=3) {
 			space = space + " ";
 			eraseAll();
@@ -35,7 +35,7 @@ class SundayCar{
 		space = " ";
 	}
 
-	public void moveCarLeft() {
+	public void goLeft() {
 		for (int i = 0; i < 475; i+=3) {
 			if (spacea.length() >= 2) {
 				spacea = spacea.substring(1);
