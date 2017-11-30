@@ -1,86 +1,88 @@
 public class Deck{
         Card[] Deck = new Card[52];
         
-        [0].setValue = "Spades";
-        [0].setSuit =
+        [0].setValue = 
+        [0].setSuit = "Spades";
         
-        [1].setValue = "Spades";
-        [1].setSuit =
+        [1].setValue =
+        [1].setSuit = "Spades";
         
-        [2].setValue = "Spades";
-        [2].setSuit =
+        [2].setValue =
+        [2].setSuit = "Spades";
         
-        [3].setValue = "Spades";
-        [3].setSuit =
+        [3].setValue =
+        [3].setSuit = "Spades";
         
-        [].setValue = "Spades";
-        [].setSuit =
+        [4].setValue =
+        [4].setSuit = "Spades";
         
-        [].setValue = "Spades";
-        [].setSuit =
+        [5].setValue =
+        [5].setSuit = "Spades";
         
-        [].setValue = "Spades";
-        [].setSuit =
+        [6].setValue =
+        [6].setSuit = "Spades";
         
-        [].setValue = "Spades";
-        [].setSuit =
+        [7].setValue =
+        [7].setSuit = "Spades";
         
-        [].setValue = "Spades";
-        [].setSuit =
+        [8].setValue =
+        [8].setSuit = "Spades";
         
-        [].setValue = "Spades";
-        [].setSuit =
+        [9].setValue =
+        [9].setSuit = "Spades";
         
-        [].setValue = "Spades";
-        [].setSuit =
+        [10].setValue =
+        [10].setSuit = "Spades";
         
-        [].setValue = "Spades";
-        [].setSuit =
+        [11].setValue =
+        [11].setSuit = "Spades";
         
-        [].setValue = "Spades";
-        [].setSuit =
+        [12].setValue =
+        [12].setSuit = "Spades";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [13].setValue =
+        [13].setSuit = "Spades";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [14].setValue =
+        [14].setSuit = "Clubs";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [15].setValue =
+        [15].setSuit = "Clubs";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [16].setValue =
+        [16].setSuit = "Clubs";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [17].setValue =
+        [17].setSuit = "Clubs";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [18].setValue =
+        [18].setSuit = "Clubs";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [19].setValue =
+        [19].setSuit = "Clubs";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [20].setValue =
+        [20].setSuit = "Clubs";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [21].setValue =
+        [21].setSuit = "Clubs";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [22].setValue =
+        [22].setSuit = "Clubs";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [23].setValue =
+        [23].setSuit = "Clubs";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [24].setValue =
+        [24].setSuit = "Clubs";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [25].setValue =
+        [25].setSuit = "Clubs";
         
-        [].setValue = "Clubs";
-        [].setSuit =
+        [26].setValue =
+        [26].setSuit = "Clubs";
+       
+        
         
         [].setValue =
         [].setSuit =
