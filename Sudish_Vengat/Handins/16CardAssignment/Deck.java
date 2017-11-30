@@ -34,13 +34,13 @@ public class Deck {
     public Card[] getOrder(){
     	return order;
     }
-
     public void setOrder(Card[] newOrder){
     	order = newOrder;
     }
 
     public Card[] getDeck(){
     	return deck;
+
     }
 
     public void setDeck(Card[] newDeck){

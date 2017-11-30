@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Machine{
-//Array of Strings that hold the types of drinks the machine holds
+        int numDrinks = drinks.length();
         String[] drinks = new String[]{"Coca Cola", "Sprite", "Pepsi", "Water", "Fanta"};
 //Some important random object
         public String input;
@@ -21,19 +21,17 @@ public class Machine{
         }
 //Checks if the user input is the same as the drinks in the machine. If not, it'll return the user back to the beginning to try again
         public void checkInput(){
-                //System.out.println("BUG");
-                //BUG: For loop only goes to one value and then stops it and returns the "false" statement because input is not equal to drinks[1]
-                for(int x = 0; x < drinks.length; x++){
-                        if(input.equals(drinks[x])){
-                                System.out.println("Ok, here you go.");
-
-                        }
-                        System.out.println("Oops! Wrong input for a drink. Please try again.");
-                        
+                switch (numDrinks){
+                        case 1: drinks = "Coca Cola";
+                        case 2: drinks = "Sprite";
+                        case 3: drinks = "Pepsi";
+                        case 4: drinks = "Water";
+                        case 5: drinks = "Fanta";
                 }
+                System.out.println(drinks);
 
         }
-//}
+
         public static void main(String[] args){
                 Machine m = new Machine();
                 m.userInput();
