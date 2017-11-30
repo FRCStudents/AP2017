@@ -21,12 +21,11 @@ class EightBall {
 	public String continue = "Yes";
 
 	public void question() {
-		System.out.println("Welcome to the Magic Eight Ball!");
-		System.out.println("Please ask a yes or no question.");
+		System.out.println("Ask me a question. I can only give yes / no answers. >>>");
 		question = s.nextLine();
 	}
 
-	public String formAnswer() {
+	public String answer() {
 		if ((int)(1 + Math.random() * 10) == 1) {
 			System.out.println(a);
 			return a;
@@ -72,23 +71,23 @@ class EightBall {
 		}
 	}
 
-	public String additionalQuestions() {
-		System.out.println("Do you have any more questions? Yes/No");
+	public String moreQuestions() {
+		System.out.println("Would you like to ask another question? 'Yes' or 'No'.");
 		continue = s.nextLine();
 		return continue;
 	}
 
-	public void yesOrNo(String additionalQuestions) {
-		if (additionalQuestions.equals("Yes")) {
+	public void yn(String moreQuestions) {
+		if (moreQuestions.equals("Yes")) {
 			continue = "Yes";
 		}
-		if (additionalQuestions.equals("No")) {
+		if (moreQuestions.equals("No")) {
 			continue = "No";
-			System.out.println("Thank you, goodbye!");
+			System.out.println("See ya!");
 		}
-		if (!additionalQuestions.equals("Yes") && !additionalQuestions.equals("No")) {
-			System.out.println("Please respond with Yes or No");
-			yesOrNo(additionalQuestions());
+		if (!moreQuestions.equals("Yes") && !moreQuestions.equals("No")) {
+			System.out.println("'Yes' or 'No' only.");
+			yn(moreQuestions());
 		}
 	}
 
