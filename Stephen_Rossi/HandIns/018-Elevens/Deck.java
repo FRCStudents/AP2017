@@ -22,7 +22,7 @@ public class Deck{
             int randIdx = rand.nextInt(deck.length);
             Card hold = deck[randIdx];
             deck[randIdx] = deck[c];
-            deck[c] = deck[randIdx];
+            deck[c] = hold;
         }
     }
     public int getLength(){

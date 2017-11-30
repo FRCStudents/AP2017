@@ -133,10 +133,10 @@ public class Board{
     if(gameStarted){
       switch(c){
         case(1):
-          combineCards();
+          combineCards(); // done
           break;
         case(2):
-          combineFaceCards();
+          combineFaceCards(); // done
           break;
         case(3):
           restartGame(); // done
@@ -154,7 +154,7 @@ public class Board{
           startGame(); // done
           break;
         case(2):
-          quitGame(); // done
+          quitGame(); // done  -   add help/rules
           break;
         default:
           parseError(); // done
@@ -163,32 +163,101 @@ public class Board{
     }
   }
 
+  public void dontCombine(int c){
+    if(c == 1){
+      System.out.println("Sorry those cards dont add up to 11, would you like to try again?");
+    } else {
+      System.out.println("Sorry, to combine face cards you need one jack, one queen, and one king");
+    }
+    System.out.print(" \n\nWould you like to try that again? If not you will be return to the board   (y/n):\n      >>");
+    Scanner sc = new Scanner(System.in);
+    String v = sc.next();
+    if(v.charAt(0) == 'y'){
+      if(c == 1){
+        combineCards();
+      } else {
+        combineFaceCards();
+      }
+    } else if(v.charAt(0) == 'n') {
+      displayBoard();
+    }
+  }
+
   public void combineCards(){
-    System.out.println("\n\n\n What positions are the cards you would like to combine in? (ex. 1,4): \n            >>");
-    Scanner s = new Scanner(System.in);
-    combineCardsCheck(playScapes[s.nextInt() - 1], playScapes[s.nextInt() - 1]);
+    System.out.print("\n\n\n What positions are the two cards you would like to combine?: \n         Card 1's Position   >>");
+    Scanner sc1 = new Scanner(System.in);
+    int first = sc1.nextInt();
+    System.out.print("         Card 2's Position   >>");
+    Scanner sc2 = new Scanner(System.in);
+    int second = sc2.nextInt();
+    combineCardsCheck(first, second);
   }
 
   public void combineCardsCheck(int f, int s){
-    if(f + s != 11){
+    if(playSpaces[f-1].getValue() + playSpaces[s-1].getValue() != 11){
       dontCombine(1);
     } else {
-      
+      System.out.println("\n The " + this.playSpaces[f-1].getFaceValue() + this.playSpaces[f-1].getSuit() +" and the " + playSpaces[s-1].getFaceValue() + playSpaces[s-1].getSuit());
+      System.out.print(" have been combined and moved to the discard pile, keep at it!");
+      playSpaces[f - 1] = placeHolder;
+      playSpaces[s - 1] = placeHolder;
+      updatePlaySpaces();
+      displayBoard();
     }
   }
 
   public void combineFaceCards(){
-
+    System.out.print("\n\n\n What positions are the three face cards you would like to combine?: \n         Card 1's Position   >>");
+    Scanner sc1 = new Scanner(System.in);
+    int first = sc1.nextInt();
+    System.out.print("         Card 2's Position   >>");
+    Scanner sc2 = new Scanner(System.in);
+    int second = sc2.nextInt();
+    System.out.print("         Card 3's Position   >>");
+    Scanner sc3 = new Scanner(System.in);
+    int third = sc3.nextInt();
+    combineFaceCardsCheck(first -1, second -1, third -1);
   }
+
+  public void combineFaceCardsCheck(int f, int s, int t){
+    int[] cards = {f,s,t};
+    boolean kingCheck = false;
+    boolean jackCheck = false;
+    boolean queenCheck = false;
+    for(int i = 0; i < 3; i++){
+      if(playSpaces[cards[i]].getFaceValue() == "King"){
+        kingCheck = true;
+      }
+      else if(playSpaces[cards[i]].getFaceValue() == "Queen"){
+        queenCheck = true;
+      }
+      else if(playSpaces[cards[i]].getFaceValue() == "Jack"){
+        jackCheck = true;
+      }
+    }
+    boolean check = kingCheck && jackCheck && queenCheck;
+    if(!check){
+      System.out.println(" not" + check);
+      dontCombine(0);
+    } else {
+      System.out.print("The selected King, Queen, and Jack have been combined and moved to the discard pile, keep at it!");
+      playSpaces[f-1] = placeHolder;
+      playSpaces[s-1] = placeHolder;
+      playSpaces[t-1] = placeHolder;
+      updatePlaySpaces();
+      displayBoard();
+    }
+  }
+
 
   public void restartGame(){
     playDeck.shuffleDeck();
+    this.gameStarted = false;
     this.deckPos = 0;
     for(int i = 0; i < this.playSpaces.length; i++){
       this.playSpaces[i] = placeHolder;
     }
     displayBoard();
-
   }
 
   public void quitGame(){

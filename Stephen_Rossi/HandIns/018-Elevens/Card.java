@@ -1,7 +1,7 @@
 public class Card {
-  private char suit;
+  public char suit;
   private int value;
-  private String faceValue;
+  public String faceValue;
   private boolean isFaceDown;
 
   public Card(String fV, String s) {
