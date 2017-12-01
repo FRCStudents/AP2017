@@ -85,7 +85,7 @@ public class Deck{
         
         
         [].setValue =
-        [].setSuit =
+        [].setSuit = "Hearts";
         
         [].setValue =
         [].setSuit =
