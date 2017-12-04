@@ -23,7 +23,7 @@ public class Capybara{
 		return speed;
 	}
 
-	public String getSound(){
+	public String getSpeech(){
 		return sound;
 	}
 
@@ -39,7 +39,7 @@ public class Capybara{
 		speed = n;
 	}
 
-	public void setSound(String n){
+	public void setSpeech(String n){
 		sound = n;
 	}
 
