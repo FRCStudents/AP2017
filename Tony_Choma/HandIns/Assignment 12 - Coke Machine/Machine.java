@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class Machine{
-        int numDrinks = drinks.length();
         String[] drinks = new String[]{"1.Coca Cola", "2.Sprite", "3.Pepsi", "4.Water", "5.Fanta"};
+        int numDrinks = drinks.length;
         int[] amounts = new int[]{3,5,2,1,0};
 //Some important random object
         public String input;
@@ -22,10 +22,12 @@ public class Machine{
         }
 //Checks if the user input is the same as the drinks in the machine. If not, it'll return the user back to the beginning to try again
         public void checkInput(){
-                if(amounts[input-1] == 0 ){
-                        System.out.println("Opps! There's no more!");
-                }else{
-                        System.out.println("Here you go!");
+                for(int x = 0; x < drinks.length-1;x++){
+                        if(amounts[x] == 0){
+                                System.out.println("Opps! There's no more!");
+                        }else{
+                                System.out.println("Here you go!");
+                        }
                 }
         }
         public static void main(String[] args){
