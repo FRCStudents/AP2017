@@ -1,26 +1,39 @@
+import java.util.*;
+
 class coffeeCup{
+	public static void main (String [] argv){
 
-	int [][] cups = new int [4][4]; //2D array
-
+	ArrayList <ArrayList <Integer>> cups = new ArrayList<ArrayList <Integer>>();
 	
-	public void setShop(int col, int row, int value){
-		cups [row][col] = value;
-	}
-
-	public void displayCups(){
-		System.out.println("_____________");
-		System.out.println("| " + cups [0][0] + " | " + cups [0][1] + " | " + cups [0][2] + " |" + cups [0][3]);
-		System.out.println("-------------");
-		System.out.println("| " + cups [1][0] + " | " + cups [1][1] + " | " + cups [1][2] + " |" + cups [1][3]);
-		System.out.println("-------------");
-		System.out.println("| " + cups [2][0] + " | " + cups [2][1] + " | " + cups [2][2] + " |" + cups [2][3]);
-		System.out.println("-------------");
-		System.out.println("| " + cups [3][0] + " | " + cups [3][1] + " | " + cups [3][2] + " |" + cups [3][3]);	
-		System.out.println("_____________");
-		}
-
-	/*public String[][] getCups(){
-		return;
-		}
-*/
+	//public coffeeCup(){
+		ArrayList <Integer> white = new ArrayList<Integer>();
+		ArrayList <Integer> black = new ArrayList<Integer>();
+		ArrayList <Integer> red = new ArrayList<Integer>();
+		ArrayList <Integer> blue = new ArrayList<Integer>();
+		
+		white.add(4);
+		white.add(3);
+		white.add(7);
+		white.add(5);
+		cups.add(white);
+		black.add(4);
+		black.add(6);
+		black.add(6);
+		black.add(5);
+		cups.add(black);
+		red.add(3);
+		red.add(3);
+		red.add(3);
+		red.add(5);
+		cups.add(red);
+		blue.add(6);
+		blue.add(6);
+		blue.add(5);
+		blue.add(5);
+		cups.add(blue);
+		System.out.println(cups);
+		//}
+	
+}
+	
 }
