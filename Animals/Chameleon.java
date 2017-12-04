@@ -25,4 +25,11 @@ public class Chameleon{
 	public void setColor(String newColor){
 		color = newColor;
 	}
+
+	public String getSound(){
+		return sound;
+	}
+	public void setSound(String newSound){
+		sound = newSound;
+	}
 }
