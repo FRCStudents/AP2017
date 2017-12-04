@@ -4,9 +4,8 @@ class SundayCar{
 	private String car = "ᕕ( ᐛ )ᕗ";
 	private String space = " ";
 
-	Car() {
+	SundayCar() {
 		String cara = "ᕕ( ᐛ )ᕗ";
-		String spacea = space;
 	}
 
 	public void eraseAll() {

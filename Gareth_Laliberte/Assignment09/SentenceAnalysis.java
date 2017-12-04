@@ -1,4 +1,4 @@
-class sentenceanalysis {
+class SentenceAnalysis {
 	
 	private int numWords = 0;
 	public String ogSentence;
