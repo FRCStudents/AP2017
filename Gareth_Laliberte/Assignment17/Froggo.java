@@ -24,39 +24,39 @@ class treeFrog {
     return "This animal is found in [" + getHabitat() + "] - and weighs: [" + getWeight() +" pounds! ]";
   }
 
-  protected int getWeight(){
+  int getWeight(){
     return weight;
   }
 
-  protected String getHabitat(){
+  String getHabitat(){
     return habitat;
   }
 
-  protected String getColor(){
+  String getColor(){
     return color;
   }
 
-  protected String getSpeech(){
+  String getSpeech(){
     return speech;
   }
 
-  protected int getSpeed(){
+  int getSpeed(){
     return speed;
   }
 
-  protected void setWeight(int w){
+  void setWeight(int w){
     weight = w;
   }
 
-  protected void setHabitat(String h){
+  void setHabitat(String h){
     habitat = h;
   }
 
-  protected void setColor(String c){
+  void setColor(String c){
     color = c;
   }
 
-  protected void setSpeech(String s){
+  void setSpeech(String s){
     speech = s;
  }
 
