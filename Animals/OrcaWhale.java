@@ -46,4 +46,8 @@ public class OrcaWhale {
 		unit = new_unit;
 	}
 
+	public String toString(){
+		return "\nOrcaWhale: " + "\nNumOfLegs: " + numOfLegs + "\nWeight: " + weight + "\nSpeed: " + speed + "\nSound: " + sound + "\n Unit: " + unit;
+	}
+
 }
