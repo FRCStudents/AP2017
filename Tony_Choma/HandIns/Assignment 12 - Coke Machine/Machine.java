@@ -2,7 +2,8 @@ import java.util.*;
 
 public class Machine{
         int numDrinks = drinks.length();
-        String[] drinks = new String[]{"Coca Cola", "Sprite", "Pepsi", "Water", "Fanta"};
+        String[] drinks = new String[]{"1.Coca Cola", "2.Sprite", "3.Pepsi", "4.Water", "5.Fanta"};
+        int[] amounts = new int[]{3,5,2,1,0};
 //Some important random object
         public String input;
 //returns the array of drinks for the user to see waht is in the machine
@@ -21,17 +22,12 @@ public class Machine{
         }
 //Checks if the user input is the same as the drinks in the machine. If not, it'll return the user back to the beginning to try again
         public void checkInput(){
-                switch (numDrinks){
-                        case 1: drinks = "Coca Cola";
-                        case 2: drinks = "Sprite";
-                        case 3: drinks = "Pepsi";
-                        case 4: drinks = "Water";
-                        case 5: drinks = "Fanta";
+                if(amounts[input-1] == 0 ){
+                        System.out.println("Opps! There's no more!");
+                }else{
+                        System.out.println("Here you go!");
                 }
-                System.out.println(drinks);
-
         }
-
         public static void main(String[] args){
                 Machine m = new Machine();
                 m.userInput();
