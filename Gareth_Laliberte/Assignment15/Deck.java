@@ -1,7 +1,7 @@
 public class Deck{
         Card[] Deck = new Card[52];
         
-        [0].setValue = 
+        Deck[0].setValue = 
         [0].setSuit = "Spades";
         
         [1].setValue =
