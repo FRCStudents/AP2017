@@ -5,6 +5,7 @@ public class Palindrome{
         String original;
         public void pconvert(String input){
                 String reverse = new StringBuffer(input).reverse().toString();
+                
                 if(reverse.equalsIgnoreCase(input)){
                         System.out.println("This phrase is a Palindrome");
                 }else{

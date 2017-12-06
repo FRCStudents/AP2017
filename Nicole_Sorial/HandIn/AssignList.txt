@@ -15,5 +15,7 @@ Assign012 - CokeMachine
 Assign013 - EightBall
 Assign014 - Day and SentenceEdit
 Assign015 - Palindrome
-Assign016 - Elevens (with Card and Deck Objects)
+Assign016 - Elevens
 Assign017 - TicTacToe
+Assign018 - CoffeeCupInventory
+Assign019 - Shapes
