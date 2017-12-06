@@ -1,4 +1,4 @@
-public class Kangaroo extends Animal{
+public class Kangaroo{
 	private int weight;
 	private double speed;
 	private String sound;
