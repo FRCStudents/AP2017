@@ -1,14 +1,11 @@
 public class Shape{
 
-protected int height = 0;
-protected int width = 0;
-protected int sides = 0;
 protected int sidea = 0;
 protected int sideb = 0;
 protected int sidec = 0;
 protected int sided = 0;
-protected int perimeter = 0;
-protected int area = 0;
+protected double perimeter = 0;
+protected double area = 0;
 protected String name = "Shape";
 
 protected void changeName(String newName){
@@ -20,21 +17,15 @@ protected final String getName(){
 	}
 
 public void getPerimeter(){
-	System.out.println("Yum " + favFood);
+	System.out.println(perimeter);
 }
 	
 public void getArea(){
-	System.out.println(this.name + " walks around");
+	System.out.println(area);
 }
 	
 public Shape(){
 		
 }
 	
-public Shape(String name, String favFood){		
-	this.changeName(name);
-	this.favFood = favFood;	
-	}
-
-
 }

@@ -1,6 +1,6 @@
-public class rectangle extends Shape{
+import java.lang.Math.*;
+public class triangle extends Shape{
 
-String name = "Rectangle";
 double sidea;
 double sideb;
 double sidec;
@@ -8,20 +8,15 @@ double sided;
 double area;
 double perimeter;
 
-public rectangle(int sidea, int sideb, int sidec, int sided){
-	sidea = 10;
-	sideb = 15;
-	sidec = 10;
-	sided = 15;
+public triangle(int sidea, int sideb, int sidec, int sided){
+	sidea = 15;
+	sideb = 20;
+	sidec = 30;
+	sided = 0;
 }
 
 public void displaySides(){
 	System.out.println("Side Lengths: " + sidea + "," + sideb + "," + sidec + "," + sided);
-}
-
-public void getArea(){
-	area = (sidea * sideb);
-	System.out.println(area);
 }
 
 public void getPerimeter(){
@@ -29,5 +24,11 @@ public void getPerimeter(){
 	System.out.println(perimeter);
 }
 
+public void getArea(double p, double r){
+	p = (perimeter/2);
+	r = ((p-sidea)*(p-sideb)*(p-sidec));
+	area = Math.sqrt(r);
+	System.out.println(area);
 }
 
+}

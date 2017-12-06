@@ -1,17 +1,18 @@
 public class square extends Shape{
 
-int sidea;
-int sideb;
-int sidec;
-int sided;
-int area;
-int perimeter;
+String name = "Square";
+double sidea;
+double sideb;
+double sidec;
+double sided;
+double area;
+double perimeter;
 
 public square(int sidea, int sideb, int sidec, int sided){
 	sidea = 10;
-	sideb = 15;
+	sideb = 10;
 	sidec = 10;
-	sided = 15;
+	sided = 10;
 }
 
 public void displaySides(){
