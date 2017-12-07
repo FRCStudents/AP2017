@@ -22,7 +22,7 @@ public class Machine{
         }
 //Checks if the user input is the same as the drinks in the machine. If not, it'll return the user back to the beginning to try again
         public void checkInput(){
-                for(int x = 0; x < drinks.length-1;x++){
+                for(int x = 0; x < drinks.length;x++){
                         if(amounts[x] == 0){
                                 System.out.println("Opps! There's no more!");
                         }else{
