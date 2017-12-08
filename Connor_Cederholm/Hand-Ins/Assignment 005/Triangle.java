@@ -1,40 +1,32 @@
-class Triangle{
-	int side1 = 5;
-	int side2 = 5;
-	int side3 = 5;
-	int perimeter = side1 + side2 + side3;
+class Triangle extends Shape{
 
+	String name = "Triangle";
+	int [] sides = new int[3];
+	int perimeter;
 
-	public int getside1(){
-		return side1;
-	}
-	public void setside1(int x){
-		side1 = x;
+	public void setTriSide(int spot, int val){
+		sides[spot -1] = val;
 	}
 
-	public int getside2(){
-		return side2;
-	}
-	public void setside2(int y){
-		side2 = y;
+	public String getName(){
+		return name;
 	}
 
-	public int getside3(){
-		return side3;
+	public void displayShape(){
+		System.out.println(getName());
 	}
-	public void setside3(int z){
-		side3 = z;
-	}
-	public int getperimeter(){
+
+	public int getTriPerimeter(){
+		
+		for(int i = 0; i < getNumSides(); i ++){
+			perimeter = perimeter + sides[i];
+		}
 		return perimeter;
-	}
-	public void setperimeter(int perry){
-	perimeter = perry;
 	}
 	
 
-	public int area(){
-		int area = (perimeter * (perimeter - side1) * (perimeter - side2) * (perimeter - side3))^1/2;
+	public double triArea(){
+		double area = (0.5* getWidth())*(getHeight());
 	return area;
 	}
 
