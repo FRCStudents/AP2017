@@ -17,6 +17,7 @@ class Triangle extends Shape{
 	}
 
 	public int getTriPerimeter(){
+		perimeter = 0;
 		
 		for(int i = 0; i < getNumSides(); i ++){
 			perimeter = perimeter + sides[i];
