@@ -5,7 +5,8 @@ public class GovermentDriver{
 		Democratic d = new Democratic();
 
 
-			d.identify();	
+			d.identifyType();	
+			d.identifyNumberOfType();
 		
 }
 }
