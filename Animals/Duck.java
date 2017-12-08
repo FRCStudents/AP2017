@@ -22,6 +22,7 @@ public class Duck{
   public int getNumberOfLegs(){
     return this.numberOfLegs;
   }
+
   public void setNumberOfLegs(int n){
     this.numberOfLegs = n;
   }
@@ -29,6 +30,7 @@ public class Duck{
   public int getWeight(){
     return this.weight;
   }
+
   public void setWeight(int w){
     this.weight = w;
   }
@@ -36,6 +38,7 @@ public class Duck{
   public int getSpeed(){
     return this.speed;
   }
+
   public void setSpeed(int s){
     this.speed = s;
   }
@@ -43,6 +46,7 @@ public class Duck{
   public String getSound(){
     return this.sound;
   }
+
   public void setSound(String s){
     this.sound = s;
   }
@@ -50,6 +54,7 @@ public class Duck{
   public String getUnits(){
     return this.units;
   }
+
   public void setUnits(String u){
     this.units = u;
   }
@@ -57,7 +62,12 @@ public class Duck{
   public String getName(){
     return this.name  ;
   }
+
   public void setName(String n){
     this.name =n;
+  }
+
+  public String toString(){
+    return "This Ducks name is " + name;
   }
 }
