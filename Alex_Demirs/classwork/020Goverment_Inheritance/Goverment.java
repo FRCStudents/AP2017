@@ -60,4 +60,17 @@ public class Goverment{
 		this.numberOfLeaders = numberOfLeaders;
 	}
 
+			protected void identifyType(){
+    				System.out.println(type + " is a goverment");
+
+	}
+
+			protected void identifyNumberOfType(){
+    				System.out.println("There are " + numberOfType + " of the is type of goverment in the world.");
+
+	}
+
+
+
+
 }
