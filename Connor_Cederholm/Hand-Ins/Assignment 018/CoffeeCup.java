@@ -38,7 +38,7 @@ public class CoffeeCup{
 			 	System.out.println("How many are there?");
 			 	menu.get(1).set(2,Integer.valueOf(s.nextInt()));	
 			 	}
-		if(s.next() == "Blue, 2.25"){//White, black, red, ble, 1.25, 2.25, 3.25, 4.99 
+		if(s.next() == "Blue, 2.25"){//White, black, red, blue, 1.25, 2.25, 3.25, 4.99 
 			 	System.out.println("How many are there?");
 			 	menu.get(1).set(3,Integer.valueOf(s.nextInt()));	
 			 	}
