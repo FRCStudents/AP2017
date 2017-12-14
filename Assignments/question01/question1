@@ -1,0 +1,73 @@
+
+class Yada {
+	String [] yada ;
+	int maxYada = 0;
+
+	public Yada(int maxYada){
+		yada = new String[maxYada];
+		this.maxYada = maxYada;
+		initYada();
+	}
+
+	public Yada(){
+		this(5);
+	}
+
+	private void initYada(){
+		for(int i=0; i<maxYada; i++){
+			if (i % 2 == 0){
+				yada[i] = "This";
+			} else {
+				yada[i] = "That";
+			}
+		}
+	}
+
+	public String getIth(int i){
+		return yada[i];
+	}
+
+	public void setIth(int i, String thing){
+		yada[i] = thing;
+	}
+
+ 	public void showYada(){
+		for(int i=0; i<maxYada; i++){
+			System.out.println("[" + i + "]" + yada[i]);
+		}
+	}
+
+}
+
+
+class SubYada extends Yada {
+	String subYadaName = "";
+	public SubYada(){
+		super(7);
+		subYadaName = getIth(3);
+	}
+
+	public void setIth(int i, String thing){
+		yada[i] = "SUBYADA: " + thing;
+	}
+}
+
+
+
+class StressTest{
+public static void main(String [] argv){
+	Yada y = new Yada(7);
+	SubYada sy = new SubYada();
+
+	y.setIth(4, "Happy");
+	sy.setIth(4, "Happy");
+	y.setIth(3, "Unhappy");
+
+	sy.setIth(3, "Unhappy");
+	y.showYada();
+
+	System.out.println("And now - the sub Yada");
+	sy.showYada();
+	}
+   }
+	
