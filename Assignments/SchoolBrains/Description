@@ -1,0 +1,59 @@
+FRCS needs a new School Brains...
+
+Human Interface:
+
+  Menu: Choices...
+    Sign on as Teacher
+    Sign on as Student
+    Sign on as Admin
+
+  Menu:
+    Create signins
+    Delete signins
+
+  Menu:
+    Teacher
+       Set up categories
+       Enter assignments
+       Enter kid's scores
+
+  User inputs numeric choices...
+
+  1) 5 ClassRooms
+      Attributes: Place
+                  Teacher
+                  ID Number
+
+        Methods:
+                  Add Student
+                  Add Assignment
+                  Add Grade
+                  Remove/Edit Assignment
+                  Remove/Edit Student
+                  Remove/Edit Grade
+                  Average Grades
+
+                  Add/Remove Category
+                  Attach assignment to category
+                  Weight category
+                  
+  2) Between 20 - 30 students in each ClassRoom
+      * Fewer than 50 grades in each ClassRoom
+
+  3) Each student gets a series of grades for each class
+      * Grades are categorized into some number < 10 of categories
+      * Categories are weighted
+      * Each grade can be assigned a number of possible points
+      * Each grade is then give a score / number of possible poi
+   4) Teacher or Admin:
+      * Can specify assignments (possible points)
+      * Can change student scores
+      * Can specify and weight categories
+
+   5) Admin
+      * Can add/delete students from ClassRoom
+      * Can add/delete ClassRooms
+      * Can assign ClassRoom to teacher
+      * Can create new users (Teachers/Admin/Students)
+
+   6) Student can see scores

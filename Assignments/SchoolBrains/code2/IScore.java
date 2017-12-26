@@ -7,4 +7,5 @@ public interface IScore {
         public int getAssignmentID();
         public int getPercentage(int points);
         public void showScore();
+	public Score enterScore(int student);
 }

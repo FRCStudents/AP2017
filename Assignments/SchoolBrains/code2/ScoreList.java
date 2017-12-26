@@ -36,6 +36,17 @@ public class ScoreList implements IScoreList{
 		scoreList.add(s);
 	}
 
+	public void removeScore(int assignmentID){
+	int pos = -1;
+		for(int i=0; i < scoreList.size(); i++){
+			if(scoreList.get(i).getAssignmentID() == assignmentID){
+				pos = i;
+				break;
+			}
+		}
+	scoreList.remove(pos);
+ 	}
+
 	public boolean isStudentScores(User u){
 		if(student.getFirstName().equals(u.getFirstName()) &&
 			student.getLastName().equals(u.getLastName())){
@@ -54,7 +65,7 @@ public class ScoreList implements IScoreList{
 	}
 
 	public void listScores(){
-		student.showUser(studentID);
+		//student.showUser(studentID);
 		for(int i=0; i < scoreList.size(); i++){
 			scoreList.get(i).showScore();
 		}

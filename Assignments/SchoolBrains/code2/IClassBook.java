@@ -18,5 +18,7 @@ public interface IClassBook {
         public User findStudent(int i);
         public void listStudentScores();
 	public void addStudentScore(User student, Score score);
-
+ 	public void listScoresForStudent(int s);
+	public void removeStudentScore(int student, int score);
+	public double getWeightedAverage(int studentID);
 }

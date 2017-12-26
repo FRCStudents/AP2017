@@ -1,4 +1,5 @@
 package skulbrains;
+import java.util.Scanner;
 
 public class Score implements IScore {
 	int score = 0;
@@ -37,7 +38,17 @@ public class Score implements IScore {
 		return (score/points) * 100;
 	}
 
+	public Score enterScore(int student){
+		studentID = student;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter assignment ID: ");
+		assignmentID = scanner.nextInt();
+		System.out.println("Enter the score: ");
+		score = scanner.nextInt();
+		return this;
+	}	
+
 	public void showScore(){
-		System.out.println("Assignment" + assignmentID + ": " + score);
+		System.out.println("Assignment: [" + assignmentID + "]: " + score);
 	}
 }

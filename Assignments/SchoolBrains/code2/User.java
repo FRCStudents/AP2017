@@ -1,4 +1,5 @@
 package skulbrains;
+import java.util.Scanner;
 
 public class User implements IUser {
 	private String firstName;
@@ -31,6 +32,17 @@ public class User implements IUser {
 
 	public int getUserType(){
 		return userType;
+	}
+
+	public User enterNewUser(int uType){
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Enter first name: ");
+		firstName = scanner.next();	
+		System.out.println("Enter last name: ");
+		lastName = scanner.next();
+		userType = uType;
+		return this;
 	}
 
 	public void showUser(int num){
