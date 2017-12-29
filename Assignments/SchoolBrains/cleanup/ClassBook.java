@@ -39,9 +39,14 @@ public class ClassBook implements IClassBook {
 			tallyList[catgry.getCategoryID()]+= score.getScore();
 			pointsList[catgry.getCategoryID()] += points;
 		}
+
 		for(int i=0; i < categories.size(); i++){
-			totalTally = tallyList[i]/pointsList[i];
-			totalTally *= categories.get(i).getWeight();
+			if(tallyList[i] == 0 && pointsList[i] == 0){
+				totalTally += 0;
+			} else {
+				totalTally = tallyList[i]/pointsList[i];
+				totalTally *= categories.get(i).getWeight();
+			}
 			total += totalTally;
 		}
 	return total;
@@ -80,6 +85,7 @@ public class ClassBook implements IClassBook {
 
 	public void removeStudent(int i){
 		studentList.deleteUser(i);
+		studentScoreLists.remove(i);
 	}
 
 	public void listStudents(){

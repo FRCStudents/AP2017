@@ -11,7 +11,7 @@ import skulbrains.DateString;
 
 import java.util.Scanner;
 
-class CommandCenter {
+public class CommandCenter implements ICommandCenter {
         ClassBook cb;
         Scanner scanner = new Scanner(System.in);
         DataBuild db;

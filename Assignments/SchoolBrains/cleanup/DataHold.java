@@ -12,9 +12,19 @@ import skulbrains.DateString;
 public class DataHold {
         ClassBook cb = new ClassBook();
         DataBuild db = new DataBuild();
+	String teacherName = "";
+
+        public DataHold(String teacher){
+		teacherName = teacher;
+		buildData();
+	}
 
 	public DataHold(){
 		buildData();
+	}
+
+	public String getTeacherName(){
+		return teacherName;
 	}
 
 	public DataBuild getDataBuild(){

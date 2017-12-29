@@ -2,19 +2,48 @@ package skulbrains;
 
 import skulbrains.CommandCenter;
 import java.util.Scanner;
+import java.util.*;
 
 import skulbrains.DataHold;
 
-public class Menu implements IMenu{
-	CommandCenter commandCenter;
+public class MenuMulti implements IMenuMulti{
+	ArrayList<CommandCenter> commandCenterList = new ArrayList<CommandCenter>();
+	ArrayList<DataHold> dataHoldList = new ArrayList<DataHold>();
 
-	public Menu(DataHold dh){
-		commandCenter = new CommandCenter(dh);
-		runApplication();
+	public MenuMulti(DataHold[] dhArr){
+		String[] teacherNames = new String[dhArr.length];
+
+		for(int i=0; i < dhArr.length; i++){
+			CommandCenter commandCenter = new CommandCenter(dhArr[i]);
+			dataHoldList.add(dhArr[i]);
+			commandCenterList.add(commandCenter);
+			teacherNames[i] = dhArr[i].getTeacherName();
+		}
+		runClassRoomMenu(commandCenterList.size(), teacherNames);
 	}
 
-	public Menu(){
+	public MenuMulti(DataHold dh){
+		CommandCenter commandCenter = new CommandCenter(dh);
+		dataHoldList.add(dh);
+		commandCenterList.add(commandCenter);
+		runApplication(0);
+	}
+
+	public MenuMulti(){
 		this(new DataHold());
+	}
+	
+	private void runClassRoomMenu(int numClasses, String[] teacherName){
+		System.out.println(stars);
+		System.out.println(ioStars);
+		for(int i=0; i < numClasses; i++){
+			System.out.println("** Class Number: " + i + "[" + teacherName[i] + "]");
+		}
+		System.out.println(ioStars);
+		System.out.println(stars);
+		System.out.println("Choose a class >>>> ");
+		int classRoom = getInput();
+		runApplication(classRoom);
 	}
 	
 	public void menu001(){
@@ -62,35 +91,35 @@ public class Menu implements IMenu{
 		return responseINT;
                 }
 
-	public void runApplication(){
+	public void runApplication(int classRoom){
 		int r = 0;
 		while(r < 9){
 			menu001();
 			r = getInput();
-			if(commandCenter.doCommand(r)){
-				runStudentApp();
+			if(commandCenterList.get(classRoom).doCommand(r)){
+				runStudentApp(classRoom);
 			}		
 		}
 	}
 
-	public void runStudentApp(){
+	public void runStudentApp(int classRoom){
 		int r = 0;
 		while(r < 9){
 			menu002();
 			r = getInput();
-			if(commandCenter.doStudentCommand(r)){
-				runScoresApp();
+			if(commandCenterList.get(classRoom).doStudentCommand(r)){
+				runScoresApp(classRoom);
 			}
 		}
 	}
 
-        public void runScoresApp(){
+        public void runScoresApp(int classRoom){
                 int r = 0;
                 if(r < 9){
                         menu003();
                         r = getInput();
-                        if(commandCenter.doScoresCommand(r)){
-				runScoresApp();
+                        if(commandCenterList.get(classRoom).doScoresCommand(r)){
+				runScoresApp(classRoom);
 			}
                 }
         }

@@ -46,7 +46,7 @@ public class User implements IUser {
 	}
 
 	public void showUser(int num){
-		System.out.println("[" + num + "] Name: " + firstName + " " + lastName);
+		System.out.println("[" + num + "]\tName:\t" + firstName + " " + lastName);
 		//System.out.println("*********************");
 		//System.out.println("** Number: " + num);
 		//System.out.println("** First: " + firstName);

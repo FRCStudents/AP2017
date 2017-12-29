@@ -1,7 +1,9 @@
+package skulbrains;
+
 import skulbrains.Menu;
 import skulbrains.DataHold;
 
-class AppRun {
+public class AppRun {
         DataHold dataHold = new DataHold();
 
 	public AppRun(){
