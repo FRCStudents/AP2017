@@ -5,5 +5,5 @@ public interface IUser {
         public String getFirstName();
         public String getLastName();
         public int getUserType();
-	public User enterNewUser(int uType); 
+	public IUser enterNewUser(int uType); 
 }

@@ -1,0 +1,30 @@
+
+IUser - fine
+
+User - implements IUser - fine
+
+User1 - implements IUser... but has no showUser function at all
+   * compile error:
+	User1.java:4: error: User1 is not abstract and does not override abstract method showUser(int) in IUser
+
+User2 - implements IUser... but showUser does not take an int parameter
+   * compile error:
+	User2.java:4: error: User2 is not abstract and does not override abstract method showUser(int) in IUser
+
+User3 - overloads showUser
+	Works, compiles and runs
+
+User4 - exact compy of User3 (except User3 -> User4)
+	Compile and run AppRun4 and User4
+	Then, after compile, I will change User4.showUser
+	Recompile, and run
+
+User5 - same experiment, but no interface
+	Works fine...
+
+User6 - implements IUser6a and IUser6b
+	Works fine...
+
+User7 - implements IUser7a, IUser7b and Comparable
+
+
