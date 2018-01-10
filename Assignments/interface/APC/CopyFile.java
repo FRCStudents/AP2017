@@ -1,13 +1,14 @@
 import java.io.*;
+
 public class CopyFile {
 
-   public static void main(String args[]) throws IOException {
-      FileReader in = null;
-      FileWriter out = null;
+   public static void main(String args[]) throws IOException {  
+      FileInputStream in = null;
+      FileOutputStream out = null;
 
       try {
-         in = new FileReader("input.txt");
-         out = new FileWriter("output.txt");
+         in = new FileInputStream("APCompNerd.java");
+         out = new FileOutputStream("./tmp/tryIt/junk.java");
          
          int c;
          while ((c = in.read()) != -1) {

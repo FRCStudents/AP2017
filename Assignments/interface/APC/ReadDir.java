@@ -7,7 +7,7 @@ public class ReadDir {
   
       try {      
          // create new file object
-         file = new File("/tmp");
+         file = new File("./tmp");
 
          // array of files and directory
          paths = file.list();

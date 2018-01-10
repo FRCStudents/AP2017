@@ -1,13 +1,13 @@
 import java.io.*;
-public class CopyFile {
+public class CopyFile2 {
 
-   public static void main(String args[]) throws IOException {  
-      FileInputStream in = null;
-      FileOutputStream out = null;
+   public static void main(String args[]) throws IOException {
+      FileReader in = null;
+      FileWriter out = null;
 
       try {
-         in = new FileInputStream("input.txt");
-         out = new FileOutputStream("output.txt");
+         in = new FileReader("./tmp/tryIt/junk.java");
+         out = new FileWriter("./tmp/tryIt/junk2.java");
          
          int c;
          while ((c = in.read()) != -1) {

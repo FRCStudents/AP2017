@@ -1,0 +1,104 @@
+1) Define requirements
+2) Define components  (players)
+3) Define relationships (interfaces)
+
+Project: SchoolBrains
+
+Requirements:
+Allow user to signin:
+  Console menu offering a system of choices:
+  1) Teachers
+      Can list classes
+      Can list students in each class
+        Can enter/list scores for each student
+      Can create/list assignments for each class
+        Can list assignments not yet done for each student
+        Can list assignments done for each student
+
+  2) Students
+      Can list classes enrolled in
+      Can list assignments for each class
+        Can list assignments not yet done
+        Can list assignments done
+      Can list scores for each class
+
+  3) Admin
+      Can assign teachers to classes
+      Can assign students to classes
+
+
+Components:
+
+  1) ClassBook: 
+		has a an array of scorelist
+	        has an assignment list
+			* ArrayList of assignments
+
+		has a category list	
+			* ArrayList of cateogories
+
+StudentList:
+  2) Each scorelist:
+		has a student (user)
+		has a studentID
+		has a ArrayList of Scores
+
+  3) Each Score:
+		has a score (int)
+		has an assignmentID
+		has a studentID
+
+  4) Each assignment:
+                has a total points
+                has a assignDate
+                has a dueDate
+                has a doneDate
+                has a latePenalty
+
+  5) Each Category:
+		has a name
+		has a percentage (weight)
+
+  6) Each teacher (user):
+                can assign score for student/assignment
+                can create assignments
+
+  7) Each UserList:
+		has an ArrayList of User
+		has a type (student/teacher/admin)
+
+  8) Each user
+                is either a teacher/student/admin
+		has a name
+
+Application Level Components:
+  1) CommandCenter
+	* executes the commands
+	* must have access to the classroom level data
+	
+  2) Menu
+	* Does i/o with the user
+	* Builds a CommandCenter 
+	* Passes the CommandCenter the Data
+
+  3) AppRun
+	* Builds data for the ClassRoom
+		- Student list
+		- test assignments
+		- test scores 
+	* Creates a Menu
+	* Passes the menu the Data
+
+Relationships:
+  Student->
+      ClassRoom/Scores List
+      ClassRoom/Assignment List
+
+  ClassRoom ->
+      StudentList
+      AssignmentList
+      TeacherUser
+
+  User ->
+      is a Student
+      is a Teacher
