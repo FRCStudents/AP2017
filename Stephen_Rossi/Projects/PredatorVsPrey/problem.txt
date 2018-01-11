@@ -1,0 +1,21 @@
+In this simulation, the prey are Zebra and the predators are Lions. These creatures live in a 20 * 20 grid
+of cells. Only one creature may occupy a cell at a time. The grid is enclosed, so a critter is not allowed to move
+off the edges of the world. Time is simulated in steps. Each creature performs some action every time step.
+The Zebra behave according to the following model:
+
+• Move: For every time step, the Zebra randomly try to move up, down, left, or right. If the neighboring
+cell in the selected direction is occupied or would move the Zebra off the grid, then the Zebra stays in the
+current cell.
+• Breed: If an Zebra survives for three time steps, at the end of the time step (i.e., after moving) the Zebra will
+breed. This is simulated by creating a new Zebra in an adjacent (up, down, left, or right) cell that is
+empty. If there is no empty cell available, no breeding occurs. Once an offspring is produced, an Zebra
+cannot produce an offspring again until it has survived three more time steps.
+The Lions behave according to the following model:
+• Move. For every time step, the Lion will move to an adjacent cell containing an Zebra and eat the
+Zebra. If there are no Zebra in adjoining cells, the Lion moves according to the same rules as the
+Zebra. Note that a Lion cannot eat other Lions.
+• Breed. If a Lion survives for eight time steps, at the end of the time step it will spawn off a new
+Lion in the same manner as the Zebra.
+• Starve. If a Lion has not eaten an Zebra within three time steps, at the end of the third time step it
+will starve and die. The Lion should then be removed from the grid of cells.
+During one turn, all the Lions should move before the Zebra.
