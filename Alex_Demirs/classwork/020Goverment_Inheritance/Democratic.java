@@ -3,10 +3,10 @@ public class Democratic extends Goverment{
 	public Democratic(){
 		type = "Democratic";
 		numberOfType = 123;
-		powerOfLeader = 0;
+		powerOfLeader = 3;
 		isFacist = false;
-		numberOfLeaders = 0;
-		sizeOfGov = 0;
+		numberOfLeaders = 1;
+		sizeOfGov = 7;
 
     }
 
