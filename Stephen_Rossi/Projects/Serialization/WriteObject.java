@@ -4,53 +4,20 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 
 class WriteObject{
-  public static void main(String args[]) {
 
-  		WriteObject obj = new WriteObject();
+      public void SerializePerson(Person person){
+        WriteObject obj = new WriteObject();
+  		//Person person = new Person("xd", 52, "Uganda", "Sanic", "KnowsDeWeh");
 
-  		Person person = new Person("Mason VanDeurse", 18, "US", "MA", "Dumbo");
-
-      //person.setWritable(true);
-
-  		obj.serializeObj(person);
-
-  	}
-
-  	public void serializeObj(Person person) {
-
-  		FileOutputStream path = null;
-  		ObjectOutputStream oos = null;
-
-  		try {
-
-  			path = new FileOutputStream("C:\\Users\\steph\\Documents\\GitHub\\AP2017\\Stephen_Rossi\\Projects\\Serialization\\WrittenObjects\\" + person.getName() + "");
-  			oos = new ObjectOutputStream(path);
-  			oos.writeObject(person);
-
-  			System.out.println("Done");
-
-  		} catch (Exception ex) {
-
-  			ex.printStackTrace();
-
-  		} finally {
-
-  			if (path != null) {
-  				try {
-  					path.close();
-  				} catch (IOException e) {
-  					e.printStackTrace();
-  				}
-  			}
-
-  			if (oos != null) {
-  				try {
-  					oos.close();
-  				} catch (IOException e) {
-  					e.printStackTrace();
-  				}
-  			}
-
-  		}
-  	}
-  }
+          try {
+             FileOutputStream pathOut = new FileOutputStream("C:/Users/steph/Documents/GitHub/AP2017/Stephen_Rossi/Projects/Serialization/WrittenObjects/"+ person.getName() +".ser");
+             ObjectOutputStream out = new ObjectOutputStream(pathOut);
+             out.writeObject(person);
+             out.close();
+             pathOut.close();
+             System.out.println("\nSerialized data is saved in C:/Users/steph/Documents/GitHub/AP2017/Stephen_Rossi/Projects/Serialization/WrittenObjects/xd.ser\n\n");
+          } catch (IOException i) {
+             i.printStackTrace();
+          }
+    }
+}
