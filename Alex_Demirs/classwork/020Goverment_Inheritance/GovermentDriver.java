@@ -7,6 +7,7 @@ public class GovermentDriver{
 
 			d.identifyType();	
 			d.identifyNumberOfType();
+			d.identifyPowerOfLeader();
 		
 }
 }
