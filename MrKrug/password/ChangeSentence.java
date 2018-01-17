@@ -11,7 +11,7 @@ public class ChangeSentence {
 	}
 
 	private static String getPWD(){
-		String s = "interestingly enough the world is not flat";
+		String s = "yikes";
 		String pwd = "";
 
 		for(int i=0; i < s.length(); i++){
