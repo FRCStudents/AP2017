@@ -1,11 +1,11 @@
 interface Comparable {
     public int getIntelligence();
-    public void setIntelligence();
+    public void setIntelligence(int i);
     public int getSpeed();
-    public void setSpeed();
+    public void setSpeed(int s);
     public int getLaptopPerformance();
-    public void setLaptopPerformance();
+    public void setLaptopPerformance(int lp);
     public String getFirstName();
-    public void setFirstName();
-    public int compareTo();
+    public void setFirstName(String fn);
+    public int compareTo(APComputerNerd nerd, boolean choice);
 }
