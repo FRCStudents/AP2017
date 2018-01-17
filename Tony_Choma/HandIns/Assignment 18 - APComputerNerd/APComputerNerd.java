@@ -1,15 +1,15 @@
-public class APCompNerd{
-        int intel;
+public class APComputerNerd{
+        int intelligence;
         int speed;
-        int laptopPerf;
+        int performance;
         private String firstName;
 
 //getters and setters for intel
-        public int getIntel(){
-                return intel;
+        public int getIntelligence(){
+                return intelligence;
         }
-        public void setIntel(int newIntel){
-                intel = newIntel;
+        public void setIntelligence(int newIntelligence){
+                intelligence = newIntelligence;
         }
 //getters and setters for speed
         public int getSpeed(){
@@ -19,11 +19,11 @@ public class APCompNerd{
                 speed = newSpeed;
         }
 //getters and setters for laptopPerf
-        public int getlaptopPerf(){
-                return laptopPerf;
+        public int getPerformance(){
+                return performance;
         }
-        public void setLaptopPerf(int newLaptopPerf){
-                laptopPerf = newLaptopPerf;
+        public void setPerformance(int newPerformance){
+                performance = newPerformance;
         }
 //getters and setters for firstName
         public String getFirstName(){
