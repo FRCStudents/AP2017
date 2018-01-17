@@ -1,7 +1,7 @@
 public class APComputerNerd{
-        int intelligence;
-        int speed;
-        int performance;
+        int intelligence; //1-10
+        int speed;//1-10
+        int performance;//1-10
         private String firstName;
 
 //getters and setters for intel
