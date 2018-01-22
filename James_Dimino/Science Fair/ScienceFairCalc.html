@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Build or Buy a Computer?</title>
+			<link rel="stylesheet" type="text/css" href="ScienceFairCalcStyle.css">
+		</head>
+
+		<body>
+
+			<h1>Build or Buy?</h1>
+
+			<nav>
+      		<ul>
+       			<li><a href="ScienceFairHome.html"><b>Home</b></a></li>
+        		<li><a href="ScienceFairCalc.html">Calculator</a></li>
+       			<li><a href="ScienceFairLast.html">Last Year</a></li>
+      		</ul>
+      			<div class="contact-btn"><a href="ScienceFairResources.html">Resources</a>
+      			</div>
+    		</nav>
+
+      <div class="calcStart">
+
+        <div class="openingPara">
+          <h2>The Calculator</h2>
+          <p>Welcome to the Build or Buy Calculator! Input your answers to the questions below to determine whether you should build or buy your own computer!</p>
+        </div>
+
+        <div class="question1">
+          <p>1) What is your budget for your computer?</p>
+          <input id="budget" placeholder="$$$">
+        </div>
+
+        <div class="question2">
+          <p>2) What will you be using your computer for?</p>
+            <label class="container">General Home Use: Streaming/Browsing
+              <input type="radio" value="A" name="radio2">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Office Work
+              <input type="radio" value="B" name="radio2">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Gaming: Intense Graphics
+              <input type="radio" value="C" name="radio2">
+              <span class="checkmark"></span>
+            </label>
+        </div>
+
+        <div class="question3">
+          <p>3) What is your annual salary?</p>
+          <input id="salary" placeholder="$$$">
+        </div>
+
+        <div class="question4">
+          <p>4) How much would you enjoy building a computer?</p>
+            <label class="container">I'd Hate It
+              <input type="radio" name="radio4">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">I Wouldn't Mind It
+              <input type="radio" name="radio4">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">I'd Thoroughly Enjoy It
+              <input type="radio" name="radio4">
+              <span class="checkmark"></span>
+            </label> 
+        </div>
+
+        <div class="question5">
+          <p>5) How experienced are you in building computers?</p>
+            <label class="container">Never Built A Computer
+              <input type="radio" name="radio5">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Helped Build A Computer
+              <input type="radio" name="radio5">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">I Know Everything About Computers
+              <input type="radio" name="radio5">
+              <span class="checkmark"></span>
+            </label> 
+        </div>
+
+          <button id="submitButton" onclick="getMCQuestion2()"> Submit </button>
+
+        <script type="text/javascript">
+        var userBudget = document.getElementById("budget");
+        var userUse;
+        var userSalary;
+        var userEnjoyment;
+        var userExperience;
+
+          function testStuff() {
+            alert(userUse);
+          }
+
+          function runBrains() {
+            alert(document.getElementsByTagName(userUse));
+          }
+
+          function getHrlySal() {
+            userSalary = (document.getElementById("salary").value / 52) / 40;
+          }
+
+          function getMCQuestion2() {
+            userUse = (document.getElementsByTagName("radio2").value);
+          }
+
+          function getMCQuestion4() {
+            if (document.getElementsByTagName('radio4').endsWith("Hate It")) {
+              userEnjoyment = 1;
+            }
+            if (document.getElementsByTagName('radio4').endsWith("Mind It")) {
+              userEnjoyment = 2; 
+            }
+            if (document.getElementsByTagName('radio4').endsWith("Enjoy It")) {
+              userEnjoyment = 3;
+            }
+          }
+
+          function getMCQuestion4() {
+            if (document.getElementsByTagName('radio5').startsWith("Never")) {
+              userExperience = 1;
+            }
+            if (document.getElementsByTagName('radio5').startsWith("Helped")) {
+              userExperience = 2; 
+            }
+            if (document.getElementsByTagName('radio5').startsWith("I")) {
+              userExperience = 3;
+            }
+          }
+
+      </script>
+
+    	</body>
+
+    </html>
