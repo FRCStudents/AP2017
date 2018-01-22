@@ -18,12 +18,18 @@ public class APComputerNERDDriver {
 		}
 	}
 
+	public static void printTest(){
+		for (int i = 0; i < testArr.length; i++){
+			System.out.println(testArr[i]);
+		}
+	}
+
 	public static void main(String[] argv){
 
 	APComputerNERD a = new APComputerNERD();
 
-	a.sort();
-	a.printTest();
+	sort();
+	printTest();
 
 	}
 }
