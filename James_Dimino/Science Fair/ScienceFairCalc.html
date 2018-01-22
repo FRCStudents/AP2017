@@ -34,15 +34,15 @@
         <div class="question2">
           <p>2) What will you be using your computer for?</p>
             <label class="container">General Home Use: Streaming/Browsing
-              <input type="radio" value="A" name="radio2">
+              <input id="radioA" type="radio" value="A" name="radio2">
               <span class="checkmark"></span>
             </label>
             <label class="container">Office Work
-              <input type="radio" value="B" name="radio2">
+              <input id="radioB" type="radio" value="B" name="radio2">
               <span class="checkmark"></span>
             </label>
             <label class="container">Gaming: Intense Graphics
-              <input type="radio" value="C" name="radio2">
+              <input id="radioC" type="radio" value="C" name="radio2">
               <span class="checkmark"></span>
             </label>
         </div>
@@ -106,6 +106,11 @@
           }
 
           function getMCQuestion2() {
+	    var elt = document.getElementById('radioB');
+	    if(elt.checked){
+		alert(elt.value);	
+	    }
+	
             userUse = (document.getElementsByTagName("radio2").value);
           }
 
