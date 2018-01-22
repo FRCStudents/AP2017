@@ -9,11 +9,5 @@ public class APComputerNERD {
 		//hmmmm.... constructor you say?
 	}
 
-	public void printTest(){
-		for (int i = 0; i < testArr.length; i++){
-			System.out.println(testArr[i]);
-		}
-	}
-
 
 }

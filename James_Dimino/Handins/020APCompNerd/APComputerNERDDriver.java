@@ -8,7 +8,9 @@ public class APComputerNERDDriver {
 		for (int j = 0; j < testArr.length; j++){
 			int lastPlace = -1;
 				for (int i = 0; i < testArr.length; i++){
+					System.out.println("ABOVE" + temp);
 					if (testArr[i] < temp){
+						System.out.println("HERE:" + testArr[i] + "::" + temp);
 						temp = testArr[i];
 						lastPlace = i;
 						testArr2[j] = testArr[i];
@@ -21,9 +23,6 @@ public class APComputerNERDDriver {
 	public static void main(String[] argv){
 
 	APComputerNERD a = new APComputerNERD();
-
-	a.sort();
-	a.printTest();
-
+	sort();
 	}
 }
