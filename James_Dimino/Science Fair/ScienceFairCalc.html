@@ -87,21 +87,26 @@
           <button id="submitButton" onclick="determineResults()"> Submit </button>
 
         <script type="text/javascript">
-        var userBudget;
-        var userUse;
-        var userSalary;
-        var userEnjoyment;
-        var userExperience;
+        var userBudget = 0;
+        var userUse = 0;
+        var userSalary = 0;
+        var userEnjoyment = 0;
+        var userExperience = 0;
         var buildTimeCost;
         var youShouldBuild = "\n\nYou should build your own computer!"
         var youShouldBuy = "\n\nYou should buy a pre-built computer!";
         var motivationMsg = "Building a computer may seem difficult at first, but with a little bit of research, you will be amazed with the results you produce!";
+        var funcFull;
         var noEnjoyment = "You stated that you would hate building a computer...\nHere are some options that suit your needs...";
         var msg1 = "\n\nHere are some options for your price range: ";
-        var buildGuides = "\nYouTube Video: https://www.youtube.com/watch?v=IhX0fOUYd8Q\n\nWebsite Text Instructional: https://www.digitaltrends.com/computing/how-to-build-a-computer/6/";
+        var buildGuides = "\n\nYouTube Video: https://www.youtube.com/watch?v=IhX0fOUYd8Q\n\nWebsite Text Instructional: https://www.digitaltrends.com/computing/how-to-build-a-computer/6/";
 
           function determineResults() {
             convertQuestionstoVals();
+            determineFuncFull();
+            if (funcFull == 2) {
+              return;
+            }
             calcBTCost();
             if ((userBudget * .186) < buildTimeCost) {
               if (userEnjoyment == 1) {
@@ -172,6 +177,24 @@
 
           function test() {
             alert(buildGuides);
+          }
+
+          function determineFuncFull() {
+            if (userBudget > 0 && userExperience > 0 && userUse > 0 && userEnjoyment > 0) {
+              console.log("func1");
+              funcFull = 1;
+            }
+            else {
+              console.log("func2");
+              funcFull = 2;
+              console.log(funcFull);
+              console.log(userBudget);
+              console.log(userUse);
+              console.log(userSalary);
+              console.log(userEnjoyment);
+              console.log(userExperience);
+              alert("Please answers all questions!");
+            }
           }
 
           function convertQuestionstoVals() {

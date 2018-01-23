@@ -47,6 +47,22 @@ nav a {
   text-decoration: none;
 }
 
+h2 {
+  position: relative;
+  text-align: center;
+  font-size: 36px;
+}
+
+.para1 {
+  text-align: center;
+}
+
+.calcProcedure {
+  position: relative;
+  left: 50px;
+  line-height: 30px;
+}
+
 .bottomOfPage {
   position: relative;
   border-width: : 2px;
@@ -55,4 +71,8 @@ nav a {
   text-align: center;
   color: white;
   background-color: #333;
+}
+
+tab {
+  padding-left: 25px;
 }
