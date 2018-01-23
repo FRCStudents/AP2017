@@ -1,0 +1,58 @@
+h1 {
+  border-width: : 2px;
+  border-color: black;
+  border-style: solid;
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  background-color: #333;
+}
+
+nav {
+  background-color: #FFF;
+  position: relative;
+  bottom: 30px;
+}
+
+nav li {
+  display: inline;
+  margin: 0;
+  padding: 0 10px;
+}
+
+nav ul {
+  display: inline;
+}
+
+.contact-btn {
+  float: right;
+}
+
+.contact-btn a {
+  cursor: pointer;
+  margin-right: 30px;
+  padding: 8px 18px;
+  border: 1px solid #204156;
+  position: relative;
+}
+
+.contact-btn a:active {
+	top: 2px;
+}
+
+nav a {
+  height: 60px;
+  line-height: 60px;
+  color: #204156;
+  text-decoration: none;
+}
+
+.bottomOfPage {
+  position: relative;
+  border-width: : 2px;
+  border-color: black;
+  border-style: solid;
+  text-align: center;
+  color: white;
+  background-color: #333;
+}

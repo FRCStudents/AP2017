@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>Build or Buy a Computer?</title>
-			<link rel="stylesheet" type="text/css" href="ScienceFairCalcStyle.css">
-		</head>
+  <html>
+    <head>
+      <title>Build or Buy a Computer?</title>
+      <link rel="stylesheet" type="text/css" href="ScienceFairCalcStyle.css">
+    </head>
 
-		<body>
+    <body>
 
-			<h1>Build or Buy?</h1>
+      <h1>Build or Buy?</h1>
 
-			<nav>
-      		<ul>
-       			<li><a href="ScienceFairHome.html"><b>Home</b></a></li>
-        		<li><a href="ScienceFairCalc.html">Calculator</a></li>
-       			<li><a href="ScienceFairLast.html">Last Year</a></li>
-      		</ul>
-      			<div class="contact-btn"><a href="ScienceFairResources.html">Resources</a>
-      			</div>
-    		</nav>
+      <nav>
+          <ul>
+            <li><a href="ScienceFairHome.html"><b>Home</b></a></li>
+            <li><a href="ScienceFairCalc.html">Calculator</a></li>
+            <li><a href="ScienceFairLast.html">How It Works</a></li>
+          </ul>
+            <div class="contact-btn"><a href="ScienceFairResources.html">Resources</a>
+            </div>
+        </nav>
 
-      <div class="calcStart">
-
-        <div class="openingPara">
+        <div class="openingPara"><center>
           <h2>The Calculator</h2>
           <p>Welcome to the Build or Buy Calculator! Input your answers to the questions below to determine whether you should build or buy your own computer!</p>
-        </div>
+        </center></div>
+
+        <div class="calcStart">
 
         <div class="question1">
           <p>1) What is your budget for your computer?</p>
@@ -34,15 +34,15 @@
         <div class="question2">
           <p>2) What will you be using your computer for?</p>
             <label class="container">General Home Use: Streaming/Browsing
-              <input id="radioA" type="radio" value="A" name="radio2">
+              <input id="radio2A" type="radio" value="A" name="radio2">
               <span class="checkmark"></span>
             </label>
             <label class="container">Office Work
-              <input id="radioB" type="radio" value="B" name="radio2">
+              <input id="radio2B" type="radio" value="B" name="radio2">
               <span class="checkmark"></span>
             </label>
             <label class="container">Gaming: Intense Graphics
-              <input id="radioC" type="radio" value="C" name="radio2">
+              <input id="radio2C" type="radio" value="C" name="radio2">
               <span class="checkmark"></span>
             </label>
         </div>
@@ -55,15 +55,15 @@
         <div class="question4">
           <p>4) How much would you enjoy building a computer?</p>
             <label class="container">I'd Hate It
-              <input type="radio" name="radio4">
+              <input id="radio4A" type="radio" name="radio4">
               <span class="checkmark"></span>
             </label>
             <label class="container">I Wouldn't Mind It
-              <input type="radio" name="radio4">
+              <input id="radio4B" type="radio" name="radio4">
               <span class="checkmark"></span>
             </label>
             <label class="container">I'd Thoroughly Enjoy It
-              <input type="radio" name="radio4">
+              <input id="radio4C" type="radio" name="radio4">
               <span class="checkmark"></span>
             </label> 
         </div>
@@ -71,75 +71,226 @@
         <div class="question5">
           <p>5) How experienced are you in building computers?</p>
             <label class="container">Never Built A Computer
-              <input type="radio" name="radio5">
+              <input id="radio5A" type="radio" name="radio5">
               <span class="checkmark"></span>
             </label>
             <label class="container">Helped Build A Computer
-              <input type="radio" name="radio5">
+              <input id="radio5B" type="radio" name="radio5">
               <span class="checkmark"></span>
             </label>
             <label class="container">I Know Everything About Computers
-              <input type="radio" name="radio5">
+              <input id="radio5C" type="radio" name="radio5">
               <span class="checkmark"></span>
             </label> 
         </div>
 
-          <button id="submitButton" onclick="getMCQuestion2()"> Submit </button>
+          <button id="submitButton" onclick="determineResults()"> Submit </button>
 
         <script type="text/javascript">
-        var userBudget = document.getElementById("budget");
+        var userBudget;
         var userUse;
         var userSalary;
         var userEnjoyment;
         var userExperience;
+        var buildTimeCost;
+        var youShouldBuild = "\n\nYou should build your own computer!"
+        var youShouldBuy = "\n\nYou should buy a pre-built computer!";
+        var motivationMsg = "Building a computer may seem difficult at first, but with a little bit of research, you will be amazed with the results you produce!";
+        var noEnjoyment = "You stated that you would hate building a computer...\nHere are some options that suit your needs...";
+        var msg1 = "\n\nHere are some options for your price range: ";
+        var buildGuides = "\nYouTube Video: https://www.youtube.com/watch?v=IhX0fOUYd8Q\n\nWebsite Text Instructional: https://www.digitaltrends.com/computing/how-to-build-a-computer/6/";
 
-          function testStuff() {
-            alert(userUse);
+          function determineResults() {
+            convertQuestionstoVals();
+            calcBTCost();
+            if ((userBudget * .186) < buildTimeCost) {
+              if (userEnjoyment == 1) {
+                if (userUse == 1) {
+                  console.log("Here1");
+                  alert(noEnjoyment + youShouldBuy + homePBComp());
+                  return;
+                }
+                if (userUse == 2) {
+                  console.log("Here2");
+                  alert(noEnjoyment + youShouldBuy + officePBComp());
+                  return;
+                }
+                if (userUse == 3) {
+                  console.log("Here3");
+                  alert(noEnjoyment + youShouldBuy + gamingPBComp());
+                  return;
+                }
+              }
+
+              if (userUse == 1) {
+                console.log("HereA");
+                alert(youShouldBuy + homePBComp());
+
+              }
+              if (userUse == 2) {
+                console.log("HereB");
+                alert(youShouldBuy + officePBComp());
+              }
+              if (userUse == 3) {
+                console.log("HereC");
+                alert(youShouldBuy + gamingPBComp());
+              }
+            }
+
+            if ((userBudget * .186) > buildTimeCost) {
+              if (userEnjoyment == 1) {
+                if (userUse == 1) {
+                  console.log("Here4");
+                  alert(noEnjoyment + youShouldBuy + homePBComp());
+                  return;
+                }
+                if (userUse == 2) {
+                  console.log("Here5");
+                  alert(noEnjoyment + youShouldBuy + officePBComp());
+                  return;
+                }
+                if (userUse == 3) {
+                  console.log("Here6");
+                  alert(noEnjoyment + youShouldBuy + gamingPBComp());
+                  return;
+                }
+              }
+                if (userUse == 1) {
+                  console.log("HereD");
+                  alert(youShouldBuild + msg1 + homeOfficeCustomComp() + buildGuides);
+                }
+                if (userUse == 2) {
+                  console.log("HereE");
+                  alert(youShouldBuild + msg1 + homeOfficeCustomComp() + buildGuides);
+                }
+                if (userUse == 3) {
+                  console.log("HereF");
+                  alert(youShouldBuild + msg1 + gamingCustomComp() + buildGuides);
+                }
+              }
           }
 
-          function runBrains() {
-            alert(document.getElementsByTagName(userUse));
+          function test() {
+            alert(buildGuides);
+          }
+
+          function convertQuestionstoVals() {
+            getQuestion1();
+            getMCQuestion2();
+            getQuestion3();
+            getMCQuestion4();
+            getMCQuestion5();
+          }
+
+          function alerter() {
+            alert("1: $" + userBudget);
+            alert("2: " + userUse);
+            alert("3: $" + userSalary);
+            alert("4: " + userEnjoyment);
+            alert("5: " + userExperience);
           }
 
           function getHrlySal() {
             userSalary = (document.getElementById("salary").value / 52) / 40;
           }
 
+          function getQuestion1() {
+            userBudget = document.getElementById('budget').value;
+          }
+
           function getMCQuestion2() {
-	    var elt = document.getElementById('radioB');
-	    if(elt.checked){
-		alert(elt.value);	
-	    }
-	
-            userUse = (document.getElementsByTagName("radio2").value);
+            var elt = document.getElementById('radio2A');
+              if(elt.checked) {
+                userUse = 1;
+              }
+            var elt = document.getElementById('radio2B');
+              if(elt.checked) {
+                userUse = 2;
+              }
+            var elt = document.getElementById('radio2C');
+              if(elt.checked) {
+                userUse = 3;
+              }
+          }
+
+          function getQuestion3() {
+            getHrlySal();
           }
 
           function getMCQuestion4() {
-            if (document.getElementsByTagName('radio4').endsWith("Hate It")) {
-              userEnjoyment = 1;
-            }
-            if (document.getElementsByTagName('radio4').endsWith("Mind It")) {
-              userEnjoyment = 2; 
-            }
-            if (document.getElementsByTagName('radio4').endsWith("Enjoy It")) {
-              userEnjoyment = 3;
-            }
+            var elt = document.getElementById('radio4A');
+              if(elt.checked) {
+                userEnjoyment = 1;
+              }
+            var elt = document.getElementById('radio4B');
+              if(elt.checked) {
+                userEnjoyment = 2;
+              }
+            var elt = document.getElementById('radio4C');
+              if(elt.checked) {
+                userEnjoyment = 3;
+              }
           }
 
-          function getMCQuestion4() {
-            if (document.getElementsByTagName('radio5').startsWith("Never")) {
-              userExperience = 1;
-            }
-            if (document.getElementsByTagName('radio5').startsWith("Helped")) {
-              userExperience = 2; 
-            }
-            if (document.getElementsByTagName('radio5').startsWith("I")) {
-              userExperience = 3;
-            }
+          function getMCQuestion5() {
+            var elt = document.getElementById('radio5A');
+              if(elt.checked) {
+                userExperience = 1;
+              }
+            var elt = document.getElementById('radio5B');
+              if(elt.checked) {
+                userExperience = 2;
+              }
+            var elt = document.getElementById('radio5C');
+              if(elt.checked) {
+                userExperience = 3;
+              }
+          }
+
+          function calcBTCost() {
+            var time = 12;
+              if (userExperience == 1) {
+                time = time + 60;
+              }
+              if (userExperience == 2) {
+                time = time + 30;
+              }
+              if (userEnjoyment == 1) {
+                time = time + 300;
+              }
+              if (userEnjoyment == 2) {
+                time = time - 30;
+              }
+
+              buildTimeCost = time * (userSalary/60);
+          }
+
+          function homePBComp() {
+            return "\n\nCheap:\nAcer Aspire Desktop, 7th Gen Intel Core i5-7400, 12GB DDR4, 2TB HDD, Windows 10 Home, TC-780-ACKI5\n\nExpensive:\n2018 HP ENVY 27-p014 27\" IPS Full HD Touchscreen All-in-One Desktop Computer";
+          }
+
+          function officePBComp() {
+            return "\n\nCheap:\nHP Pavilion Desktop Computer\n\nExpensive:\nDell - XPS Desktop";
+          }
+
+          function gamingPBComp() {
+            return "\n\nCheap:\nCyberPowerPC - Gamer Ultra Desktop\n\nExpensive:\niBUYPOWER - Desktop - Intel Core i7-7700K - 16GB Memory - NVIDIA GeForce GTX 1080 - 240GB Solid State Drive + 1TB Hard Drive - Black/Gray";
+          }
+
+          function homeOfficeCustomComp() {
+            return "\nCheap:\nCPU :: Intel Core i3-6100\nMotherboard :: MSI H110M Gaming Micro ATX LGA1151\nMemory :: Corsair Vengeance LPX 8GB DDR4-2400\nStorage :: Kingston SSDNow V300 Series 120GB SSD\n               :: Western Digital 7200RPM 1TB Hard Drive\nGraphics Card :: NVIDIA GeForce GTX 1060 3GB\nCase :: Cooler Master N200 MicroATX Mini\nPower Supply :: EVGA 500W 80+ Bronze Certified\n\tPrice :: $530.00\n\nExpensive:\nCPU :: Intel Core i5-6600K\nMotherboard :: Asus Z170-A ATX LGA1151\nMemory :: Corsair Vengeance LPX 16GB DDR4\nStorage :: Samsung 850 EVO 250GB SSD\n               :: Western Digital WD Black 1TB 7200RPM SATA 6Gb/s Hard Drive\nGraphics Card :: NVIDIA GeForce GTX 1070 8GB Video Card\nCase :: Phanteks ECLIPSE P400 ATX Mid\nPower Supply :: EVGA SuperNOVA NEX 650W 80+ Gold\n\tPrice :: $1,012.00";
+          }
+
+          function gamingCustomComp() {
+            return "\nCheap:\nCPU :: Intel Core i5-4460 3.2GHz Quad-Core\nMotherboard :: ASRock H97M PRO4 Micro ATX LGA1150\nMemory :: Kingston HyperX Fury Blue 8GB DDR3-1600\nStorage :: SanDisk Ultra II 120GB 2.5\" SSD\n               :: Western Digital 7200RPM 1TB Hard Drive\nGraphics Card :: EVGA GeForce GTX 970 4GB Superclocked ACX 2.0\nCase :: NZXT S340 (Black/Blue) ATX Mid\nPower Supply :: EVGA SuperNOVA GS 550W 80+ Gold Certified Fully-Modular ATX\n\tPrice :: $820.00\n\nExpensive:\nCPU :: Intel Core i5-7600K\nMotherboard :: MSI Z270 SLI PLUS\nMemory :: Crucial Ballistix Sport LT 8GB\nStorage :: SanDisk SSD PLUS 120GB\n               :: WD Blue 1TB HDD\nGraphics Card :: GIGABYTE GTX 1080 Windforce OC\nCase :: Phanteks ECLIPSE P400 ATX Mid\nPower Supply :: EVGA SuperNOVA 750 G2\n\tPrice :: $1,340.00"
           }
 
       </script>
 
-    	</body>
+        <div class="bottomOfPage">
+          <p>Science Fair 2017-2018 - Foxborough Regional Charter School - James Dimino & Connor Cederholm</p>
+        </div>
+
+      </body>
 
     </html>
