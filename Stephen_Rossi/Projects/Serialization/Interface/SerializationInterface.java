@@ -53,7 +53,9 @@ public class SerializationInterface{
   }
 
   public void readPerson(){
-    sopl("read");
+
+	Person p = ser.deSerializePerson("Efraim");
+    	System.out.println(p);
   }
 
   public void deletePerson(){

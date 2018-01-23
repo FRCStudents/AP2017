@@ -1,25 +1,22 @@
 import java.io.*;
 
-public class CopyFile {
+public class Cat {
 
    public static void main(String args[]) throws IOException {  
       FileInputStream in = null;
-      FileOutputStream out = null;
 
       try {
          in = new FileInputStream("Snap");
-         out = new FileOutputStream("Crackle");
          
          int c;
+	 char charHold;
          while ((c = in.read()) != -1) {
-            out.write(c);
+	    charHold = (char)c;
+            System.out.print(charHold);
          }
       }finally {
          if (in != null) {
             in.close();
-         }
-         if (out != null) {
-            out.close();
          }
       }
    }
