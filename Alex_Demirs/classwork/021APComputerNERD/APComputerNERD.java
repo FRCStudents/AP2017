@@ -5,6 +5,15 @@ public class APComputerNERD{
 	int laptopPreformance;
 	String firstName;
 
+public APComputerNERD(int i, int s, int l, String f){
+	inteligence = i;
+	speed = s;
+	laptopPreformance = l;
+	firstName = f;
+}
+
+public APComputerNERD(){
+}
 
 //sets + gets
 		public int getInteligence(){
@@ -39,19 +48,25 @@ public class APComputerNERD{
 			firstName = newFirstName;
 		}
 
-public void compareTo(int i, int j){
-	if(i < j ){
+public int toCompare(int x, int y){
+	if(x == y){
+		return 0;
+	}
+	if(x > y){
 		return 1;
 	}
-	if(j < i){
+	if(x < y){
 		return -1;
 	}
+
+	return 2;
 }
 
-public void swapArray(int arr[i]){
-	int hold;
-	hold = arr[i];
-	arr[i] = arr[j];
-	arr[j] = hold;
-}
+	public void swapObject(int i, int j, Object[] objArray) {
+		Object hold = objArray[i];
+		objArray[i] = objArray[j];
+		objArray[j] = hold;
+	}
+
+
 }
