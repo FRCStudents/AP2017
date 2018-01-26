@@ -87,21 +87,26 @@
           <button id="submitButton" onclick="determineResults()"> Submit </button>
 
         <script type="text/javascript">
-        var userBudget;
-        var userUse;
-        var userSalary;
-        var userEnjoyment;
-        var userExperience;
+        var userBudget = 0;
+        var userUse = 0;
+        var userSalary = 0;
+        var userEnjoyment = 0;
+        var userExperience = 0;
         var buildTimeCost;
         var youShouldBuild = "\n\nYou should build your own computer!"
         var youShouldBuy = "\n\nYou should buy a pre-built computer!";
         var motivationMsg = "Building a computer may seem difficult at first, but with a little bit of research, you will be amazed with the results you produce!";
+        var funcFull;
         var noEnjoyment = "You stated that you would hate building a computer...\nHere are some options that suit your needs...";
         var msg1 = "\n\nHere are some options for your price range: ";
-        var buildGuides = "\nYouTube Video: https://www.youtube.com/watch?v=IhX0fOUYd8Q\n\nWebsite Text Instructional: https://www.digitaltrends.com/computing/how-to-build-a-computer/6/";
+        var buildGuides = "\n\nYouTube Video: https://www.youtube.com/watch?v=IhX0fOUYd8Q\n\nWebsite Text Instructional: https://www.digitaltrends.com/computing/how-to-build-a-computer/6/";
 
           function determineResults() {
             convertQuestionstoVals();
+            determineFuncFull();
+            if (funcFull == 2) {
+              return;
+            }
             calcBTCost();
             if ((userBudget * .186) < buildTimeCost) {
               if (userEnjoyment == 1) {
@@ -172,6 +177,24 @@
 
           function test() {
             alert(buildGuides);
+          }
+
+          function determineFuncFull() {
+            if (userBudget > 0 && userExperience > 0 && userUse > 0 && userEnjoyment > 0) {
+              console.log("func1");
+              funcFull = 1;
+            }
+            else {
+              console.log("func2");
+              funcFull = 2;
+              console.log(funcFull);
+              console.log(userBudget);
+              console.log(userUse);
+              console.log(userSalary);
+              console.log(userEnjoyment);
+              console.log(userExperience);
+              alert("Please answers all questions!");
+            }
           }
 
           function convertQuestionstoVals() {
@@ -266,23 +289,23 @@
           }
 
           function homePBComp() {
-            return "\n\nCheap:\nAcer Aspire Desktop, 7th Gen Intel Core i5-7400, 12GB DDR4, 2TB HDD, Windows 10 Home, TC-780-ACKI5\n\nExpensive:\n2018 HP ENVY 27-p014 27\" IPS Full HD Touchscreen All-in-One Desktop Computer";
+            return "\n\nCheap:\nAcer Aspire Desktop, 7th Gen Intel Core i5-7400, 12GB DDR4, 2TB HDD, Windows 10 Home, TC-780-ACKI5\n\tPrice :: $350.00\n\nExpensive:\n2018 HP ENVY 27-p014 27\" IPS Full HD Touchscreen All-in-One Desktop Computer\n\tPrice :: $700.00";
           }
 
           function officePBComp() {
-            return "\n\nCheap:\nHP Pavilion Desktop Computer\n\nExpensive:\nDell - XPS Desktop";
+            return "\n\nCheap:\nHP Pavilion Desktop Computer\n\tPrice :: $450.00\n\nExpensive:\nDell - XPS Desktop\n\tPrice :: $750.00";
           }
 
           function gamingPBComp() {
-            return "\n\nCheap:\nCyberPowerPC - Gamer Ultra Desktop\n\nExpensive:\niBUYPOWER - Desktop - Intel Core i7-7700K - 16GB Memory - NVIDIA GeForce GTX 1080 - 240GB Solid State Drive + 1TB Hard Drive - Black/Gray";
+            return "\n\nCheap:\nCyberPowerPC - Gamer Ultra Desktop\n\tPrice :: $869.99\n\nExpensive:\niBUYPOWER - Desktop - Intel Core i7-7700K - 16GB Memory - NVIDIA GeForce GTX 1080 - 240GB Solid State Drive + 1TB Hard Drive - Black/Gray\n\tPrice :: $1,400.00";
           }
 
           function homeOfficeCustomComp() {
-            return "\nCheap:\nCPU :: Intel Core i3-6100\nMotherboard :: MSI H110M Gaming Micro ATX LGA1151\nMemory :: Corsair Vengeance LPX 8GB DDR4-2400\nStorage :: Kingston SSDNow V300 Series 120GB SSD\n               :: Western Digital 7200RPM 1TB Hard Drive\nGraphics Card :: NVIDIA GeForce GTX 1060 3GB\nCase :: Cooler Master N200 MicroATX Mini\nPower Supply :: EVGA 500W 80+ Bronze Certified\n\tPrice :: $530.00\n\nExpensive:\nCPU :: Intel Core i5-6600K\nMotherboard :: Asus Z170-A ATX LGA1151\nMemory :: Corsair Vengeance LPX 16GB DDR4\nStorage :: Samsung 850 EVO 250GB SSD\n               :: Western Digital WD Black 1TB 7200RPM SATA 6Gb/s Hard Drive\nGraphics Card :: NVIDIA GeForce GTX 1070 8GB Video Card\nCase :: Phanteks ECLIPSE P400 ATX Mid\nPower Supply :: EVGA SuperNOVA NEX 650W 80+ Gold\n\tPrice :: $1,012.00";
+            return "\n\nCheap:\nCPU :: Intel Core i3-6100\nMotherboard :: MSI H110M Gaming Micro ATX LGA1151\nMemory :: Corsair Vengeance LPX 8GB DDR4-2400\nStorage :: Kingston SSDNow V300 Series 120GB SSD\n               :: Western Digital 7200RPM 1TB Hard Drive\nGraphics Card :: NVIDIA GeForce GTX 1060 3GB\nCase :: Cooler Master N200 MicroATX Mini\nPower Supply :: EVGA 500W 80+ Bronze Certified\n\tPrice :: $530.00\n\nExpensive:\nCPU :: Intel Core i5-6600K\nMotherboard :: Asus Z170-A ATX LGA1151\nMemory :: Corsair Vengeance LPX 16GB DDR4\nStorage :: Samsung 850 EVO 250GB SSD\n               :: Western Digital WD Black 1TB 7200RPM SATA 6Gb/s Hard Drive\nGraphics Card :: NVIDIA GeForce GTX 1070 8GB Video Card\nCase :: Phanteks ECLIPSE P400 ATX Mid\nPower Supply :: EVGA SuperNOVA NEX 650W 80+ Gold\n\tPrice :: $1,012.00";
           }
 
           function gamingCustomComp() {
-            return "\nCheap:\nCPU :: Intel Core i5-4460 3.2GHz Quad-Core\nMotherboard :: ASRock H97M PRO4 Micro ATX LGA1150\nMemory :: Kingston HyperX Fury Blue 8GB DDR3-1600\nStorage :: SanDisk Ultra II 120GB 2.5\" SSD\n               :: Western Digital 7200RPM 1TB Hard Drive\nGraphics Card :: EVGA GeForce GTX 970 4GB Superclocked ACX 2.0\nCase :: NZXT S340 (Black/Blue) ATX Mid\nPower Supply :: EVGA SuperNOVA GS 550W 80+ Gold Certified Fully-Modular ATX\n\tPrice :: $820.00\n\nExpensive:\nCPU :: Intel Core i5-7600K\nMotherboard :: MSI Z270 SLI PLUS\nMemory :: Crucial Ballistix Sport LT 8GB\nStorage :: SanDisk SSD PLUS 120GB\n               :: WD Blue 1TB HDD\nGraphics Card :: GIGABYTE GTX 1080 Windforce OC\nCase :: Phanteks ECLIPSE P400 ATX Mid\nPower Supply :: EVGA SuperNOVA 750 G2\n\tPrice :: $1,340.00"
+            return "\n\nCheap:\nCPU :: Intel Core i5-4460 3.2GHz Quad-Core\nMotherboard :: ASRock H97M PRO4 Micro ATX LGA1150\nMemory :: Kingston HyperX Fury Blue 8GB DDR3-1600\nStorage :: SanDisk Ultra II 120GB 2.5\" SSD\n               :: Western Digital 7200RPM 1TB Hard Drive\nGraphics Card :: EVGA GeForce GTX 970 4GB Superclocked ACX 2.0\nCase :: NZXT S340 (Black/Blue) ATX Mid\nPower Supply :: EVGA SuperNOVA GS 550W 80+ Gold Certified Fully-Modular ATX\n\tPrice :: $820.00\n\nExpensive:\nCPU :: Intel Core i5-7600K\nMotherboard :: MSI Z270 SLI PLUS\nMemory :: Crucial Ballistix Sport LT 8GB\nStorage :: SanDisk SSD PLUS 120GB\n               :: WD Blue 1TB HDD\nGraphics Card :: GIGABYTE GTX 1080 Windforce OC\nCase :: Phanteks ECLIPSE P400 ATX Mid\nPower Supply :: EVGA SuperNOVA 750 G2\n\tPrice :: $1,340.00"
           }
 
       </script>
