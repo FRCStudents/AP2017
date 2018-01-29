@@ -1,4 +1,8 @@
-
+//
+// password generation
+// for now - leave the www and the .com on the website
+// and gererate with the full string
+//
 public class Mkpwd {
 	private static String getPWD(String s){
 		int total = 0;

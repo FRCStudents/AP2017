@@ -25,3 +25,15 @@ APComputerNerd
 			Array of APComputerNerd objects
 
 		* Method sort() where you sort the array
+
+WorkFlow 
+	* Create a front end - to gather information on people
+	* Front end should write the information to files
+	* Create a process to collect all the files and 
+		write the info into one file
+	* Create a process to convert the complete file
+		to HTML
+	* Write a script to run the whole process 
+
+
+

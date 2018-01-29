@@ -106,6 +106,10 @@ public class APCompNerd implements IAPCompNerd, Comparable {
 		return compareInts(i1, i2);
 	}
 
+	// Note: this comparison returns 0 if 2 strings are
+	//	 different lengths, but match for the length
+	// 	 of the shorter string
+	//
 	private int compareStrings(String t1, String p1){
                 for(int i=0; (i < t1.length() && i < p1.length()); i++){
                         if(t1.charAt(i) > p1.charAt(i)){
