@@ -40,6 +40,8 @@ class Deck {
 		this(fulldeck_suits, fulldeck_values, default_suit_ranks, default_value_ranks);
 		shuffleDeck(deck2);
 	}
+
+
 	// =====================================================================
 
 	// METHODS
