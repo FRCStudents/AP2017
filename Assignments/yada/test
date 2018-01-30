@@ -1,0 +1,35 @@
+In order to get this, you must see the code for Yada.java and SubYada.java
+
+1) What is printed to console (if anything) when you run StressTest?
+
+2) Which object is working as the driver?
+
+3) Which object is the 'parent' object?
+
+4) Which object is the 'child' object?
+
+5) Which function is overloaded?
+
+6) Which function is overridden?
+
+7) Which attributes are inherited?
+
+============================================================================
+
+/question02:
+
+8) Please show me what is printed to console (if anything).
+
+9) Which function is overloaded?
+
+10) Which function is overridden?
+
+11) One way to visualize this is 5 sets and each set has 3 strings.
+    How would you set the 3rd string in the 5th set with "Yo, Mama!"?
+
+12) Please write a loop that will put "Yo, DUDE!" into the following:
+	The first spot in the first set,
+	The second spot in the second set,
+	and the third spot in the third set.
+
+

@@ -24,6 +24,24 @@ class SentenceAnalysis {
 	public boolean isSentence() { // helper function
 		return original_sentence.contains(" ");
 	}
+
+	/*
+    	 * Notice - you are destroying your attribute sentence here!
+         * That could be alright (you need to know it and make it clear to your
+  	 * clients)...
+	 * Or, you may want to keep a copy of it and then restore the copy
+	 * Or, you can copy it, and destroy the copy...
+	 *
+	 * VERY nicely done! Awesome! I'm dancing!
+	 *
+	 */
+
+
+	/* 
+	 * You could also simply return an int from getNumberOfWords()...
+	 * rather than converting the String after the fact...
+	 */
+
 	public String getNumberOfWords() {
 		if (isSentence()) {
 			num_words = 1;

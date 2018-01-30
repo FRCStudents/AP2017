@@ -1,0 +1,138 @@
+
+	//
+	// 1)
+	// Shayla2::setShaylaArr1
+	// Oops! I forgot to fix this function when I copied my code
+	// to this new object - please fix it for me!
+	// This function should set some spot in shaylaArr1 to
+	//	a specific String value
+	//
+
+        //
+    	// 2)  
+	// Shayla2::getShaylaArr1
+	// Oops! I forgot to fix this function when I copied my code
+        // to this new object - please fix it for me!
+        // This function should set some spot in shaylaArr2 to
+        //      a specific int value
+        //
+
+	// Object: Shayla2
+	// 3)
+	// This function displays shaylaArr1 as a grid
+	// (please, write this function!)
+	//
+
+	// Object: Shayla2
+	// 4)
+	// This function displays shaylaArr2 as a grid
+	// (please, write this function!)
+	//
+
+	// 5)
+	// Object: Shayla
+	// Please put the code here that will fill the
+	// shaylaArr1 with the following:
+	// "My", "Dog", "Has", "A Ukelele"
+	}
+
+	// 6)
+	// Object: Shayla
+	// Please put the code here that will fill the
+	// shaylaArr2 with the following:
+	// x, x+1, x+2, x+3  
+	// that is - starting with x and increasing each
+	// entry by 1
+
+	// 7)
+	// Object: Shayla2
+	// I want to write the following line of code:
+	// s.setShaylaArr2(2, 156);
+	// But, of course, it will not compile or run!
+	// Please make it work - coded consistently with the
+	// rest of the Shayla object
+	//
+
+	// 8)
+	// Object: Shayla2
+	// I want to write the following line of code:
+	// s.showShayla2()
+	// This should display to console both arrays
+	// in the Shayla2 object
+	// Please make it work.
+	//
+
+	// 9) 
+	// Shayla
+	// Please write a method in Shayla that will print
+	// alternating between the two arrays
+	// Thing 0 Thing 0 Thing 0 Thing 0
+
+	// 10)
+	// Shayla
+	// Please write a method that will print out the elements of 
+	// ShaylaArr1 if (and only if) they are longer than 4 characters
+
+	// 11) 
+	// Shayla
+	// Please write a method that will print out the elements of
+	// ShaylaArr2 if (and only if) they are larger than 7
+
+	// 12) 
+	// Shayla2
+	// Please put the code here that will fill the
+	// shaylaArr1 with the following:
+	// "My", "Dog", "Has", "A", "Ukelele"
+	// "Dog", "Has", "A", "Ukelele", "My"
+	// "Has",  "A", "Ukelele", "My", "Dog"
+	// "A", "Ukelele", "My", "Dog", "Has"
+
+	// 13)
+	// Shayla2
+	// Please put the code here that will fill the
+	// shaylaArr2 with the following:
+	// x, x+1, x+2, x+3  
+	// x+1, x+2, x+3, x+4
+	// x+2, x+3, x+4, x+1
+	// x+3, x+4, x+1, x+2
+	// that is - starting with x and increasing each
+	// entry by 1
+
+
+	// 14)
+	// Shayla2
+	// I want to write the following line of code:
+	// s.setShaylaArr2(2, 4, 156);
+	// But, of course, it will not compile or run!
+	// Please make it work - coded consistently with the
+	// rest of the Shayla object
+	//
+
+	// 15)
+	// Shayla
+	// I want to write the following line of code:
+	// s.showShayla()
+	// This should display to console both arrays
+	// in the Shayla object
+	// Please make it work.
+	//
+
+	// 16) 
+	// Shayla2
+	// Please write a method in Shayla that will print
+	// alternating between the two arrays
+	//	String-1, int-1, String-2, int-2, String-3, int-3, String-4, int-4
+	//	String-5, int-5, String-6, int-6, String-7, int-7, String-8, int-8
+	//	... etc  
+ 
+
+	// 17)
+	// Shayla2
+	// Please write a method that will print out the elements of 
+	// shaylaArr1 if (and only if) they are longer than 4 characters
+
+	// 18) 
+	// Shayla2
+	// Please write a method that will print out the elements of
+	// shaylaArr2 if (and only if) they are larger than 7
+

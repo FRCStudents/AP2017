@@ -1,0 +1,9 @@
+
+in the second constructor, you can also just:
+
+public Mathematica(){
+	this(5,5,5);
+}
+
+...
+

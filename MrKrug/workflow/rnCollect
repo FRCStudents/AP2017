@@ -1,0 +1,12 @@
+#################################
+# This is a linux shell script  #
+#  * it must be executable      #
+#  * then it runs all the       # 
+#	pieces                  #
+#################################
+cd /home/ekrug/FRCS2017/AP2017/MrKrug/workflow
+rm ./data/all.emkproject
+java RunEnter
+java CollectData
+java DataHTMLize
+firefox ./data/allHTML.html

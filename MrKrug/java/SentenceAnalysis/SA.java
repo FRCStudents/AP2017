@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+/* 
+ * Please note:
+ *        SA2 is a simpler version of this project
+ *        Weird - simpler is always a bit harder
+ *                but it is easier to understand... 
+ */
+
 public class SA {
   private  String sentence = "";
   private  String currentWord = "";
@@ -15,6 +22,10 @@ public class SA {
     sentence = reader.nextLine();
     wordCount = countWords();
     averageWordSize = addWordSizes()/countWords();
+  }
+
+  public void promptForSentence(){
+	System.out.print("Please, enter a sentence: ");
   }
 
   /*

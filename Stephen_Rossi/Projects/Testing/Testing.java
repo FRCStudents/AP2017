@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 import java.util.Random;
+=======
+import javax.swing.*;
+import java.awt.*;
+>>>>>>> 167247c7c5a52c02247cc661c755c202c8f85544
 
-public class Testing {
-	private static String[] options = {"1", "2", "3","4","5","6"};
+class Testing {
 
-	public static void shuffleArray() {
-		for(int i = 0; i < options.length; i ++) {
-			int s = i + (int)(Math.random() * (options.length - i));
+    public static void main(String[] args) {
+      int[] x = {1,2,3,4,5,6,7};
+      System.out.println(x);
+    }
 
+<<<<<<< HEAD
 			String temp = options[s];
 			options[s] = options[i];
 			options[i] = temp;
@@ -25,3 +31,6 @@ public class Testing {
 		System.out.println((int)num);
 	}
 }
+=======
+}
+>>>>>>> 167247c7c5a52c02247cc661c755c202c8f85544

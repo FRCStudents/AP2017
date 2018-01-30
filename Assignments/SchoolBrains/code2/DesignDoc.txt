@@ -1,0 +1,94 @@
+1) Define requirements
+2) Define components  (players)
+3) Define relationships (interfaces)
+
+Project: SchoolBrains
+
+Requirements:
+Allow user to signin:
+  Console menu offering a system of choices:
+  1) Teachers
+      Can list classes
+      Can list students in each class
+        Can enter/list scores for each student
+      Can create/list assignments for each class
+        Can list assignments not yet done for each student
+        Can list assignments done for each student
+
+  2) Students
+      Can list classes enrolled in
+      Can list assignments for each class
+        Can list assignments not yet done
+        Can list assignments done
+      Can list scores for each class
+
+  3) Admin
+      Can assign teachers to classes
+      Can assign students to classes
+
+
+Components:
+  0) School:    
+		has a teacher list
+                has a ClassRoom list
+                has a student list
+                has an address
+                has a headmaster
+
+  1) ClassRoom: 
+		has a student list
+                has an assignment list
+                has a teacher (user)
+                has an address
+
+  2) Each student (user):
+                has a Assignment Done list
+                has a grade
+                has an average
+
+  3) Each assignment:
+                has a total points
+                has a assignDate
+                has a dueDate
+                has a doneDate
+                has a latePenalty
+
+  4) Each teacher (user):
+                can assign score for student/assignment
+                can create assignments
+
+  5) Each user
+                can sign in
+                is either a teacher/student/admin
+
+  6) TeacherMenu
+                Present Choices - level 1
+                        List Classes
+                        List Students
+
+                Present Choices - level 2
+                        ClassList:
+                            Create/List Assignment
+                            Score/List Student
+
+  7) StudentMenu
+                Present Choices - level 1
+                        List Classes
+
+                Present Choices - level 2
+                        List Assignments
+                        List Scores/Grade
+
+Relationships:
+  Student->
+      ClassRoom/Scores List
+      ClassRoom/Assignment List
+
+  ClassRoom ->
+      StudentList
+      AssignmentList
+      TeacherUser
+
+  User ->
+      is a Student
+      is a Teacher

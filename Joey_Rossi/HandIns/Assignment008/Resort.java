@@ -27,9 +27,7 @@ class Resort{
 		else {
 			return "ERROR!";
 		}
-	}	
-
-	
+	}	 	
 
 	public static void main(String[] args){
 		Resort Day1 = new Resort();
