@@ -8,14 +8,16 @@ public class SentenceAnalyze {
 		this.input = input;
 	}
 	public int calcAverageWordLength() {
-		return;
+		int value = 5;
+		return value;
 	}
 	public int sumWordLength(){
-		input.split(" ", )
+		String[] split = input.split(" ");
+		System.out.println(split);
 	}
 	public int getNumOfWords(){
 		int tempWords = 0;
-		for(int i = 0; i < input.length; i ++) {
+		for(int i = 0; i < input.length(); i ++) {
 			if(s.charAt(i) == ' ' || s.charAt(i) == '.') {
 				tempWord ++;
 			}

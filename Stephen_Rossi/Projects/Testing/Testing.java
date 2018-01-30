@@ -1,4 +1,4 @@
- import java.util.Random;
+import java.util.Random;
 
 public class Testing {
 	private static String[] options = {"1", "2", "3","4","5","6"};
@@ -21,7 +21,7 @@ public class Testing {
 		}
 		System.out.println(" ");
 		System.out.println(Math.random());
-		double num = .654;
-		System.out.println((int)num));
+		double num = .9954;
+		System.out.println((int)num);
 	}
 }
