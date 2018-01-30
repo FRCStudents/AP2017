@@ -1,0 +1,32 @@
+
+Card - one instantiation for each card in the deck
+	isEqual(Card c)
+	
+Deck - the full deck of 52 cards
+	shuffle() - what you may expect
+	dealCard() - keeps a pointer and returns next card
+	isEmpty() - returns boolean
+
+	so you can: while(!isEmpty()) dealCard();
+
+Table - 1) 9 card grid for the table
+	2) the ability to check the 9 card grid for an
+		elevens match (2 cards) or a royalty
+		match (3 cards)
+	3) the ability to check the table against itself
+	4) the ability to check the table against the next card dealt
+
+	5) keep a discard list
+
+Game -  1) deal first 9 cards
+	2) while (there is a match in the 9 card grid){
+		deal a new card
+		
+	3) while (there are cards in the deck){
+		c = dealCard()
+		check table against card (c)
+		while(pile can be played on the table)
+		fill table back up
+
+	4) print pile
+	5) print table	

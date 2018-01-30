@@ -1,0 +1,60 @@
+
+1) Write a class called "Yada"
+
+2) Yada must have one int attribute called YadaNumber
+
+3) Yada must have one String attribute called YadaString
+
+4) Write a constructor for Yada: 
+	the constructor should set the YadaNumber to 0, and
+				the YadaString to "ThisThing";
+
+5) Write another constructor for Yada that accepts two parameters
+	and sets YadaNumber and YadaString to those parameter values.
+
+6) Write a method called "spillYada" that prints out the YadaString
+	YadaNumber times.
+
+	In other words, if YadaNumber is 2 and YadaString is "This", 
+	spillYada will print "This" 2 times.
+
+	This
+	This
+
+7) Write a driver called YabbaDabbaDo 
+
+8) The driver must instantiate Yada and run spillYada
+
+9) Write a class called SubYada
+
+10) SubYada must inherit everything from Yada - including attributes and 
+methods.
+
+11) Override spillYada method -
+
+	the new spillYada will do exactly the same thing, but it will print
+	"**" before each line:
+
+	**This
+	**This
+
+12) Write a class called YadaNum
+
+13) YadaNum should have an attribute - a 5 X 5 double array of int
+
+14) YadaNum should have a method to print the double array
+
+15) YadaNum should have a method to set a number in a specific spot.
+
+16) YadaNum should have a constructor that fills the array with 7s.
+
+17) Now write the code to fill the array with an X of 0's - that so 
+that it will look like this: 
+
+	0	7	7	7	0
+	7	0	7	0	7
+	7	7	0	7	7
+	7	0	7	0	7
+	0	7	7	7	0
+
+ 

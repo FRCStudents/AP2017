@@ -1,0 +1,11 @@
+
+View:
+	Life
+		Microbe: Male/Female 
+			 count children
+			 age
+			 living/dead
+
+		Environment: Good/Bad
+				count Microbes
+

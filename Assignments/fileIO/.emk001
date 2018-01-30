@@ -1,0 +1,15 @@
+javac ReadDir.java
+javac RegEx.java
+javac IAPCompNerd.java
+javac MakeDir.java
+javac CheckAndCreate.java
+javac CopyFile2.java
+javac DeserializeDemo.java
+javac rConsole.java
+javac GetList.java
+javac Cat.java
+javac APCompNerdGo.java
+javac CopyFile.java
+javac CreateDir.java
+javac APCompNerd.java
+javac SerializeDemo.java

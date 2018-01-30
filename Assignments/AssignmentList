@@ -1,0 +1,39 @@
+
+This file has descriptions of the more recent projects
+
+Yada/EYada
+	* Excercise in inheritance
+
+Card/Deck/Elevens
+	* Create an object: Card
+	* Create an object: Deck with an array of Card
+	* Create an object: Table....
+	* Create an object: Game
+
+APComputerNerd
+	* Create an APComputerNerd object
+	* Attributes:
+		1) Intelligence
+		2) Speed
+		3) Lap Top Performance
+		4) Name (String)
+	* Implement a "Comparable" Interface
+		Method compareTo(object o)
+
+	* Build an APComputerNerdDriver object (with main) and
+		* Attributes:
+			Array of APComputerNerd objects
+
+		* Method sort() where you sort the array
+
+WorkFlow 
+	* Create a front end - to gather information on people
+	* Front end should write the information to files
+	* Create a process to collect all the files and 
+		write the info into one file
+	* Create a process to convert the complete file
+		to HTML
+	* Write a script to run the whole process 
+
+
+

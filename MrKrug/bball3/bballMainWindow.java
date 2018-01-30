@@ -42,8 +42,8 @@ public class bballMainWindow {
             containerMain.setPreferredSize(d);
 
             MenuBuilder mb = new MenuBuilder();
-    	      menuBarMain = mb.buildMenuBar();
-    	      frameMain.setJMenuBar(menuBarMain);
+    	    menuBarMain = mb.buildMenuBar();
+    	    frameMain.setJMenuBar(menuBarMain);
 
             frameMain.pack();
             frameMain.setVisible(true);

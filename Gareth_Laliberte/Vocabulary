@@ -1,0 +1,481 @@
+Java Curriculum - Vocabulary  	 
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+
+ARGUMENT
+A value that appears in a call to a method.
+
+ATTRIBUTES
+Parts of a class that contain the current state of objects of that class. The member variables of a class.
+
+BEHAVIORS
+Parts of a class that define what objects of that class can do. The methods within a class.
+
+CLASS
+A list of specifications that define a certain type of object and can be used to create objects of that type.
+
+COMPILING
+The process of converting Java code into byte code that can then be understood by the Java interpreter.
+
+CONSTRUCTOR
+Methods of a class that define how objects of that class are created.
+
+EDITOR
+A software program that allows a programmer to type in code. Modern versions usually make it easy to format the code on the screen.
+
+INSTANCE
+An object of a class.
+
+METHOD
+Sections of code that perform some action defined by a class.
+
+OBJECT
+The basic building block of OOP, defined by classes and then instantiated within a program to solve parts of a larger problem.
+
+OBJECT-ORIENTED PROGRAMMING (OOP)
+A style of programming where a programmer takes a large problem and breaks it down into smaller pieces using objects.
+
+SOURCE CODE
+The text that a programmer types into the computer and that the Java compiler can convert into byte code.
+
+ 
+CLASS DIAGRAM
+A visual representation of the relationships between classes.
+
+COMMENTS
+Text within source code that is ignored by the compiler and is used to make notes about the workings of the class.
+
+DRIVER CLASS
+A specialized class whose only purpose is to instantiate the initial objects of a program and start the interactions within.
+
+IDENTIFIER
+A name given to a variable, method, or class.
+
+import
+Keyword that allows a programmer to access pre-made classes and packages.
+
+main
+A method that is the starting point for a program. Every Java program must have one to run, but most objects should not contain one.
+
+MESSAGE
+Information and instructions passed between objects.
+
+new
+Keyword used to create objects.
+
+PACKAGE
+A collection of related classes.
+
+UML
+** Standards used when designing OO systems. It stands for Unified Modeling Language.
+
+ASCII
+** A standard set of two byte codes which represent characters. It stands for American Standard Code for Information Interchange.
+
+ASSIGNMENT OPERATOR
+The equal sign (=). It copies the value on the right to the variable on the left.
+
+boolean
+A primitive data type that represents either true or false.
+
+char
+A primitive data type that represents an ASCII character.
+
+DECREMENT OPERATOR
+The operator (--) that decreases the value of a numerical variable by one.
+
+double
+A primitive data type that represents numbers with a decimal point. It can represent larger numbers and has more precision than float, but it takes up more memory.
+
+ESCAPE SEQUENCE
+Special characters that are interpreted differently than they appear in code. These are generally used for carriage returns (\n), tabs (\t), and quotes (\") within string literals.
+
+float
+A primitive data type that represents numbers with a decimal point. It cannot hold numbers as large or as precise as a double, but it takes up less memory.
+
+INCREMENT OPERATOR
+The operator (++) that increases the value of a numerical variable by one.
+
+int
+A primitive data type that represents whole numbers.
+
+MODULUS OPERATOR
+The operator (%) that returns the remainder of dividing the left expression by the right expression.
+
+PRECEDENCE
+A set of rules that defines in what order operators are evaluated.
+
+PRIMITIVE DATA TYPE
+**Basic items that are not objects.
+
+RESERVED WORDS
+Words in Java that have special meaning and therefore cannot be used as identifiers.
+
+STRING LITERAL
+Text enclosed by double quotes.
+
+TYPE CONVERSION
+**A way of changing from one primitive data type to another.
+
+return
+**The keyword used to send a value back to a method's caller.
+
+SETTERS
+Methods for updating an object's attributes.
+
+GETTERS
+Methods for obtaining the value of an object's attributes.
+
+PARAMETER
+The identifier used to handle a passed in value.
+
+SCOPE
+The area where a variable can be used.
+
+SIGNATURE
+The unique structure of a class or method name.
+
+ENCAPSULATION
+The process of hiding data.
+
+ACCESS SPECIFIER
+The keywords public, private, and protected, which determine how an identifier can be used.
+
+INSTANCE VARIABLE
+An identifier whose scope is a whole object.
+
+OVERLOADING
+The process of creating multiple methods of the same name.
+
+PSEUDOCODE
+A mixture of English and source code.
+
+TOP DOWN DESIGN
+Starting with a broad concept and breaking it down into smaller and smaller pieces.
+
+API
+**Documents that give details on how to use a class.
+Application Programming Interface - a link to obtain data
+
+STATIC
+Keyword that attaches an identifier to a class rather than to the objects created from that class.
+
+JAVADOC
+A tool which will create an API(Documentation) for a class or package.
+
+FINAL
+An identifier with this keyword cannot change its value after it has been initialized.
+
+CONVERSION
+**A piece of the formatting String that tells the Formatter class how to react to a message.
+
+FLAGS
+**Special characters that give special properties to values passed in to the Formatter class.
+
+PRECISION
+**A piece of the formatting String that tells the Formatter class the maximum number of characters to print out.
+
+printf
+A method of the System class that is capable of outputting formatted text.
+
+Scanner
+A java.util class that is capable of reading input.
+
+System.in
+The default input stream.
+
+System.out
+The default output stream.
+
+WIDTH
+A piece of the formatting String that tells the Formatter class the minimum number of characters to output.
+
+ALGORITHM
+A systematic method for solving a problem.
+
+BOOLEAN IDENTIFIER
+A variable name of type boolean.
+
+COMPOUND STATEMENT
+Using multiple single line statements within one structure block.
+
+CONDITIONAL OPERATOR
+	** i think they are talking about TERNARY OPERATOR: val = (x > y ? x : y); **
+An alternate way of coding an if-else statement using three operands.
+
+CONTROL STRUCTURE
+A way to control how many times sections of code are executed.
+
+IF-ELSE
+A two way selection structure.
+
+ITERATION
+A control structure where code is repeated until a certain condition is met.
+
+LOGICAL OPERATOR
+Operators that determine if certain conditions are true or false.
+
+PSEUDOCODE
+A mixture of code and English that is used to study algorithms before actual coding is started.
+
+RELATIONAL OPERATOR
+Operators which compare two values.
+
+STEPWISE REFINEMENT
+The process of breaking a problem down into progressively smaller pieces.
+
+STRUCTURED PROGRAMMING
+**A method of programming which follows rules about selection, sequence, and iteration control structures.
+
+BASE CASE
+When a recursive problem can be calculated without another recursive call.
+
+RECURSION
+The process of a method calling itself in order to solve a problem.
+
+STACK
+A data abstraction where data is 'pushed' or 'popped' from the top.
+
+STACK OVERFLOW ERROR
+** When Java runs out of room in its stack, typically(sometimes) because a recursive program never ended.
+
+charAt
+The String method that returns a char in the String at a specified index.
+
+compareTo
+A String method that compares a specified String to the current String **(part of the Comparable Interface - returns int).
+
+CONCATENATION
+**Adding two Strings together using the '+' operator.
+
+equals
+**A String method that compares the content of two Strings to see if they are equivalent.
+
+GARBAGE
+An object with no references to it.
+
+GARBAGE COLLECTION
+A Java process that removes inaccessible objects from memory.
+
+IMMUTABLE
+An object that cannot be changed.
+
+length
+** A String method that returns the length in characters of the String.
+
+next
+** A Scanner method that returns a String ending when the Scanner object reaches whitespace.
+
+nextLine
+** A Scanner method that returns a String ending when the Scanner object reaches a newline character.
+
+null
+An identifier that does not point to an object.
+
+STRING CLASS
+A class that holds a group of characters.
+
+STRING LITERAL
+Text that is hardcoded.
+
+substring
+A String method that returns a designated portion of a String.
+
+toLowerCase
+A String method that returns the String without any capital letters.
+
+toString
+A method that returns the String equivalent of any object.
+
+toUpperCase
+A String method that returns the String without any lower case letters.
+
+trim
+A String method that returns the String with any leading or trailing whitespace removed.
+
+BASE CLASS
+A class used to define a new class.
+
+CHILD CLASS
+A class based on another class.
+
+DERIVED CLASS
+A class based on another class.
+
+extends
+Keyword indicating that the class will be based upon another.
+
+implements
+Keyword indicating that the class will use an interface.
+
+interface
+A set of rules governing which attributes and behaviors a class must define.
+
+METHOD OVERRIDING
+When a child class overwrites a method inherited from a parent class.
+
+PARENT CLASS
+A class used to define a new class.
+
+SUBCLASS
+A class based on another class.
+
+super
+A reference by a child class to the parent class.
+
+SUPERCLASS
+A class used to define a new class.
+
+break
+A keyword used to move to the end of a loop's execution.
+
+BOUNDARY
+The limits of where a loop executes code.
+
+do-while
+An exit check loop with one operand.
+
+ENTRY CHECK
+**A loop type that checks the condition before ever executing a statement.
+
+EXIT CHECK
+**A type of loop that checks the condition after executing its statements at least once.
+
+for
+A type of loop typically used when the exact number of iterations is known in advance.
+
+LOOP INVARIANT
+An assertion about a loop that is relevant to the purpose of the loop.
+
+NESTED LOOP
+When one or more loops are placed inside of another loop.
+
+SENTINEL
+A fake value used to identify when a loop should end.
+
+STATE
+The current value of a given variable,** object, application or machine.
+
+while
+An entry check loop with only one operand.
+
+catch
+The statement that will execute in a try-catch if an appropriate exception occurs.
+
+ERROR
+A problem with a program that causes unwanted functionality.
+
+EXCEPTION
+A type of error that interrupts execution of the program during run-time.
+
+try
+A keyword indicating an exception may occur in the following block of code.
+
+BOOLEAN ASSERTIONS
+An expression that results in a true or false answer.
+
+BOOLEAN ALGEBRA
+A branch of math devoted to the study of Boolean values.
+
+DE MORGAN’S LAWS
+Rules to negate compound Boolean expressions.
+
+ABSTRACT DATA TYPE
+A data structure emphasizing properties, functionality, and use rather than implementation.
+
+ArrayList
+A data structure that can hold varying numbers of objects that can be referenced by an index.
+
+CAST
+Converting one data type to another.
+
+for each LOOP
+A shorthand way to visit every element of a collection in order.
+
+LIST
+A data structure that holds multiple pieces of information.
+
+WRAPPER
+Classes used to represent primitive data types as objects.
+
+ARRAY
+A data structure holding a fixed amount of data that can be referenced by an index.
+
+INDEX
+The location of a given piece of data in a list.
+
+RANDOM ACCESS
+The ability to access a list at any given point.
+
+TRAVERSAL
+The process of looking at each cell of a list, usually in order.
+
+BUBBLE SORT
+A quadratic sort using a nested loop and very simple comparisons.
+
+INSERTION SORT
+A quadratic sort using a nested loop and that places data into the appropriate spot.
+
+QUADRATIC SORT
+A general type of sort with a number of steps increasing with the square of the size.
+
+SELECTION SORT
+A quadratic sort using a nested loop that goes through the whole list, finds the smallest or biggest item, and swaps that item to the beginning or end.
+
+STUB
+A routine that can be called but is not complete.
+
+SWAP
+Switching two data members of a list with each other.
+
+MERGE
+Taking two lists and putting them together.
+
+MERGESORT
+A sort that divides the list into two parts, sorts those parts, and then brings the sorted parts back together.
+
+BINARY SEARCH
+A search that has an order of O(log2N).
+
+SEQUENTIAL SEARCH
+A search that has an order of O(N).
+
+ABSTRACT
+A type of class where some or all of the methods are left undefined.
+
+CONCRETE CLASS
+A class where all the methods are fully defined.
+
+LATE BINDING
+When the actual method to call is not determined until run time.
+
+POLYMORPHISM
+When the behavior of a method is determined at run-time.
+
+BINARY
+A number base with only two digits.
+
+DECIMAL
+A number base with ten digits.
+
+HEXADECIMAL
+A number base with sixteen digits.
+
+OCTAL
+A number base with eight digits.
+
+OVER-FLOW ERROR
+When a value is placed into a data type without enough bits to handle the value's size.
+
+ROUND-OFF ERROR
+An error which affects the precision of decimal numbers.
+
+UNDER-FLOW ERROR
+**?? When a value is placed into a data type that cannot handle numbers as small as the value.

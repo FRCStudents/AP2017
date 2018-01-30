@@ -1,0 +1,12 @@
+
+Command
+	add/delete/edit user(int i)
+	attribute: userList
+
+Menu
+	getChoice() 
+
+School
+	userList
+	while(choice = runMenu()){
+		runCommand(choice);
