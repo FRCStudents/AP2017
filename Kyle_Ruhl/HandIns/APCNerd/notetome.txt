@@ -1,3 +1,0 @@
-note; 
-
-faulty somewhere in my compareTo, the booleans dont always work...
