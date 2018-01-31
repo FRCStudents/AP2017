@@ -88,7 +88,7 @@ class CompareNerds{
 		}
 		boolean complete = true;
 		for(int i = 0; i < nerds.length - 1; i++){
-			boolean x = nerds[i].getIntelligence() > nerds[i+1].getIntelligence();
+			boolean x = nerds[i].getIntelligence() >= nerds[i+1].getIntelligence();
 			complete = complete && x;
 		}
 		if(complete == true){
