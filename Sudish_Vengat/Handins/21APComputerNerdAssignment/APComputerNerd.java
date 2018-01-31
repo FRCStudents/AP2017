@@ -1,59 +1,52 @@
-public class APComputerNerd implements Comparable{
+class APComputerNerd implements Comparable{
 
-	//Atrributes
-	private int intelligence; //{9,10}
-	private int speed; //{4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}
-	private int laptopPerformance; //{0,1,2,3,4,5,6,7,8,9,10}
-	private String firstName;
+    private int intelligence;
+    private int speed;
+    private int laptopPerformance;
+    private String firstName;
 
+    public APComputerNerd(int i, int s, int l, String f) {
+        intelligence = i;
+        speed = s;
+        laptopPerformance = l;
+        firstName = f;
+    }
 
-	public APComputerNerd(int i, int s, int l, String f){
-		intelligence = i;
-		speed = s;
-		laptopPerformance = l;
-		firstName = f;
-		this("Ralph", 8, 3, 2);
-	}
+    public APComputerNerd() {
+        this(3, 4, 8, "Ralph");
+    }
 
+    public int getIntelligence() {
+        return intelligence;
+    }
+    public void setIntelligence(int i) {
+        intelligence = i;
+    }
 
-	//Getters and Setters
-	public int getSeed(){
-		return speed;
-	}
+    public int getSpeed() {
+        return speed;
+    }
+    public void setSpeed(int s) {
+        speed = s;
+    }
 
+    public int getLaptopPerformance() {
+        return laptopPerformance;
+    }
+    public void setLaptopPerformance(int l) {
+        laptopPerformance = l;
+    }
 
-	public void setSpeed(int newSpeed){
-		speed = newSpeed;
-	}
-
-	public int getIntelligence(){
-		return intelligence;
-	}
-
-	public void setIntelligence(int newIntelligence){
-		intelligence = newIntelligence;
-	}
-
-	public int getLaptopPerformance(){
-		return laptopPerformance;
-	}
-
-	public void setLaptopPerformance(int newLaptopPerformance){
-		laptopPerformance = newLaptopPerformance;
-	}
-
-	public String getFirstName(){
-		return firstName;
-	}
-
-	public void setFirstName(String newFirstName){
-		firstName = newFirstName;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String f) {
+        firstName = f;
+    }
 
 
-	//Compares object 
-	public int compareTo(APComputerNerd nerd1, boolean nerd2){ 
-		if (nerd2) {
+    public int compareTo(APComputerNerd nerd1, boolean choice) { 
+        if (choice) {
             if (nerd1.getIntelligence() > intelligence) {
                 return -1;
             } else if (nerd1.getIntelligence() < intelligence) {
@@ -61,7 +54,6 @@ public class APComputerNerd implements Comparable{
             } else {
                 return 0;
             }
-
         } else {
             if (nerd1.getFirstName().charAt(0) > firstName.charAt(0)) {
                 return -1;
@@ -71,5 +63,9 @@ public class APComputerNerd implements Comparable{
                 return 0;
             }
         }
+    }
+
+    public String toString() {
+        return (firstName + "(" + intelligence + "," + speed + "," + laptopPerformance + ")");
     }
 }
