@@ -68,12 +68,12 @@ class CompareNerds{
 		}
 		boolean complete = true;
 		for(int i = 0; i < nerds.length - 1; i++){
-			boolean x = nerds[i].getAge() > nerds[i+1].getAge();
+			boolean x = nerds[i].getAge() >= nerds[i+1].getAge();
 			complete = complete && x;
 		}
 		if(complete == true){
 			printNerds();
-		} else {
+		} else if (complete == false) {
 			compareTheNerdsAge();
 		}
 	}	
@@ -99,7 +99,7 @@ class CompareNerds{
 	} 
 
 	public static void compareTheNerdsCompSpeed() {
-		for(int i = 0; i < nerds.length; i++){
+		for(int i = 0; i < nerds.length - 1; i++){
 			if((nerds[i].getComputerSpeed() <=  nerds[i+1].getComputerSpeed())){
 				APComputerNerd placeholder = nerds[i];
 				nerds[i] = nerds[i+1];
@@ -108,7 +108,7 @@ class CompareNerds{
 		}
 		boolean complete = true;
 		for(int i = 0; i < nerds.length - 1; i++){
-			boolean x = nerds[i].getComputerSpeed() > nerds[i+1].getComputerSpeed();
+			boolean x = nerds[i].getComputerSpeed() >= nerds[i+1].getComputerSpeed();
 			complete = complete && x;
 		}
 		if(complete == true){
@@ -129,7 +129,7 @@ class CompareNerds{
 	}
 	public static void goAgain(){
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Would you like to go again? (y/n) \n       >>>");
+		System.out.print("\n\nWould you like to go again? (y/n) \n       >>>");
 		String choice = sc.next();
 		char x = choice.charAt(0);
 		if(x == 'y'){

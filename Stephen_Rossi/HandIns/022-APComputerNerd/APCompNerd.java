@@ -42,6 +42,6 @@ class APComputerNerd{
 		this.intelligence = intelligence;
 	}
 	public String toString(){
-		return name + " is " + age + ", and has an intelligence of " + intelligence;
+		return name + " is " + age + ", has an intelligence of " + intelligence + ", and has a computer speed of " +computerSpeed;
 	}
 }
