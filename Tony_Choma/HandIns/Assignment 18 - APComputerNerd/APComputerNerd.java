@@ -1,8 +1,15 @@
-public class APComputerNerd{
+ public class APComputerNerd{
         int intelligence; //1-10
         int speed;//1-10
         int performance;//1-10
         private String firstName;
+
+        APComputerNerd(int i,int s, int p, String fN){
+             i.setIntelligence();
+             s.setSpeed();
+             p.setPerformance();
+             fN.setFirstName();
+       }
 
 //getters and setters for intel
         public int getIntelligence(){
