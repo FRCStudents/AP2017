@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class APComputerNerd{
         int intelligence; //1-10
         int speed;//1-10
@@ -19,14 +21,28 @@ public class APComputerNerd{
         public int getIntelligence(){
                 return intelligence;
         }
-        public void setIntelligence(int newIntelligence){
-                intelligence = newIntelligence;
+        public void setIntelligence(int i){
+             if(i > 9 || i < 10){
+                   System.out.println("Intelligence " + i + " within the range of 9-10");
+                   return;
+             }
+             if(i < 9 || i > 10){
+                   System.out.println("Intelligence " + i + " is not within range of 9-10");
+                        return;
+             }
+             intelligence = i;
         }
 //getters and setters for speed
         public int getSpeed(){
                 return speed;
         }
         public void setSpeed(int newSpeed){
+             if(s > 5 || s < 9999){
+                   System.out.println("Speed " + s + " is within range of 5-9999");
+             }
+             if(s < 5 || s > 9999){
+                   System.out.println("Speed " + s + " is not within range of 5- 9999");
+             }
                 speed = newSpeed;
         }
 //getters and setters for laptopPerf
