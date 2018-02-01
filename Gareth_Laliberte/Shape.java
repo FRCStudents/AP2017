@@ -1,7 +1,10 @@
 public class Shape{
         
-        protected int sde1();
-        protected nt sde2();
-        protected nt sde();
+        protected String shapeName;
+        protected double side1;
+        protected double side2;
+        protected double side3;        
+        protected double area;
+        protected double perimeter;
+
         
-        prat
