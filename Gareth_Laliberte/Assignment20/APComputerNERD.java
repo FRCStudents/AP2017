@@ -17,7 +17,7 @@ public class APComputerNERD implements Comparable{
 	public int laptopPerformance; //between 0 and 10
 	public String firstName;
 
-	int[]+arr = new int[5];
+	int[] arr = new int[5];
 
 	APComputerNERD(int i, int s, int p, String f){
 		intelligence = i;
@@ -73,4 +73,5 @@ public int compareTo(Object Nerd){
 		}
 		return -1;
 	}
+
 }
