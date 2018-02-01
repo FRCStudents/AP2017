@@ -18,7 +18,7 @@ public class APComputerNERD {
 	public void sort(){
 		int temp = 0;
 		for (int j = 0; j < testArr.length; j++){
-			int lastPlace = -1;
+			int lastPlace = 0;
 				for (int i = 0; i < testArr.length; i++){
 					if (testArr[i] < temp){
 						temp = testArr[i];
