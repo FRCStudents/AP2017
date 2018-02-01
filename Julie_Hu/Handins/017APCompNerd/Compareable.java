@@ -1,4 +1,4 @@
-public interface Comparable{
+public interface Compareable{
 		
 		public void displayNerd();
 		

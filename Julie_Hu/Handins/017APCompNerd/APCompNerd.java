@@ -1,4 +1,4 @@
-public class APCompNerd implements Comparable{
+public class APCompNerd implements Compareable{
 	
 	public int intelligence;
 	public int speed;
