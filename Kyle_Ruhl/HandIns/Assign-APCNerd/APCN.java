@@ -99,8 +99,12 @@ public class APCN implements comparable{
 		System.out.println("[Name: " + getName() + " | Intellegence: " + getIntelligence() + " | Speed: " + getSpeed() + " | Laptop Performance: " + getLaptopPerformance() + "]");
 	}	
 	
+	public void displayNerd2(){
+		System.out.println("[Name: " + getName() + " | Intellegence: " + getIntelligence() + "]");
+	}
+	
 	public void displayKevin(){
-		System.out.println("\n\nAttributes for " + fName);
+		System.out.println("Attributes for " + fName);
 		System.out.println("[Name: " + fName + " | Intellegence: " + intelligence + " | Speed: " + speed + " | Laptop Performance: " + laptopPerformance + "]");
 	}
 }

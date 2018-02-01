@@ -1,6 +1,7 @@
 public interface comparable{
 		
 		public void displayNerd();
+		public void displayNerd2();
 		
 	    public String getName();
 		public void setName(String a);
