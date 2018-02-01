@@ -7,14 +7,14 @@ public class APComputerNerd{
         String firstName;
 
         public APComputerNerd(){
-             this(9,6,10, "FROG");
+             this("FROG",9,6,10);
        }
 
-        public APComputerNerd(int i,int s, int p, String fN){
-             i.setIntelligence();
-             s.setSpeed();
-             p.setLaptopPerformance();
-             fN.setFirstName();
+        public APComputerNerd(String fN, int i,int s, int p){
+             setIntelligence(i);
+             setSpeed(s);
+             setLaptopPerformance(p);
+             setFirstName(fN);
        }
 
 //getters and setters for intel
