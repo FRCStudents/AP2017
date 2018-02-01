@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.Scanner;
 
 public class Entry {
@@ -11,7 +12,6 @@ public class Entry {
 	//Should make double for sizes?
 	private int shoeSize;
 	private int hatSize;
-	private int identification;
 
 		public Entry() {
 			name = " ";
@@ -82,22 +82,35 @@ public class Entry {
 			System.out.println("Enter Hat Size");
 			hatSize = scanner07.nextInt();
 
+			storePerson();
+
 			createSpace();
 			table();
 		}
 
 		public void viewLastPerson() {
-			System.out.println(name);
-			System.out.println(age);
-			System.out.println(occupation);
-			System.out.println(speed);
-			System.out.println(height);
-			System.out.println(shoeSize);
-			System.out.println(hatSize);
+			System.out.println("Name: " + name);
+			System.out.println("Age: " + age);
+			System.out.println("Occupation: " + occupation);
+			System.out.println("Speed: " + speed);
+			System.out.println("Height: " + height);
+			System.out.println("Shoe Size: " + shoeSize);
+			System.out.println("Hat Size:" + hatSize);
 		}
 
-		public void storePerson() {
-
+		public void storePerson() throws IOException {
+			FileOutputStream out = null;
+			String str = name + "~" + age + "~" + occupation + "~" + speed + "~" + height + "~" + shoeSize + "~" + hatSize;      
+			try {
+				out = new FileOutputStream("/InfoStorage/" + name + ".txt");
+				for(int i=0; i < str.length(); i++){
+					out.write(str.charAt(i));
+				}
+			} finally {
+				if(out != null){
+					out.close();
+				}
+			} 
 		}
 
 		public void createSpace() {
