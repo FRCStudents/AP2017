@@ -1,4 +1,4 @@
-public class APCompNerd implements comparable{
+public class APCompNerd implements Comparable{
 	
 	public int intelligence;
 	public int speed;
@@ -6,7 +6,7 @@ public class APCompNerd implements comparable{
 	public String fName;
 	public boolean flagger;
 
-	public APCompNerd(){ this("Joe", 8, 2, 7); }
+	public APCompNerd(){ this("Joe", 8, 3, 9); }
 
 	public APCompNerd(String a, int b, int c, int d){
 		setIntelligence(b);
@@ -30,28 +30,28 @@ public class APCompNerd implements comparable{
 		APCompNerd arrayOfNERDZ = (APCompNerd)NARD;
 		String thisName = this.getName();
 		String driverzName = arrayOfNERDZ.getName();
-		int thisIntele = this.getIntelligence();
-		int driverzIntele = arrayOfNERDZ.getIntelligence();
-		if(thisIntele == driverzIntele && !flagger){
+		int thisInteli = this.getIntelligence();
+		int driverzInteli = arrayOfNERDZ.getIntelligence();
+		if(thisInteli == driverzInteli && !flagger){
 			return 0;}
 		if(thisName.equals(driverzName) && flagger){
 			return 0;}
 		if(flagger){
 			return compareNames(thisName, driverzName);}
-		return compareIntelegence(thisIntele, driverzIntele);}
+		return compareInteligence(thisInteli, driverzInteli);}
 	public int compareNames(String thisName, String driverzName){
     	for(int i=0; (i < thisName.length() && i < driverzName.length()); i++){
         	if (thisName.charAt(i) > driverzName.charAt(i)) { return 1; } 
 			} return -1;}
-	public int compareIntelegence(int thisIntele, int driverzIntele){
-		if (thisIntele > driverzIntele){
+	public int compareInteligence(int thisInteli, int driverzInteli){
+		if (thisInteli > driverzInteli){
 			return 1; } else {  return -1; }}
 	public void displayNerd(){
-		System.out.println("[Name: " + getName() + " | Intellegence: " + getIntelligence() + " | Speed: " + getSpeed() + " | Laptop Performance: " + getLaptopPerformance() + "]");
+		System.out.println("[Name: " + getName() + " | Intelligence: " + getIntelligence() + " | Speed: " + getSpeed() + " | Laptop Performance: " + getLaptopPerformance() + "]");
 	}	
 	
 	public void displayJoe(){
 		System.out.println("\n\nAttributes for " + fName);
-		System.out.println("[Name: " + fName + " | Intellegence: " + intelligence + " | Speed: " + speed + " | Laptop Performance: " + laptopPerformance + "]");
+		System.out.println("[Name: " + fName + " | Intelligence: " + intelligence + " | Speed: " + speed + " | Laptop Performance: " + laptopPerformance + "]");
 	}
 }

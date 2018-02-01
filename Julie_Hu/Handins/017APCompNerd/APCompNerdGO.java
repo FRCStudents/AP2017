@@ -24,7 +24,7 @@ public class APCompNerdGO{
 		}
 	
 		public static void fillArray(){
-			int x; //intelegence level
+			int x; //inteligence level
 			int y; //speed
 			int z; //laptop performance
 
@@ -59,7 +59,7 @@ public class APCompNerdGO{
 	        
 			setArraySortType(false);
 	        sortArray();
-			System.out.println("\n\n++++++++ Sorted Least to Greatest on Intelegence Level ++++++++");
+			System.out.println("\n\n++++++++ Sorted Least to Greatest on Inteligence Level ++++++++");
 	        showArray();
 			System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
