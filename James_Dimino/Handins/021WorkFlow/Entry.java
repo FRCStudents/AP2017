@@ -24,7 +24,7 @@ public class Entry {
 
 		}
 
-		public void table() {
+		public void table() throws IOException {
 			createSpace();
 
 			Scanner scanner9 = new Scanner(System.in);
@@ -46,7 +46,7 @@ public class Entry {
 			}
 		}
 
-		public void enterInfo() {
+		public void enterInfo() throws IOException {
 			createSpace();
 			Scanner scanner01 = new Scanner(System.in);
 			System.out.println("Enter Name");
