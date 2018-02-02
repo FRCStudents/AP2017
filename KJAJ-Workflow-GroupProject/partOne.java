@@ -132,7 +132,7 @@ public class partOne{
 	public void writeTextFile(){
         try{
             // Create new file
-            //CHAMGE THE STRING BELOW FOR YOUR EDIFICATION
+            //CHANGE THE STRING BELOW FOR YOUR EDIFICATION
             String path = "/Users/imac/Downloads/AP2017/KJAJ-Workflow-GroupProject/KJAJ_";
 			String txt = ".txt/";
             File file = new File(path + theName + txt);
