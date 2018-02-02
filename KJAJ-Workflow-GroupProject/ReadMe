@@ -1,6 +1,14 @@
-Workflow Group Assignment 
+Workflow Group Assignment (KJAJ)
 
 Kyle Ruhl
 James Dimino
-Julie Hu
 Archit Sahay
+Julie Hu
+
+For your edification to work for your computer: 
+	-change the string “path” in the method writeTextFile in partOne.java
+	-type in ‘pwd’ in the command prompt for whatever directory where these files are 
+	saved and change it so that it will save the text files into wherever you are 
+	working. You could also make a copy of my file so that you don’t mess it up but whatever.
+
+**Also, to display the contents of a text file you made, type ‘more’ and the text file name in the command prompt.

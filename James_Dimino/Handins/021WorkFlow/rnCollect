@@ -1,0 +1,4 @@
+cd /Documents/AP2017/James_Dimino/Handins/021WorkFlow
+rm ./InfoStorage/
+java EntryDriver
+java CollectDataWork

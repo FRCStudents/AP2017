@@ -5,13 +5,13 @@ public class ShapeDriver{
 
 		shapes[0] = a;
 
-		a.setTriSide(1,5);
-		a.setTriSide(2,5);
-		a.setTriSide(3,5);
+		a.setTriSide(1,6);
+		a.setTriSide(2,6);
+		a.setTriSide(3,6);
 
 		shapes[0].setNumSides(3);
-		shapes[0].setHeight(5);
-		shapes[0].setWidth(5);
+		shapes[0].setHeight(6);
+		shapes[0].setWidth(6);
 
 		a.getTriPerimeter();
 		a.triArea();

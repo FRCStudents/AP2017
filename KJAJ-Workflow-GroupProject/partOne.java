@@ -1,6 +1,9 @@
 //first part of the workflow project
 //Project by Kyle Ruhl, James Dimino, Julie Hu, Archit Sahay
 import java.util.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 public class partOne{
 
 	//attributes:
@@ -123,5 +126,35 @@ public class partOne{
 			//if they corrected something, the double checking process will happen again using recursion
 			displayAttributes();
 			askCorrections();	
-		}
+		}	
+	}
+	
+	public void writeTextFile(){
+        try{
+            // Create new file
+            //CHANGE THE STRING BELOW FOR YOUR EDIFICATION
+            String path = "/Users/imac/Downloads/AP2017/KJAJ-Workflow-GroupProject/KJAJ_";
+			String txt = ".txt/";
+            File file = new File(path + theName + txt);
+
+            // If file doesn't exists, then create it
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+
+            FileWriter fw = new FileWriter(file.getAbsoluteFile());
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            // Write in file
+			bw.write(theName + "\n" + age + "\n" + occupation + "\n" + height + "\n" + speed + "\n" + shoeSize + "\n" + hatSize);
+
+            // Close connection
+            bw.close();
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+    	System.out.println("\n\n\n\n\n\nDone! File is Written!");   
+			}//ends write file
 }
+		

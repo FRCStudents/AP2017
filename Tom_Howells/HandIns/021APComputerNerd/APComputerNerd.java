@@ -12,7 +12,7 @@ class APComputerNerd implements Comparable{
     }
 
     public APComputerNerd() {
-        this(9, 10, 8, "Dilbert");
+        this(-1, -1, -1, "");
     }
 
     public int getIntelligence() {
@@ -44,23 +44,6 @@ class APComputerNerd implements Comparable{
     }
 
     // return -1 if other is greater, 0 if equal, and 1 if this object is greater
-	// Something you could do:
-	// 	Create a new attribute called "sortByType", then default it
-	//	to 0, and write a method called "setSortByType(int i)" and 
-	//	allow the client to set it to a non-zero value (or binary).
-
-	// 	In your compareto function, you can check that sortByType
-	//	and determine if you will sort by name or intelligence...
-	//	
-	//	If you did that, in your driver you would:
-	//		1) create the array
-	//		2) sort in the defaulted way
-	//		3) walk the array and set the sortByType variables
-	//		4) and sort the array (by the other attribute)
-	//		
-	//		What do you think?
-	//
-
     public int compareTo(APComputerNerd nerd, boolean choice) { // choice = 0 for intelligence, choice = 1 for firstName
         if (choice) {
             if (nerd.getIntelligence() > intelligence) {
