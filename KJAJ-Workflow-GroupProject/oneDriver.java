@@ -18,5 +18,6 @@ public class oneDriver{
 		
 		//this function uses recursion to redo scanners and then re-display the attributes and redo itself
 		b.askCorrections(); 
+		b.writeTextFile();
 	}
 }
