@@ -19,6 +19,7 @@ public class APComputerNERD {
 		int temp = 0;
 		for (int j = 0; j < testArr.length; j++){
 			int lastPlace = 0;
+			temp = testArr2[j];
 				for (int i = 0; i < testArr.length; i++){
 					if (testArr[i] < temp){
 						temp = testArr[i];
@@ -31,8 +32,8 @@ public class APComputerNERD {
 	}
 
 	public void printTest(){
-		for (int i = 0; i < testArr.length; i++){
-			System.out.println(testArr[i]);
+		for (int i = 0; i < testArr2.length; i++){
+			System.out.println(testArr2[i]);
 		}
 	}
 
