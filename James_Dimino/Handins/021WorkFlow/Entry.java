@@ -103,7 +103,7 @@ public class Entry {
 			String str = name + "~" + age + "~" + occupation + "~" + speed + "~" + height + "~" + shoeSize + "~" + hatSize;      
 			try {
 				out = new FileOutputStream("/InfoStorage/" + name + ".txt");
-				for(int i=0; i < str.length(); i++){
+				for (int i=0; i < str.length(); i++) {
 					out.write(str.charAt(i));
 				}
 			} finally {
