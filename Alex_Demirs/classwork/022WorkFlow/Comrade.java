@@ -101,8 +101,4 @@ System.out.println("What is your hatsize comrade?");
 String haImput = haimput.nextLine();
 setHatSize(haImput);
 }
-
-
-
-
 }
