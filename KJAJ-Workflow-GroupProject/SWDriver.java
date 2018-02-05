@@ -1,10 +1,10 @@
 //first part of the workflow project--DRIVER
 //Project by Kyle Ruhl, James Dimino, Julie Hu, Archit Sahay
 
-public class oneDriver{
+public class SWDriver{
 	public static void main(String[] argv){
 		
-		partOne b = new partOne();
+		scanAndWrite b = new scanAndWrite();
 		
 		b.scanForName();
 		b.scanForAge();
@@ -18,6 +18,7 @@ public class oneDriver{
 		
 		//this function uses recursion to redo scanners and then re-display the attributes and redo itself
 		b.askCorrections(); 
+		
 		b.writeTextFile();
 	}
 }
