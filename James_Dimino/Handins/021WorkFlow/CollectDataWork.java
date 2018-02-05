@@ -53,10 +53,3 @@ class CollectDataWork {
 		}
 	}
 }
-
-class CollectData{
-	public static void main(String [] argv) throws IOException  {
-		CollectDataWork cdw = new CollectDataWork();
-		//cdw.printFiles();
-	}
-}
