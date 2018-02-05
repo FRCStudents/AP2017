@@ -1,0 +1,10 @@
+
+--------------
+Name: Douglas
+Age: 37
+Occupation: Dentist
+Height: 75 inches 
+Speed: 20.0 mph 
+Shoe Size: 16.5
+Hat Size: 9
+--------------

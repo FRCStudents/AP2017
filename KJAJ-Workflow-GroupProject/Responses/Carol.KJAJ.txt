@@ -1,0 +1,10 @@
+
+--------------
+Name: Carol
+Age: 50
+Occupation: Manager
+Height: 64 inches 
+Speed: 6.0 mph 
+Shoe Size: 8.5
+Hat Size: 10
+--------------

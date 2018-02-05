@@ -5,6 +5,8 @@ public class APComputerNerd{
         int speed;//1-10
         int laptopPerformance;//Based off PassMark CPU Benchmarks
         String firstName;
+        int[] names = new int[10];
+        String[] test = {"Frank", "Maya", "Jack", "Sophia", "Ben", "Erin", "Mike", "Rachael", "Tom", "April"};
 
         public APComputerNerd(){
              this("FROG",9,6,10);
@@ -15,6 +17,10 @@ public class APComputerNerd{
              setSpeed(s);
              setLaptopPerformance(p);
              setFirstName(fN);
+       }
+
+       public void sortName(){
+
        }
 
 //getters and setters for intel
@@ -51,8 +57,16 @@ public class APComputerNerd{
         public int getLaptopPerformance(){
                 return laptopPerformance;
         }
-        public void setLaptopPerformance(int newLaptopPerformance){
-                laptopPerformance = newLaptopPerformance;
+        public void setLaptopPerformance(int i){
+             if(i < 1000){
+                   System.out.println("Laptop performance " + i + " is crap so go get a new one.");
+                   return;
+             }
+             if(i > 20000){
+                   System.out.println("Laptop performance " + i + " is too much and can solve the answer to life so you good.");
+                   return;
+             }
+                laptopPerformance = i;
         }
 //getters and setters for firstName
         public String getFirstName(){

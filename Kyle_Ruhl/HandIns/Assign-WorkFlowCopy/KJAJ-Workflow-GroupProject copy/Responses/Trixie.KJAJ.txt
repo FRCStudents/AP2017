@@ -1,0 +1,10 @@
+
+--------------
+Name: Trixie
+Age: 36
+Occupation: Dancer
+Height: 59 inches 
+Speed: 7.0 mph 
+Shoe Size: 11.0
+Hat Size: 3
+--------------

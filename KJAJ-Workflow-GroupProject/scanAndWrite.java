@@ -4,7 +4,7 @@ import java.util.*;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
-public class partOne{
+public class scanAndWrite{
 
 	//attributes:
 	public String theName = "";
@@ -21,6 +21,7 @@ public class partOne{
 	//-------------------------------------------------------------------------
 	//The following 7 methods all are scanners for each individual attribute:::::::
 	public void scanForName(){
+		for (int i = 0; i < 50; i++){ System.out.println(""); }
 		System.out.println("Welcome to the Workflow! Please start by following the following prompts to create a person...");
 		Scanner ScanNAME = new Scanner(System.in);
 		System.out.println("\nPlease Type the NAME of your person:");
@@ -85,7 +86,7 @@ public class partOne{
 		//this function asks user if all their inputed responses are to thier liking
 		
 		Scanner ScanC = new Scanner(System.in);
-		System.out.println("\n\nAre These Characteristics all Correct? \nFor 'yes', type 'YES'. For 'no', type 'NO'");
+		System.out.println("\n\nAre These Characteristics all Correct? \nFor 'yes', press ENTER. For 'no', type 'NO'");
 		String answer = ScanC.nextLine();
 		
 		if (answer.equals("NO")){
@@ -132,10 +133,11 @@ public class partOne{
 	public void writeTextFile(){
         try{
             // Create new file
-            //CHAMGE THE STRING BELOW FOR YOUR EDIFICATION
-            String path = "/Users/imac/Downloads/AP2017/KJAJ-Workflow-GroupProject/KJAJ_";
+            //CHANGE THE STRING BELOW FOR YOUR EDIFICATION
+            String path = "/Users/imac/Downloads/AP2017/KJAJ-Workflow-GroupProject/Responses/";
+			String kjaj = ".KJAJ";
 			String txt = ".txt/";
-            File file = new File(path + theName + txt);
+            File file = new File(path + theName + kjaj + txt);
 
             // If file doesn't exists, then create it
             if (!file.exists()) {
@@ -146,7 +148,15 @@ public class partOne{
             BufferedWriter bw = new BufferedWriter(fw);
 
             // Write in file
-			bw.write(theName + "\n" + age + "\n" + occupation + "\n" + height + "\n" + speed + "\n" + shoeSize + "\n" + hatSize);
+			bw.write("\n--------------\n");
+			bw.write("Name: " + theName);
+			bw.write("\nAge: " + age);
+			bw.write("\nOccupation: " + occupation);
+			bw.write("\nHeight: " + height + " inches ");
+			bw.write("\nSpeed: " + speed + " mph ");
+			bw.write("\nShoe Size: " + shoeSize);
+			bw.write("\nHat Size: " + hatSize);
+			bw.write("\n--------------\n");
 
             // Close connection
             bw.close();
@@ -154,7 +164,7 @@ public class partOne{
         catch(Exception e){
             System.out.println(e);
         }
-    	System.out.println("\n\n\n\n\n\nDone! File is Written!");   
+    	System.out.println("\n\n\nDone! File is Written!");   
 			}//ends write file
 }
 		

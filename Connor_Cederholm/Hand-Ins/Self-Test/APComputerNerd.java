@@ -9,7 +9,7 @@ public class APComputerNerd implements Comparable{
 	}
 
 	public void setIntelligence(int k){
-		intelligence = k;
+		k = intelligence;
 	}
 
 	private void swap(int i, int j){
@@ -28,14 +28,18 @@ public class APComputerNerd implements Comparable{
 	}
 
 	public void sortByInt(APComputerNerd[] arr1){
+		int temp = 2;
 		APComputerNerd [] arr2 = new APComputerNerd [arr1.length];
 		for (int j = 0; j < arr1.length; j ++){
-			if(arr1[j].getIntelligence() < arr1[j+1].getIntelligence()) {
-				arr2[j] = arr1[i];
-			}else {
-				
-						
-			} 
+			int lastPlace = -1;
+			for (int i = 0; i < arr1.length; i++){
+				if (arr1[i].getIntelligence() < temp){
+					temp = arr1[i].getIntelligence();
+					lastPlace = i;
+				}
+			arr2[j] = arr1[i];
+			}
+		arr1[lastPlace].setIntelligence(999);
 		}
 		for (int m = 0; m < arr1.length; m ++){
 			arr1[m] = arr2[m];

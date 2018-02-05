@@ -1,0 +1,10 @@
+
+--------------
+Name: Harold
+Age: 3
+Occupation: Child
+Height: 24 inches 
+Speed: 5.0 mph 
+Shoe Size: 4.0
+Hat Size: 1
+--------------

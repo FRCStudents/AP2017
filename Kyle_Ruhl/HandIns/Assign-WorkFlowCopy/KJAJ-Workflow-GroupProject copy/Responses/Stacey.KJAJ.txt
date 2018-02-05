@@ -1,0 +1,10 @@
+
+--------------
+Name: Stacey
+Age: 21
+Occupation: Bartender
+Height: 64 inches 
+Speed: 23.0 mph 
+Shoe Size: 12.0
+Hat Size: 8
+--------------
