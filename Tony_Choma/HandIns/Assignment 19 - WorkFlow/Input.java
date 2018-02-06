@@ -10,7 +10,7 @@ public class Input{
       private int hatSize;
 //Scanner
       Scanner input = new Scanner(System.in);
-//Contructor
+//Contructors
       public Input(String n, int a, int s, int h, int sS, int hS){
             setName(n);
             setAge(a);
@@ -18,6 +18,9 @@ public class Input{
             setHeight(h);
             setShoeSize(sS);
             setHatSize(hS);
+      }
+
+      public Input(){
       }
 
 //Printer boi
@@ -53,7 +56,7 @@ public class Input{
       }
 
       public int getHeight(){
-            printer("what is your height?");
+            printer("what is your height in inches?");
             height = input.nextInt();
             return height;
       }
@@ -77,5 +80,21 @@ public class Input{
       }
       public void setHatSize(int hS){
             hatSize = hS;
+      }
+
+      public static void main(String[] args){
+            Input i = new Input();
+            //Input("Shjt", 95, 2121, 122, 65, 12);
+            i.getName();
+            i.getAge();
+            i.getSpeed();
+            i.getHeight();
+            i.getShoeSize();
+            i.getHatSize();
+            System.out.println("Hello " + i.name + ", you are " + i.age +
+                              ", you have a speed of " + i.speed +
+                              ", height of " + i.height +
+                              " inches, shoe size of " + i.shoeSize +
+                              " and a hat size of " + i.hatSize +".");
       }
 }

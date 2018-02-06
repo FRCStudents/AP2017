@@ -8,6 +8,7 @@ public class Entry {
 	private int speed;
 	private int age;
 	private int height;
+	private int returnHome;
 
 	//Should make double for sizes?
 	private int shoeSize;
@@ -88,7 +89,10 @@ public class Entry {
 			table();
 		}
 
-		public void viewLastPerson() {
+		public void viewLastPerson() throws IOException {
+
+			createSpace();
+
 			System.out.println("Name: " + name);
 			System.out.println("Age: " + age);
 			System.out.println("Occupation: " + occupation);
@@ -96,13 +100,31 @@ public class Entry {
 			System.out.println("Height: " + height);
 			System.out.println("Shoe Size: " + shoeSize);
 			System.out.println("Hat Size:" + hatSize);
+
+			System.out.println(" ");
+
+			Scanner scanner99 = new Scanner(System.in);
+			System.out.println("1 -> Return To Home");
+			returnHome = scanner99.nextInt();
+
+			if (returnHome == 1) {
+				createSpace();
+				table();
+			}
+
+			else {
+				createSpace();
+				viewLastPerson();
+			}
+
+
 		}
 
 		public void storePerson() throws IOException {
 			FileOutputStream out = null;
 			String str = name + "~" + age + "~" + occupation + "~" + speed + "~" + height + "~" + shoeSize + "~" + hatSize;      
 			try {
-				out = new FileOutputStream("/InfoStorage/" + name + ".txt");
+				out = new FileOutputStream("./InfoStorage/" + name + ".txt");
 				for (int i=0; i < str.length(); i++) {
 					out.write(str.charAt(i));
 				}
