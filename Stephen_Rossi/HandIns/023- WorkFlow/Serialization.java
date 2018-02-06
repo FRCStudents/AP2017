@@ -11,10 +11,10 @@ public class Serialization {
 
 			 String path = null;
 
-			 if(fileName.substring(fileName.length()-3) == ".ser"){
-				 path = "./" + fileName;
+			 if(fileName.endsWith(".ser")){
+				 path = "./People/" + fileName;
 			 } else {
-				 path = "./" + fileName + ".ser";
+				 path = "./People/" + fileName + ".ser";
 			 }
 
 			 try {

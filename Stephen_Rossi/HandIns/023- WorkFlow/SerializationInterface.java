@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.PrintWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class SerializationInterface{
 
@@ -14,7 +14,7 @@ public class SerializationInterface{
     System.out.print(x);
   }
 
-  public void dispMenu(){
+  public void dispMenu() throws IOException{
     sopl("+~~~~~~~~~~~~~~~~~~~~~~~~+");
     sopl("+~  1. Create Person    ~+");
     sopl("+~   2. Read Person     ~+");
@@ -27,7 +27,7 @@ public class SerializationInterface{
     parseMenu(sc.nextInt());
   }
 
-  public void parseMenu(int x){
+  public void parseMenu(int x) throws IOException{
     if(x == 1){
       createPerson();
     } else if(x == 2){
@@ -62,7 +62,7 @@ public class SerializationInterface{
   Scanner sc = new Scanner(System.in);
   System.out.print("What is the person's name? \n         >>");
   String name = sc.next();
-  Person p = ser.deSerializePerson("/People/" + name);
+  Person p = ser.deSerializePerson(name);
   System.out.println(p);
   }
 
@@ -75,8 +75,13 @@ public class SerializationInterface{
   }
 
   public void htmlize() throws IOException{
-      File file = new File ("people.html");
-      PrintWriter writer = new PrintWriter ("people.html");
+    File file = null;
+    Serialization ser = new Serialization();
+    try {
+      file = new File ("people.html");
+      PrintWriter writer = new PrintWriter("people.html");
+      String[] files = new File("./023- WorkFlow/People/").list();
+      int len = files.length;
       writer.println("<HTML>");
       writer.println("  <head>");
       writer.println("    <title> People! </title>");
@@ -84,14 +89,30 @@ public class SerializationInterface{
       writer.println("  </head>");
       writer.println("  <body>");
       writer.println("    <table>");
-      writer.println("      <tr>");
-      writer.println("       <th> Name </th>");
-      writer.println("       <th> Age </th>");
-      writer.println("       <th> Country </th>");
-      writer.println("       <th> Sub-Region </th>");
-      writer.println("       <th> Description </th>");
-      writer.println("      /<tr>");
+      writer.println("       <tr>");
+      writer.println("         <th> Name </th>");
+      writer.println("         <th> Age </th>");
+      writer.println("         <th> Country </th>");
+      writer.println("         <th> Sub-Region </th>");
+      writer.println("         <th> Description </th>");
+      writer.println("       </tr>");
+      for(int i = 0; i < len; i++){
+        Person temp = ser.deSerializePerson(files[i]);
+        writer.println("       </tr>");
+        writer.println("         <td> " + temp.getName() + " </td>");
+        writer.println("         <td> " + temp.getAge() + " </td>");
+        writer.println("         <td> " + temp.getCountry() + " </td>");
+        writer.println("         <td> " + temp.getState() + " </td>");
+        writer.println("         <td> " + temp.getInfo() + " </td>");
+        writer.println("       </tr>");
+      }
+      writer.println("    </table>");
+      writer.println("  </body>");
+      writer.println("</HTML>");
       writer.close();
-      //System.out.println(new File("Documents/Github/Stephen_Rossi/HandIns/023- WorkFlow/People/").list().length);
+    } catch(IOException ex) {
+      System.out.println("There is an IOException that was caught here!");
+    }
+    //Runtime.getRuntime().exec("cmd start people.html");
   }
 }

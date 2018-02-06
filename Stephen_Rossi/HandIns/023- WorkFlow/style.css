@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	height: 100%;
+	background: red; 
+    background: linear-gradient(#444, #777, #444s);
+}
+table {
+  	width: 80vw;
+  	margin-left: 10vw;
+	margin-top: 10vw;
+	text-align: center;
+	font-family: Arial;
+	background-color: #222;
+	border-radius: .5%;
+}
+
+th {
+	font-weight: unset;
+  	background-color: #111;
+  	color: #bbb;
+}
+
+td {
+	font-weight: unset;
+	background-color: #555;
+	color: #111;
+}
