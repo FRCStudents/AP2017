@@ -1,9 +1,9 @@
 import java.io.*;
 
-class DataHTMLize {
+class HTMLConverter {
    static String beginHTML = "<HTML><HEAD><link rel=\"stylesheet\" type=\"text/css\" href=\"DATA.CSS\">\n\t<TITLE>Html Build</TITLE></HEAD>\n";
    static String beginHTML2 = "<BODY><DIV class=BODY><H1>Serious Data</H1><br><DIV CLASS=table><TABLE>";
-   static String beginHTML3 = "\n<TR><TH>Name</TH><TH>Age</TH><TH>Height</TH><TH>Shoe Size</TR><TR><TD class=big>";
+   static String beginHTML3 = "\n<TR><TH>Name</TH><TH>Age</TH><TH>Occupation</TH><TH>Speed</TR><TH>Height</TH><TH>Shoe Size</TH><TH>Hat Size</TH><TR><TD class=big>";
    static String endHTML = "</TD></TR></TABLE></DIV></DIV></BODY></HTML>";
    
    static void doBeginHTML(FileOutputStream out)  throws IOException{

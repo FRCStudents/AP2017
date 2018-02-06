@@ -3,4 +3,4 @@ rm ./InfoStorage/all.txt
 java EntryDriver
 java CollectWorkDriver
 java HTMLConverter
-open ./Data/allHTML.html
+open ./InfoStorage/allHTML.html
