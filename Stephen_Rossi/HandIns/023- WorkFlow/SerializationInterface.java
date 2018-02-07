@@ -1,7 +1,8 @@
 import java.util.Scanner;
-import java.io.PrintWriter;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+//import java.io.PrintWriter;
+//import java.io.File;
+//import java.io.IOException;
 
 public class SerializationInterface{
 
@@ -37,11 +38,27 @@ public class SerializationInterface{
     } else if(x ==4){
       deletePerson();
     } else{
-      parseError();
+      parseError(x);
     }
   }
 
-  public void createPerson(){
+  public void continueQ() throws IOException{
+    System.out.println("\n\n");
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Would you like to continue in this program? (y/n) \n          >>");
+    char answ = sc.next().charAt(0);
+    if(answ == 'y'){
+      System.out.println("\n\n\n");
+      dispMenu();
+    }else if (answ == 'n') {
+      System.exit(0);
+    } else {
+      System.out.println("Error, please try again \n \n");
+      continueQ();
+    }
+  }
+
+  public void createPerson() throws IOException{
     Scanner sc = new Scanner(System.in);
     sop("\nWhat is the persons name? \n      >>> ");
     String name = sc.next();
@@ -55,23 +72,32 @@ public class SerializationInterface{
     String info = sc.next();
     Person placeH = new Person(name,age,country,state,info);
     ser.SerializePerson(placeH);
-
+    continueQ();
   }
 
-  public void readPerson(){
-  Scanner sc = new Scanner(System.in);
-  System.out.print("What is the person's name? \n         >>");
-  String name = sc.next();
-  Person p = ser.deSerializePerson(name);
-  System.out.println(p);
+  public void readPerson() throws IOException{
+    Scanner sc = new Scanner(System.in);
+    System.out.print("What is the person's name? \n         >>");
+    String name = sc.next();
+    Person p = ser.deSerializePerson(name);
+    System.out.println(p);
+    continueQ();
   }
 
-  public void deletePerson(){
-    sopl("Delete not updated");
+  public void deletePerson() throws IOException{
+    Scanner sc = new Scanner(System.in);
+    System.out.print("What is the name of the person contained in the file? \n         >>");
+    String name = sc.next();
+    String path = "./People/"+name+".ser";
+    File file = new File(path);    
+    file.delete();
+    continueQ();
   }
 
-  public void parseError(){
-    sopl("error");
+  public void parseError(int x) throws IOException{
+    sopl("Error, please chose an available option and try again");
+    parseMenu(x);
+
   }
 
   public void htmlize() throws IOException{
@@ -84,6 +110,7 @@ public class SerializationInterface{
       int len = files.length;
       writer.println("<HTML>");
       writer.println("  <head>");
+      writer.println("   <link rel='shortcut icon' type='image/png' href='/favicon.png'>");
       writer.println("    <title> People! </title>");
       writer.println("    <link rel='stylesheet' type='text/css' href='style.css'>");
       writer.println("  </head>");
@@ -113,6 +140,6 @@ public class SerializationInterface{
     } catch(IOException ex) {
       System.out.println("There is an IOException that was caught here!");
     }
-    //Runtime.getRuntime().exec("cmd start people.html");
+    continueQ();
   }
 }
