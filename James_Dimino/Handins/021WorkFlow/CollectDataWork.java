@@ -36,10 +36,10 @@ class CollectDataWork {
          		file = new File("./InfoStorage/");
          		paths = file.list();
          		for(String path:paths) {
-	    			if(path.length() < 12) continue;
+	    			if(path.length() < 5) continue;
 				//System.out.println("{" + path.substring(path.length() - 11) + "}");
-	    			if(path.substring(path.length() - 11).equals(".txt")){
-					pathArray.add("./InfoStorage/" + path);
+	    			if(path.substring(path.length() - 4).equals(".txt")){
+						pathArray.add("./InfoStorage/" + path);
 	    			}
 			}	
       		} catch (Exception e) {
