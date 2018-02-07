@@ -11,7 +11,7 @@ public class Communism{
 		comeradeList = comeradeList + j;
 	}
 
-	public void communeBuilder(Comerade[] a){
+	public void communeBuilder(comerade[] a){
 		for (int i = 0; i < a.length(); i ++){
 			newComerade("New Comerade:" + "\n Name: " + a[i].getName() +"\n Occupation: " + a[i].getOccupation() + "\n Age: " + a[i].getAge() + "\n Height: " + a[i].getHeight() +  "\n Speed:" + a[i].getSpeed() + "\n ShoeSize: " + a[i].getShoeSize() + "\n HatSize: " + a[i].getHatSize());
 		}
