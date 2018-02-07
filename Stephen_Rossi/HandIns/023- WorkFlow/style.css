@@ -6,7 +6,7 @@
 body{
 	height: 100%;
 	background: red; 
-    background: linear-gradient(#444, #777, #444s);
+    background: linear-gradient(#444, #777, #444);
 }
 table {
   	width: 80vw;
