@@ -1,4 +1,5 @@
-public class FileSeven{
+public class FileEight{
+//Seven:	
 	public int a;
 
 	FileSeven(){
@@ -10,7 +11,6 @@ public class FileSeven{
 	}
 
 	public String toString(){
-		System.out.print(a);
-		return null;
+		return a;
 	}
 }
