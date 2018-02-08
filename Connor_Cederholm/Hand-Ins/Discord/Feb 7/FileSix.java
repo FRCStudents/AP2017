@@ -4,4 +4,9 @@ public class FileSix{
 	FileSix(){
 		a = 17;
 	}
+
+	public String toString(){
+		System.out.print(a);
+		return null;
+	}
 }
