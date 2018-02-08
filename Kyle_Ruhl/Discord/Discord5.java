@@ -1,11 +1,10 @@
 public class Discord5{
 
-//NOT DONE
-
+public boolean secondFunction;
+	
 public boolean secondFunction(String y){
 	char[] theWord = y.toCharArray();
-	//theWord.toLowerCase();
-		if(theWord[0] == 'a'){
+		if (theWord[0] == 'a'){
 		return true; }
 		
 		if (theWord[0] == 'e'){
@@ -22,9 +21,8 @@ public boolean secondFunction(String y){
 		}else{ return false; }
 	}
 
-public void firstFunction(){
-if (secondFunction == true){
-	System.out.println("Whew");
-		}else{ System.out.println("drag"); }
+public void firstFunction(String y) {
+			if (secondFunction(y)){ System.out.println("whew"); } 
+				else { System.out.println("drag"); }
  }
-}
+}//endsDiscord5

@@ -36,9 +36,15 @@ boolean x;
 	}
 
 
+public static String stringGetter(){
+	Scanner imput = new Scanner(System.in); 
+	System.out.println("String please");
+	String Imput = imput.nextLine();
+	return Imput;
+}
 
 public static void main (String [] GoBaby){
-	
-	yayOrNay(check("apple"));
+	String thing = "cpple";
+	yayOrNay(check(stringGetter()));
 }
 }
