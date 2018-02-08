@@ -1,8 +1,8 @@
 public class Discord5{
 
-public boolean secondFunction;
+public static boolean secondFunction;
 	
-public boolean secondFunction(String y){
+public static boolean secondFunction(String y){
 	char[] theWord = y.toCharArray();
 		if (theWord[0] == 'a'){
 		return true; }
@@ -21,8 +21,13 @@ public boolean secondFunction(String y){
 		}else{ return false; }
 	}
 
-public void firstFunction(String y) {
+public static void firstFunction(String y) {
 			if (secondFunction(y)){ System.out.println("whew"); } 
 				else { System.out.println("drag"); }
  }
+
+public static void main(String[] argv){
+	firstFunction("restaurant");
+	secondFunction("restaurant");
+}
 }//endsDiscord5
