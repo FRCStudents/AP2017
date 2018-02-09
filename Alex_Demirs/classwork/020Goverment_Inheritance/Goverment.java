@@ -36,7 +36,7 @@ public class Goverment{
 		this.numberOfType = numberOfType;
 	}
 
-	protected final int getpowerOfLeader(){
+	protected final int getPowerOfLeader(){
 		return this.powerOfLeader;
 	}
 
@@ -60,15 +60,29 @@ public class Goverment{
 		this.numberOfLeaders = numberOfLeaders;
 	}
 
+	protected final int getSizeOfGov(){
+		return this.sizeOfGov;
+	}
+
+	protected final void setSizeOfGov(){
+		this.sizeOfGov = sizeOfGov;
+	}
+
 			protected void identifyType(){
     				System.out.println(type + " is a goverment");
 
 	}
 
 			protected void identifyNumberOfType(){
-    				System.out.println("There are " + numberOfType + " of the is type of goverment in the world.");
+    				System.out.println("There are " + getNumberOfType() + " " + type + " goverments in the world.");
 
 	}
+
+	protected void identifyPowerOfLeader(){
+    				System.out.println("The leader in a " + type + " goverment has " + getPowerOfLeader() + " out of 10 power.");
+
+	}
+
 
 
 

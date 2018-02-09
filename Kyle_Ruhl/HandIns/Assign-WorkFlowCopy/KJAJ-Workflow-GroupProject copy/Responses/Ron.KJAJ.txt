@@ -1,0 +1,10 @@
+
+--------------
+Name: Ron
+Age: 84
+Occupation: Principal
+Height: 72 inches 
+Speed: 12.0 mph 
+Shoe Size: 13.0
+Hat Size: 1
+--------------

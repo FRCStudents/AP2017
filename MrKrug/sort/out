@@ -1,0 +1,15 @@
+
+[84][95][27][33][13][87][48][34][96][31][83][60][58][8][80][16][54][44][71][69]
+length: 20 indexes: 8:13
+length: 18 indexes: 1:4
+length: 16 indexes: 3:11
+length: 14 indexes: 0:1
+length: 12 indexes: 4:3
+length: 10 indexes: 5:0
+length: 8 indexes: 6:1
+length: 6 indexes: 5:4
+length: 4 indexes: 1:0
+length: 2 indexes: 0:1
+------------ out ---------------
+
+[8][13][16][27][31][33][34][44][48][54][58][60][69][71][80][83][84][87][95][96]

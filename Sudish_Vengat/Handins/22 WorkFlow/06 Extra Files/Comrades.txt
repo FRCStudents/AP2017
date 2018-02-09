@@ -1,0 +1,65 @@
+COMRADE DATA:
+
+Name - Karl Marx
+Occupation - Father of Communism
+Age - 64
+Height - 5 feet
+Speed - 5 mph
+Shoe Size - 5
+Hat Size - 5
+
+Name - Vladimir Putin
+Occupation - President of the motherland
+Age - 65
+Height - 6 feet
+Speed - 10 mph
+Shoe Size - 10
+Hat Size - 9
+
+Name - Vladimir Lenin
+Occupation - Russian Communist Revolutionary
+Age - 54
+Height - 5 feet
+Speed - 7 mph
+Shoe Size - 7
+Hat Size - 6
+
+Name - Joseph Stalin
+Occupation - General Secretary of the Communist Party
+Age - 74
+Height - 6 feet
+Speed - 14 mph
+Shoe Size - 7
+Hat Size - 9
+
+Name - Konstantin Chernenko
+Occupation - Soviet Politician
+Age - 74
+Height - 5 feet
+Speed - 12 mph
+Shoe Size - 5
+Hat Size - 6
+
+Name - Yuri Andropov
+Occupation - General Secretary of the Communist Party
+Age - 70
+Height - 8 feet
+Speed - 8 mph
+Shoe Size - 4
+Hat Size - 6
+
+Name - Nikita Khrushchev
+Occupation - Soviet Statesman
+Age - 77
+Height - 6 feet
+Speed - 19 mph
+Shoe Size - 8
+Hat Size - 4
+
+Name - Leonid Brezhnev
+Occupation - General Secretary of the Communist Party
+Age - 75
+Height - 7 feet
+Speed - 1 mph
+Shoe Size - 9
+Hat Size - 3

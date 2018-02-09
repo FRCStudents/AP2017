@@ -1,0 +1,15 @@
+
+hi alex,
+
+it seems that you have two objects, an APCompNerd and a driver.
+
+The driver has an attribute of a list of APCompNerds.
+
+Within that list, you may want to swap nerds. But I think, on
+the more specific level of specific object (APCompNerd), swapping
+doesn't make sense.
+
+What do you think?
+
+Best,
+~Mr Krug

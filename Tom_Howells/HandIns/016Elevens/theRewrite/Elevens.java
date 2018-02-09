@@ -36,26 +36,6 @@ class Elevens {
 
     // movesPossible() to see if moves are possible
     public static boolean movesPossible() {
-        int negCount = 0;
-        // make sure there's a possible sum of either -3 (3 card values) or 11 (2 card values)
-        for (int i = 0; i < p.length(); i++) {
-            if (p.getCard(i + 1).getValue() == -1) {
-                negCount ++;
-            }
-        }
-        if (negCount >= 3) {
-            return true;
-        }
-
-        // now this is the hard part, making sure that two or more pairs add up to 11
-        for (int i = 0; i < p.length(); i++) {
-            for (int j = i + 1; j < p.length(); j++) {
-                if ((p.getCard(i + 1).getValue() + p.getCard(j + 1).getValue()) == 11) {
-                    return true;
-                }
-            }
-        }
-        return false;
 
     }
 

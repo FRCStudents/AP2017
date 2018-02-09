@@ -15,12 +15,12 @@ class Deck {
 	private static final String[] default_value_ranks = {"Aces", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
 
 	// Used to assign arrays as the chosen decks 
-	public String[] chosen_suits = fulldeck_suits;
-	public String[] chosen_values = fulldeck_values;
+	protected String[] chosen_suits = fulldeck_suits;
+	protected String[] chosen_values = fulldeck_values;
 
 	// Used to assign arrays as the chosen ranking system
-	public String[] chosen_suit_ranks = default_suit_ranks;
-	public String[] chosen_value_ranks = default_value_ranks;
+	protected String[] chosen_suit_ranks = default_suit_ranks;
+	protected String[] chosen_value_ranks = default_value_ranks;
 
 	// Creates deck array
 	private Card[] deck = new Card[chosen_suits.length * chosen_values.length];
@@ -40,6 +40,8 @@ class Deck {
 		this(fulldeck_suits, fulldeck_values, default_suit_ranks, default_value_ranks);
 		shuffleDeck(deck2);
 	}
+
+
 	// =====================================================================
 
 	// METHODS
@@ -180,7 +182,7 @@ class Deck {
 
 	public Card dealCard() {
 		card_num++;
-		shuffled_deck[card_num].printCard(shuffled_deck[card_num]);
+		//shuffled_deck[card_num].printCard(shuffled_deck[card_num]);
 		return shuffled_deck[card_num];
 	}
 }

@@ -1,0 +1,28 @@
+Workflow Group Assignment (KJAJ)
+
+Kyle Ruhl
+James Dimino
+Archit Sahay
+Julie Hu
+
+*********************************************************************
+TO RUN ALL (using shell script): In your terminal, type: bash go.sh 
+*********************************************************************
+
+****************************************************************
+For your edification to work for your computer: 
+(Copy all these files into your own separate directory so you don’t mess the originals up)
+	1. change the string “path” in the method writeTextFile in scanAndWrite.java
+	2. change both pathways in TotalFileMerger.java (not the AllData.txt ones)
+	3. Edit the first line of go.sh to your working directory
+
+****************************************************************
+NOTE: type in ‘pwd’ in the command prompt for whatever directory where these files are saved and change it so that it will save the text files into wherever you are working.
+
+Also, to display the contents of a text file you made, type ‘more’ and the text file name in the command prompt.
+
+Manual Run order- (without shell script)
+1. SWDriver.java
+2. TotalFileMerger.java
+3. ChangeExt.java
+4. Open AllData.html
