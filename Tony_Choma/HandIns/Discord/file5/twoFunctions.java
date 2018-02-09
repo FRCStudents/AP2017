@@ -11,7 +11,7 @@ public class twoFunctions{
 
       public boolean checkVowel(String s){
             for(int i; i < vowels.length; i++){
-                  if(vowels[0].equals(s.charAt(0))){
+                  if(vowels[i].equals(s.charAt(0))){
                         return check = true;
                   }else{
                         return check = false;

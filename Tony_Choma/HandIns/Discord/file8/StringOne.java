@@ -15,10 +15,11 @@ public class StringOne{
             x = newX;
       }
 
+      public String toString(){
+            return x;
+      }
       public static void main(String[] args){
             StringOne c = new StringOne();
-            c.setX(17);
-            c.getX();
-            System.out.println(c.x);
+            System.out.println(toString());
       }
 }
