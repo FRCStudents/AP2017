@@ -1,0 +1,45 @@
+
+Write a program 
+
+Note: these are one file, one main - until instructed otherwise:
+	When you write the following functions, make sure the 
+	function is called when the program is compiled and run.
+
+that prints out "Yo, Dudele!"
+
+with a function that prints a line of "*"
+
+with a function that accepts a String, and prints out:
+	"This is the "string", you know: (parameter here)"
+
+a function: parameter int, and it prints a line depending on the
+value of the parameter. If the parameter is divisible by 6,
+it prints "Hah ha 6-divisor dude". Otherwise it prints "(Bummer and a half)"
+
+2 functions:
+	first function calls the second - if the second returns
+	true, the first function writes "whew". Otherwise, the
+	first function write "drag".
+
+	the second function takes a parameter of a String, and
+	returns true if the first letter is a vowel. Otherwise
+	it returns false.
+
+Write a class that has 1 attribute (int) and a constructor
+that initializes the attribute to 17
+
+Write a class that has 1 attribute (int) and a constructor 
+that accepts an int and sets the attribute to the new
+value - but defaults to 17.
+
+Write a toString method on each of the previous two classes.
+	The toString method should print out the attribute 
+
+
+Write two classes. One class instatiates the second class.
+The second class has a method "printStars()" that prints
+a row of stars.
+The first class has a method "printStarLines()" that
+instantiates the second class and uses the method printStars().
+
+
