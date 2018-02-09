@@ -6,7 +6,7 @@
 	</head>
 			<body>
 				<p>
-					<table>
+					<table BORDER = 5 BORDERCOLOR = RED>
 						<tr>
 							<th> Name </th>
 							<th> Occupation </th>
