@@ -33,6 +33,11 @@ public class dealership{
 			System.out.print("Listing price: ");
 			System.out.println(price(2017-vehicle[i].year));
 		}
+
+	void buyACar(){
+		
+
+	}
 	}
 
 
