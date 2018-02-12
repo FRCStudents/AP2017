@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	<title>Vocab Practice</title>
+<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #555;
+		}
+		#card{
+			background-color: #ccc;
+			color: #333;
+			height: 10vw;
+			width: 40vw;
+			margin-left: 29vw;
+			margin-top: 10vw;
+			border-radius: 1.2%;
+			text-align: center;
+			padding-left: 1vw;
+			padding-right: 1vw;
+			font-family: Arial;
+		}
+		#word{
+			position: relative;
+			font-size: 120%;
+			text-decoration: underline;
+			top: 2vw;
+		}
+		#defenition{
+			position: relative;
+			top: 3vw;
+		}
+		button{
+			margin-top: 4vw;
+			text-align: center;
+			width: 10vw;
+			margin-left: 45vw;
+		}
+	</style></head>
+	
+<body>
+	<div id="Header"></div>
+	<div id="card">
+		<div id="word">Exemplar</div>
+		<div id="defenition">(n.) An example or model, especially an ideal one. 
+ &lt;br&gt;(adj.) Exemplary.</div>
+	</div>
+	<button onclick="randomWord();"> Random Word </button>	
+
+	<script type="text/javascript">
+	var vocabList = ["Abjure", "Amorphous", "Animus", "Dichotomy", "Exemplar", "Herculean", "Inchoate", "Individious", "Melange", "Nefarious", "Nihlism", "Ratify", "Subsume", "Variegated", "Vitiate"];
+	var defenitions = ["(v.) To renounce or give up formally.", "(adj.) Without definite shape, boundary, or character.", "(n.) An attitude or spirit within a person that stringly influences him or her. \n (n.) Deep-seated ill will.", "(n.) Division into two distinct parts or groups.", "(n.) An example or model, especially an ideal one. \n (adj.) Exemplary.", "(adj.) Of extraordinary size, power, or difficulty.", "(adj.) Not fully formed or realized.", "(adj.) Likely to cause resentment or animosity.", "(n.) A mixture of materials.", "(adj.) Very wicked.", "(n.) A viewpoint that denies any meaning of value to life. \n (adj.) Nihlistic.", "(v.) To approve, confirm, or verfiy.", "(v.) To encompass in a larger or more comprehensive group; to include.", "(adj.) Varied as to form, type, or color.", "(v.) To impair or weaken."];
+
+	function randomWord(){
+		var rand =  Math.floor(Math.random() * (vocabList.length -1));
+		document.getElementById("word").innerHTML = vocabList[rand];
+		document.getElementById("defenition").innerHTML = defenitions[rand];
+	}
+	</script>
+</body></html>
