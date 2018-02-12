@@ -106,7 +106,7 @@ public class SerializationInterface{
     try {
       file = new File ("people.html");
       PrintWriter writer = new PrintWriter("people.html");
-      String[] files = new File("./023- WorkFlow/People/").list();
+      String[] files = new File("./People/").list();
       int len = files.length;
       writer.println("<HTML>");
       writer.println("  <head>");
