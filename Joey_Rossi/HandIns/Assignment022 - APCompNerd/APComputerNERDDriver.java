@@ -12,21 +12,45 @@ class APComputerNERDDriver {
         arr[2] = new APComputerNERD(5, 4, 8, "Boey");
         System.out.println("Notsorted:");
         printArr();
-
+        
         sort(0);
-        System.out.println("Intelligence Sorting:");
+        System.out.println("\nSorting by Intelligence:");
         printArr();
 
         sort(1);
-        System.out.println("First Name Sorting:");
+        System.out.println("Sorting by First Name:");
         printArr();
     }
 
-    public static void sort(int choice) {
+    public static void sort(int choice) { // 0 for intelligence, 1 for firstName
         if (choice == 0) {
-            for(i = 0; i < arr.length; i++);
-        } else {
-
+            int compare;
+            int newValPos;
+            for (int i = 0; i < arr.length; i++) {
+                compare = -1;
+                newValPos = -1;
+                for (int j = i; j < arr.length; j++) {
+                    if (arr[j].getIntelligence() > compare) {
+                        compare = arr[j].getIntelligence();
+                        newValPos = j;
+                    }
+                }
+                swap(i, newValPos);
+            }
+                    } else {
+            char compare; 
+            int newValPos; 
+            for (int i = 0; i < arr.length; i++) { 
+                compare = 0;
+                newValPos = -1;
+                for (int j = i; j < arr.length; j++) {
+                    if (arr[j].getFirstName().charAt(0) > compare) {
+                        newValPos = j;
+                        compare = arr[j].getFirstName().charAt(0);
+                    }
+                }
+                swap(i, newValPos);
+            }
         }
     }
 
