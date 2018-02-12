@@ -1,5 +1,5 @@
 public class PrintLine{
-      String line = "*";
+      String line = "**";
       public void printLine(){
             for(int i = 0; i < 15; i++){
                   System.out.print(line);
