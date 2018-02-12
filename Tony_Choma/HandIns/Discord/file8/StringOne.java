@@ -1,7 +1,8 @@
 public class StringOne{
       public int x;
+      public String i = "The number is " + x;
       public StringOne(int newX){
-            setX(newX);
+            setX(x);
       }
       public StringOne(){
             this(17);
@@ -14,12 +15,14 @@ public class StringOne{
       public void setX(int newX){
             x = newX;
       }
-
       public String toString(){
-            return x;
+            return i;
       }
+
       public static void main(String[] args){
-            StringOne c = new StringOne();
-            System.out.println(toString());
+            StringOne c = new StringOne(21);
+            c.setX(17);
+            System.out.println(c.getX());
+            System.out.println(c.toString());
       }
 }
