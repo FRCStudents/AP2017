@@ -1,0 +1,6 @@
+public class yo{
+	
+	public static void main (String[] argv ){
+	system.out.println "Yo, dudele!"
+	}
+}
