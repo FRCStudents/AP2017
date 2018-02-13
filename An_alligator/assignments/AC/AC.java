@@ -2,6 +2,11 @@ class AC{
 	int AC0;
 	int AC1;
 
+	AC(){
+		AC0 = 0;
+		AC1 = 0;
+	}
+
 	public void prt(int x){
 		System.out.println(x);
 	}
