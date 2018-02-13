@@ -8,4 +8,10 @@ abstract class AC{
             turnOnAC();
             turnOffAC();
       }
+      public void putInBox(){
+            System.out.println("**********************");
+            System.out.println("*         " + turnOnAC() + "          *");
+            System.out.println("*         " + turnOffAC() + "          *");
+            System.out.println("**********************");
+      }
 }
