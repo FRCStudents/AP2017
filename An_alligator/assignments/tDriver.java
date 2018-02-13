@@ -6,5 +6,9 @@ class tDriver{
 		x.prt(x.AC1);
 		y.prt(y.AC0);
 		y.prt(y.AC1);
+		for(int l=0; l<5; l++){
+			x.putInBox();
+			x.AC0 = x.AC0*10;
+		}
 	}
 }
