@@ -9,7 +9,7 @@ public class File5 {
 	}
 
 	public static boolean vowel(String s) {
-		if (s.charAt(0) == 'a' || s.charAt(0) == 'A') {
+		if (s.charAt(0) == 'a' || s.charAt(0) == 'A'z) {
 			return true;
 		} else if (s.charAt(0) == 'e' || s.charAt(0) == 'E') {
 			return true;
