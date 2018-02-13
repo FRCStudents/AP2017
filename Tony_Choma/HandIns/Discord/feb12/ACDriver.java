@@ -4,6 +4,8 @@ public class ACDriver{
             AC p1 = new BigAC();
             p0.getAC();
             p1.getAC();
+            p0.putInBox();
+            p1.putInBox();
 
       }
 }

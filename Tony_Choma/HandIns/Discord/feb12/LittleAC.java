@@ -6,10 +6,4 @@ public class LittleAC extends AC{
       public void turnOffAC(){
             System.out.println(0);
       }
-
-      public static void main(String[] args){
-            AC p = new LittleAC();
-            p.turnOnAC();
-            p.turnOffAC();
-      }
 }
