@@ -20,7 +20,7 @@ public class APComputerNerd{
        }
 
        public void sortName(){
-
+             for(int i = 0; i < )
        }
 
 //getters and setters for intel
