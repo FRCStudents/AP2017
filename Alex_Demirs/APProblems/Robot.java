@@ -57,6 +57,7 @@ public Robot() {
 			move();
 			rank++;
 		}
+			System.out.print(rank);
 			return rank;
 
 
