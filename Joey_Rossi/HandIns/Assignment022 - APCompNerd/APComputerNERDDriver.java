@@ -51,6 +51,29 @@ class APComputerNERDDriver {
                 }
                 swap(i, newValPos);
             }
+=======
+	//
+	// Joey! This is perfect! Now you need to figure out
+	// how to code these next few lines - 
+	// 
+	// One way to do that is to get a deck of 3 cards (make them)
+	// and lay them face up on the table. then pretend like you are
+	// a computer and figure out what you do to sort them...
+	//
+	// Don't give up!
+	//
+    public static void sort(int choice) {
+        if (choice == 0) {
+            for(i = 0; i < arr.length; i++){
+		for(j = i; j < arr.length; j++){
+			// sometimes swap...
+			// i.e. "use the swap, Luke!"
+			//
+		}
+	    }
+        } else {
+
+>>>>>>> 8bd5649ddc9f7afefb1e27c03ec2def9b56df2c3
         }
     }
 

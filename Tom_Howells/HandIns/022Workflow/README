@@ -1,0 +1,3 @@
+run EnterUser.java to enter a user and write them to a file within the Users folder
+run CollectUsers.java to collect all of the files within the Users folder and write them to Users.usrs
+run WriteToHtml.java to write the data in Users.usrs to Users.html

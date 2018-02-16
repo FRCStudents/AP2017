@@ -26,6 +26,8 @@ public class dealership{
 		return vehicle;
 	}
 
+	void 
+
 	void dispVehicles(vehicle[] a){
 		for(int i=0; i<a.length; i++){
 			System.out.println();
@@ -37,7 +39,7 @@ public class dealership{
 
 
 	public static void main(String[] args){
-		dealership pete = new dealership();
+		dealership pete_and_wrench = new dealership();
 		vehicle[] vehicle = pete.newDay();
 		pete.dispVehicles(vehicle);
 	}

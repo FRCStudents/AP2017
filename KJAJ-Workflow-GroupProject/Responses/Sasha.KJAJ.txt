@@ -1,0 +1,10 @@
+
+--------------
+Name: Sasha
+Age: 15
+Occupation: Trucker
+Height: 57 inches 
+Speed: 13.0 mph 
+Shoe Size: 15.0
+Hat Size: 60
+--------------

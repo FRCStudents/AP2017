@@ -37,7 +37,7 @@ public class Serialization {
 
 		public void SerializePerson(Person pers){
 				try {
-					 FileOutputStream pathOut = new FileOutputStream("./" + pers.getName() +".ser");
+					 FileOutputStream pathOut = new FileOutputStream("./People/" + pers.getName() +".ser");
 					 ObjectOutputStream out = new ObjectOutputStream(pathOut);
 					 out.writeObject(pers);
 					 out.close();

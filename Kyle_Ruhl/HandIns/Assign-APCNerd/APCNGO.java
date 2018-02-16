@@ -3,6 +3,8 @@ public class APCNGO{
 		private static APCN[] arrayOfNERDZ = new APCN[16];
 		private static String[] classmates = { "Archit", "Kyle", "James", "Julie", "Tom", "Connor", "Joey",
 							"Sudish", "Nicole", "Tony", "Tunji", "Gareth", "Steven", "Krug", "Alex", "Will" };
+		private static String[] COPY = { "Archit", "Kyle", "James", "Julie", "Tom", "Connor", "Joey",
+							"Sudish", "Nicole", "Tony", "Tunji", "Gareth", "Steven", "Krug", "Alex", "Will" };
 							
 		private static void setArraySortType(boolean flagger){
 			for(int i=0; i < arrayOfNERDZ.length; i++){
@@ -22,6 +24,11 @@ public class APCNGO{
 						}
 				}
 		}
+		
+		//new method sorts the names in aplhabetical order
+		public static void Alphabitize(){
+			Arrays.sort(COPY);
+		}
 	
 		public static void fillArray(){
 			int x; //intelegence level
@@ -36,31 +43,48 @@ public class APCNGO{
 				arrayOfNERDZ[i] = new APCN(classmates[i], x, y, z);
 			}
 		}
- 
+		
+
 		public static void showArray(){
-			for(int i = 0; i < arrayOfNERDZ.length; i++){ arrayOfNERDZ[i].displayNerd(); }
+			//use this method to display FULL array
+			for (int i = 0; i < arrayOfNERDZ.length; i++){ arrayOfNERDZ[i].displayNerd(); }
 		}
+		
+		public static void showArray2(){
+			//use this method to display ONLY NAME AND INTELEGENCE LEVEL
+			for (int i = 0; i < arrayOfNERDZ.length; i++){ arrayOfNERDZ[i].displayNerd2(); }
+		}
+		
+		//-----the following method fixes the bug of not alphabatizing the names-------------
+		//also created a copy array so it does not mess up other arrays. 
+		
+		public static void showAlphabArray(){
+			for (int r = 0; r < COPY.length; r++){ 	System.out.println("[Name: " + COPY[r] + "]"); }
+		}
+		//---------end---------------------------------------------------------
 
 		public static void main(String[] args){ 
 			APCN k = new APCN();
+			System.out.println("\n\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 			k.displayKevin();
+			System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 			
 			fillArray();
 			
-			System.out.println("\n\n++++++++ Original Array Of AP Computer Nerds ++++++++");
+			System.out.println("\n\n++++++++++ Original Array Of AP Computer Nerds ++++++++++++");
 			showArray();
-			System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++");
+			System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 			
-			System.out.println("\n\n++++++++ Sorted Alphabetically by Name ++++++++");
+			System.out.println("\n\n++++++++++++ Sorted Alphabetically by Name ++++++++++++");
 			setArraySortType(true);
-			sortArray();
-			showArray();
-			System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++");
+			Alphabitize(); //changed, now successfully alphabatizes
+			showAlphabArray(); //changed, only prints out the names now in order
+			System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 	        
 			setArraySortType(false);
 	        sortArray();
 			System.out.println("\n\n++++++++ Sorted Least to Greatest on Intelegence Level ++++++++");
-	        showArray();
+	        showArray2(); //now only shows name and intellegence level after sort to keep cleaner
 			System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
 		}	
