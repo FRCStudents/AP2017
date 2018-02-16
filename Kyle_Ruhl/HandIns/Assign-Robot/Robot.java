@@ -4,10 +4,10 @@ public class Robot {
 	private boolean facingRight;
 
 	public Robot() {
-			hall[0] = 4;
-			hall[1] = 23;
-			hall[2] = 100;
-			hall[3] = 40;
+			this.hall[0] = 12;
+			this.hall[1] = 23;
+			this.hall[2] = 100;
+			this.hall[3] = 40;
 			pos = 1;
 			facingRight = true;
 		}
