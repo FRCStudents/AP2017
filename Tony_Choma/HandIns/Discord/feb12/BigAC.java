@@ -5,7 +5,7 @@ public class BigAC extends AC{
             System.out.println(AC);
       }
       public int turnOffAC(){
-            return AC = -10
+            return AC = -10;
             System.out.println(AC);
       }
 }
