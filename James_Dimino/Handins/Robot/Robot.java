@@ -23,7 +23,7 @@ public class Robot {
 		}
 	}
 
-	private void move() {
+	/*private void move() {
 		for (int j = pos; j < hall.length; j++) {
 			for (int i = 0; i < hall[j]; i ++) {
 				hall[j] = hall[j] - 1;
@@ -34,6 +34,21 @@ public class Robot {
 				continue;
 			}
 		}
+	}*/
+
+	public void move() {
+		while (hall)
+			if (hall[pos] != 0) {
+				hall[pos] - 1;
+			}
+
+			if (hall[pos] == 0) {
+				pos = pos + 1;
+			}
+
+			if (hall[pos + 1] == hall.length) {
+				
+			}
 	}
 
 	public int clearHall() {

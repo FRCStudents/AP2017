@@ -1,15 +1,20 @@
-public class LittleAC implements AC {
+public class LittleAC extends AC {
+
+	public LittleAC(){
+		attribute1 = 0;
+	}
+
+	protected void turnOnAC(){
+		attribute1 = 1;
+	}
+
+
+	protected void turnOffAC(){
+		attribute1 = 0;
+	}
+
+	public String toString(){
+		return "Little AC value: " + attribute1;
+	}
 	
-	protected int a;
-	protected int b;
-
-	public void turnOnAC() {
-		a = 1;
-		b = 1;
-	}
-
-	public void turnOffAc() {
-		a = 0;
-		b = 0;
-	}
 }
