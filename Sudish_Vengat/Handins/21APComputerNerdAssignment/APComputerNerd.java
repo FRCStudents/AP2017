@@ -13,7 +13,7 @@ class APComputerNerd implements Comparable{
     }
 
     public APComputerNerd() {
-        this(3, 4, 8, "Ralph");
+        this(7, 1, 5, "Ralph");
     }
 
     public int getIntelligence() {
@@ -66,6 +66,6 @@ class APComputerNerd implements Comparable{
     }
 
     public String toString() {
-        return (firstName + "(" + intelligence + "," + speed + "," + laptopPerformance + ")");
+        return ("[" + firstName + "," + intelligence + "," + speed + "," + laptopPerformance + "]");
     }
 }

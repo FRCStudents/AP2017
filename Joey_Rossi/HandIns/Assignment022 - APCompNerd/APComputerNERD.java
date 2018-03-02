@@ -18,12 +18,6 @@ class APComputerNERD implements Comparable{
         firstName = fn;
         sortType = true;
     }
-    public APComputerNERD(APComputerNERD apcn){
-    	setFirstName(acpn.getFirstName());
-    	setIntelligence(acpn.getIntelligence()); 
-    	setSpeed(acpn.getSpeed());
-    	setLaptopPerformance(acpn.getLaptopPerformance());
-    }
 
 		//getters and setters
 	public int getIntelligence(){
