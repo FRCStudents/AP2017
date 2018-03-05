@@ -17,7 +17,11 @@ public class Robot {
 	}
 
 	public boolean forwardMoveBlocked(){
-		return(facingRight && pos == hall.length - 1) || (!facingRight && pos == 0);
+		if(facingRight && pos == hall.length - 1) || (!facingRight && pos == 0){
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public void move(){
