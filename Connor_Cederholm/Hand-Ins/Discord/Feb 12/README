@@ -1,0 +1,21 @@
+
+Hi Connor - 
+
+Please straighten out the inheritance issues!
+
+Your FileTwo (should be named AC... i don't care,
+but the AP Exam will)...
+
+Is abstract - great.
+
+However, your LittleAC needs to extend
+FileTwo.
+
+Also - getAC and putInBox should be implemented in
+FileTwo - so that they will automatically be available
+to BigAC, LittleAC and VeryBigAC...
+
+32/40 - fix it and i'll give you credit...
+
+more important: have a great week!
+

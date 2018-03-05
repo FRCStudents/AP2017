@@ -1,0 +1,51 @@
+Hi Folks -
+
+By now I guess you know that our AP class has just taken some 
+radical changes! Like – I can’t call it “ours” anymore. 
+Now it’s “yours”…
+
+In other words – before now I was leading you and trying my 
+best to teach you what I know. That’s an awesome part of the 
+process. It’s fun, and exciting. There are new ideas and new 
+thoughts.
+
+As James said – we have learned about everything you need for 
+the AP Exam. Now you enter into the phase where you take ownership. 
+You take control. You review everything we have done, make sure 
+you understand it – so well that you can explain it to each other 
+and code it from an empty screen. Now it has to become “yours”. 
+
+I really did not intend to get fired – I was really surprised, as a 
+matter of fact! But for you in this course – it is really perfect. 
+
+The only thing you lose is a cheerleader. 
+
+So, please – figure out a way to make sure everyone has a cheerleader… 
+either you can have partners – or you can assign one person to cheer 
+for everyone else (and then someone to cheer for the one). 
+
+I do want to say – this movement of “ours” to “yours” is part of life. 
+It is deep. And it is profound. 
+
+Whenever I have been on the other side of this – I find that I carry 
+memories of my teacher. I shudder to think of what kinds of memories 
+you may be carrying of me! Whatever it is, I really hope it serves you 
+well. 
+
+You should take a look at my MVC code. M(odel), V(iew), C(ontroller) – 
+is a common development scheme these days. The Model is the database 
+tables and data. The View is how that is presented to the user. And 
+the Controller is the communication between the two. Take a look. Copy 
+the code and try adding more stuff into it… more menu options (in the 
+View) and handle them (in the Controller) and access data (in the Model).
+
+And you should all work on double arrays. Translate these into java:
+http://netlab.cs.ucla.edu/~schoi/cs31/notes/array_practice.pdf
+
+Oh, and you should all try to find an IDE you like! It’s time!
+
+Best of the best, you guys! And… last thing – it will make FRCS Admin 
+look really pathetic when you ALL get 5 on the AP Exam!
+
+Best!
+~Krug
