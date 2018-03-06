@@ -1,21 +1,21 @@
 public class BigAC extends AC{
 
 public BigAC(){
-attribute1 = -10;
+AC = -10;
 }
 
 //@overide
-protected void turnOnAC(){
-attribute1 = 10;
+public void turnOnAC(){
+AC = 10;
 }
 
 //@overide
-protected void turnOffAC(){
-attribute1 = -10;
+public void turnOffAC(){
+AC = -10;
 }
 
 public String toString(){
-return "Big AC value: " + attribute1; 
+return "Big AC value: " + AC; 
 }
 
 }
