@@ -1,21 +1,21 @@
 public class LittleAC extends AC{
 
 public LittleAC(){
-attribute1 = 0;
+AC = 0;
 }
 
 	
 //@overide
-protected void turnOnAC(){
-attribute1 = 1;
+public void turnOnAC(){
+AC = 1;
 }
 
 //@overide
-protected void turnOffAC(){
-attribute1 = 0;
+public void turnOffAC(){
+AC = 0;
 }
 
 public String toString(){
-	return "Little AC value: " + attribute1;
+	return "Little AC value: " + AC;
 }
 }

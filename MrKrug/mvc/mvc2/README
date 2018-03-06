@@ -1,0 +1,6 @@
+
+This version of MVC reads and writes names to 
+and from a file.
+
+It is also using ArrayList instead of regular
+arrays.

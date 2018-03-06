@@ -4,7 +4,6 @@ public class FileTen{
 	private int b;
 
 	public void FileTen(int a, int b){
-		setA(0);
-		setB(0);
+		
 	}
 }

@@ -1,22 +1,22 @@
 public class VeryBigAC extends AC{
 
 public VeryBigAC(){
-attribute1 = -100;
+AC = -100;
 }
 
 	
 //@overide
-protected void turnOnAC(){
-attribute1 = 100;
+public void turnOnAC(){
+AC = 100;
 }
 
 //@overide
-protected void turnOffAC(){
-attribute1 = -100;
+public void turnOffAC(){
+AC = -100;
 }
 
 public String toString(){
-return "Very Big AC value: " + attribute1; 
+return "Very Big AC value: " + AC; 
 }
 
 }

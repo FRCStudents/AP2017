@@ -1,25 +1,24 @@
 public abstract class AC{
+	int AC;
 
-protected int attribute1;
-protected int attribute2;
 
-protected abstract void turnOnAC();
-protected abstract void turnOffAC();
+public abstract void turnOnAC();
+public abstract void turnOffAC();
 
 public int getAC(){
-	return attribute1;
+	return AC;
 }
 
 public void putInBox(){
 	System.out.println("*************");
 	System.out.println("*	    *");
-	System.out.println("*    " + attribute1 + "    *");
+	System.out.println("*    " + AC + "    *");
 	System.out.println("*	    *");
 	System.out.println("*************");
 }
 
 public void SetAC(int a){
-	attribute1 = a;
+	AC = a;
 }
 
 }

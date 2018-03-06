@@ -1,0 +1,66 @@
+
+Hi James...
+
+Rethink a loop... try this:
+
+If I have 10 stacks of paper on the table, I can do one of these
+two things:
+
+1) I can go through the whole line and pick up a page from each stack... or else:
+
+2) I can go to the first place,
+		pick up one page,
+		go to the next place,
+		pick up one page...
+
+In number#1 - I am doing everything all altogether
+
+In number#2 - I am doing everything, but ONE STEP AT A TIME...
+
+
+So... In number one - I say: Do number #1... and i am finished.
+With number #2 - I say:
+	For each spot:
+		do #2
+
+Both approaches do the same thing. We need to break it down for the
+second approach. One step at a time.
+
+In java, #1 is like this:
+
+	for(int i=0; i < end; i++){
+		stack--;
+	}
+
+and #2 is like this:
+	
+	int pickUpPage(int x){
+		return x--;
+	}
+
+	void pickItAllUp(){
+		for(int i=0; i < end; i++){
+			pickUpPage(arry[i]);
+		}
+	}
+
+Again, it is a *very* subtle difference... but it is the answer to the
+question "Where do I put the for loop?"
+
+	In your function move() - do you:
+		1) put your for loop in the move() function and call that 
+		function exactly one time? Or do you put your for loop 
+		OUTSIDE the move() function, and call it over and over
+		until the hall is clear?
+
+
+
+B
+B
+B
+B
+B
+B
+B
+B
+		2) put your for loop OUTSIDE the move() function, and 
