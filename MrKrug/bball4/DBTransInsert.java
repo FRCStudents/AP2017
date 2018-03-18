@@ -14,12 +14,12 @@ import java.sql.*;
       public ballDEBUG bbDEBUG = new ballDEBUG();
 
       public DBTransInsert(){
-        bbDEBUG.debugOff();
+        bbDEBUG.debugOn();
         DBConn = new DBConnect();
       }
 
       public DBTransInsert(DBConnect DBConn){
-        bbDEBUG.debugOff();
+        bbDEBUG.debugOn();
         this.DBConn = DBConn;
       }
 
@@ -27,43 +27,34 @@ import java.sql.*;
         return DBConn;
       }
 
-      public int doInsert(String tbl, String name){
+      public int doInsert(String tbl, String name, int parentId){
 	int r = 0;
-	if(tbl.equals("BOOKS"))
-          	r = doBooksInsert(name);
+	if(tbl.equals("BOOKS")){
+          	String sql = "INSERT INTO BOOKS " +
+                         "(NAME) VALUES ('" + name + "')";
+          	r = doDBInsert(sql, name);
+		}
+        if(tbl.equals("LEAGUES")){
+                String sql = "INSERT INTO LEAGUES " +
+                        "(NAME, BOOK_ID) VALUES ('" + name + "'," + parentId + ")";
+                r = doDBInsert(sql, name);
+                }
+
  	return (r >= 0 ? r: -1);
       }
 
-      public int doBooksInsert(String bName)
+      public int doDBInsert(String sql, String bName)
       {
         Statement stmt = null;
-        String sql = "";
         int lastKey = 0;
         try {
           stmt = DBConn.getConnection().createStatement();
-          sql = "INSERT INTO BOOKS " +
-                         "(NAME) VALUES ('" + bName + "')";
-
           bbDEBUG.msgPrt(sql);
           stmt.executeUpdate(sql);
           stmt.close();
         } catch ( Exception e ) {
 	  System.out.println("Crash & Burn: " + sql);
-          System.exit(0);
-        }
-
-        try {
-          stmt = DBConn.getConnection().createStatement();
-          sql = "SELECT COUNT(*) AS CNT	 FROM BOOKS;"; 
-
-          bbDEBUG.msgPrt(sql);
-          ResultSet rs = stmt.executeQuery(sql);
-	  rs.next();
-	  int i = rs.getInt("CNT");
-          stmt.close();
-        } catch ( Exception e ) {
-          System.out.println("Crash & Burn: " + sql);
-          System.exit(0);
+	  return -1;
         }
 
         // return key of the record we just inserted
@@ -74,7 +65,8 @@ import java.sql.*;
              rs.close();
              stmt.close();
              } catch ( Exception e ) {
-                 System.out.println("Error BOOKS (insert id)");
+                 System.out.println("Error (insert id): " + sql);
+		 return -1;
              }
 
         return lastKey;
