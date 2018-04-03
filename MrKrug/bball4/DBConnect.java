@@ -41,23 +41,21 @@ public class DBConnect
 
    public void commitDB(){
      ballDEBUG bdBUG = new ballDEBUG();
-     bdBUG.debugOff();
+     bdBUG.debugOn();
      try {
        conn.commit();
      } catch ( Exception e ) {
        bdBUG.msgPrt("commit: Crash & Burn");
-       System.exit(0);
      }
    }
 
    public void closeDB(){
      ballDEBUG bdBUG = new ballDEBUG();
-     bdBUG.debugOff();
+     bdBUG.debugOn();
      try {
        conn.close();
      } catch ( Exception e ) {
        bdBUG.msgPrt("close: Crash & Burn");
-       System.exit(0);
      }
    }
 }

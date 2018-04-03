@@ -66,7 +66,6 @@ public class BookList {
 			try {
 			   while(rs.next()){
 				Books b = new Books(rs.getInt("ID"), rs.getString("NAME"));
-				System.out.println("Loading: <" + rs.getInt("ID") + "><" + rs.getString("NAME") + ">");
 				bookList.add(b);
 			   }
 			} catch(Exception e){

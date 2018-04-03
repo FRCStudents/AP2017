@@ -55,6 +55,10 @@ public class DBRecord {
 			name = sm.getName();
 		}
 
+		public void DBClose(){
+			dbAccess.DBClose();
+		}
+
 		public String getName (){
 			return name;
 		}
@@ -80,7 +84,7 @@ public class DBRecord {
 		}
 
 		public int getKey(String recType, String field, String value){
-			return getKey(recType, field, value);
+			return dbAccess.getKey(recType, field, value);
 		}
 
 		public ResultSet doSelect(String recType, int key){

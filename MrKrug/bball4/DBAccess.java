@@ -13,6 +13,7 @@ import java.io.*;
 import java.util.Date;
 import java.util.*;
 import java.sql.*;
+import java.sql.SQLException;
 
  public class DBAccess
  {
@@ -35,8 +36,8 @@ import java.sql.*;
     }
 
     public void DBClose(){
-      DBConn.commitDB();
-      DBConn.closeDB();
+    	//DBConn.commitDB();
+      	DBConn.closeDB();
     }
 
     private String DBFix(String recType){
@@ -46,6 +47,10 @@ import java.sql.*;
         
 	if(recType.toLowerCase().indexOf("league") > -1){
                 return "LEAGUES";
+        }
+
+        if(recType.toLowerCase().indexOf("game") > -1){
+                return "GAMES";
         }
 
 	return "NONE";
@@ -157,6 +162,49 @@ import java.sql.*;
       }
       return rs;
     }
+
+    private String buildSQL(String recType_in, String[] fields){
+	String sql = "";
+	System.out.println(recType_in + ":" + fields[0]);
+        if(recType_in.equals("BOOKS")){
+                sql = "INSERT INTO BOOKS " +
+                         "(NAME) VALUES ('" + fields[0] + "')";
+                }
+        if(recType_in.equals("LEAGUES")){
+		int parentId = getKey("BOOKS", "NAME", fields[1]);
+                sql = "INSERT INTO LEAGUES " +
+                        "(NAME, BOOK_ID) VALUES ('" + fields[0] + "'," + parentId + ")";
+                }
+
+        if(recType_in.equals("GAMES")){
+		int parentId = getKey("LEAGUES", "NAME", fields[3]);
+                sql = "INSERT INTO GAMES " +
+                   "(TEAM_1, TEAM_2, GAME_DATE, LEAGUE_ID) VALUES ('" + fields[0] + "','" + fields[1] + "','" + fields[2] + "'," + parentId + ")";
+                }
+	System.out.println(sql);
+	return sql;
+    }
+
+    public void doAdd(String recType_in, String[] fields) 
+    {
+      Statement stmt = null;
+      String sql = ""; 
+      String recType = DBFix(recType_in);
+      if(recType.equals("NONE")){
+        System.out.println("Coding Error: record type: " + recType_in);
+      }
+      try {
+        stmt = DBConn.getConnection().createStatement();
+        sql = buildSQL(recType_in, fields); 
+        stmt.executeUpdate(sql);
+        stmt.close();
+      } catch ( SQLException e ) {
+        System.out.println(sql);
+        System.out.println(e.getMessage());
+        System.out.println("Error " + recType_in);
+      }
+  
+    }
  
     public void doDelete(String recType_in, int key)
     {
@@ -172,8 +220,10 @@ import java.sql.*;
                        " WHERE ID = " + key + ";";
         stmt.executeUpdate(sql);
         stmt.close();
-      } catch ( Exception e ) {
-        System.out.println("Error Books");
+      } catch ( SQLException e ) {
+	System.out.println(sql);
+	System.out.println(e.getMessage());
+        System.out.println("Error " + recType_in);
       }
     }
 

@@ -1,4 +1,8 @@
-install jdbc:sqlite:bball.db!!
+Start: ViewDriver.java (currently shows the most)
+
+need to put ViewDriver code into MainApp.java
+Now doing: Model.java: createGameList...
+	* this may be done...
 
 DBTransInsert.java
 DBTransUpdate.java

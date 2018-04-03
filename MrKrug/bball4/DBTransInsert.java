@@ -27,18 +27,25 @@ import java.sql.*;
         return DBConn;
       }
 
-      public int doInsert(String tbl, String name, int parentId){
+      public int doInsert(String tbl, String[] values, int parentId){
 	int r = 0;
 	if(tbl.equals("BOOKS")){
           	String sql = "INSERT INTO BOOKS " +
-                         "(NAME) VALUES ('" + name + "')";
-          	r = doDBInsert(sql, name);
+                         "(NAME) VALUES ('" + values[0] + "')";
+          	r = doDBInsert(sql, values[0]);
 		}
         if(tbl.equals("LEAGUES")){
                 String sql = "INSERT INTO LEAGUES " +
-                        "(NAME, BOOK_ID) VALUES ('" + name + "'," + parentId + ")";
-                r = doDBInsert(sql, name);
+                        "(NAME, BOOK_ID) VALUES ('" + values[0] + "'," + parentId + ")";
+                r = doDBInsert(sql, values[0]);
                 }
+
+        if(tbl.equals("GAMES")){
+                String sql = "INSERT INTO GAMES " +
+                   "(TEAM_1, TEAM_2, GAME_DATE, LEAGUE_ID) VALUES ('" + values[0] + "','" + values[1] + "','" + values[2] + "'," + parentId + ")";
+                r = doDBInsert(sql, values[0]);
+                }
+
 
  	return (r >= 0 ? r: -1);
       }

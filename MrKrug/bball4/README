@@ -1,0 +1,63 @@
+
+basketball book keeping 
+-----------------------
+
+This application includes three levels:
+
+1) Books - each book has a name
+2) Leagues - a book can hold a number of leagues
+	* each league has a name
+	* each league has a foreign key to the owner book
+3) Games - each league has a number of games
+	* each game has 2 teams
+	* each game has a date
+	* each game has notes
+
+This application is written in an MVC format.
+
+There is also a Navigator object that holds everything
+together. The navigator is a singleton (design pattern).
+
+View
+----
+The views are different jFrames - created in netbeans,
+and compiled into this project. 
+
+
+Model
+-----
+The Model object: accesses a database object, and translates
+the database resultsets into model lists. For example, there 
+is an object called a Book. This object matches the database
+book record. 
+
+There is also an object called a BookList. This is an array
+of Book objects that reflects the books in the database.
+
+The Model object accesses the database, and loads the bookList.
+
+The Model object also fields calls such as add and delete - 
+that is - when the user clicks the add/delete buttons in the 
+view a command is passed to the Navigator, and the MainApp
+reads the command, and calls the Model object to carry it out.
+
+The Model object passes control to the DBAccess object, which
+does the database work itself. That is, the DBAccess creates 
+and executes the SQL.
+
+Finally, there is an object DBRecord, which is the parent
+for every database record type.
+
+Controller
+----------
+
+The MainApp is essentially the controller. This object 
+launches views when necessary, handles the command queue,
+and interacts with the Model as necessary.
+
+
+Navigator
+---------
+
+This is the singleton that is passed around and keeps 
+currency.

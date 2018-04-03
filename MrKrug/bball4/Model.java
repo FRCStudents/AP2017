@@ -6,6 +6,7 @@ import bballDB.DBAccess;
 import bballDB.DBTransInsert;
 import bball.BookList;
 import bball.LeagueList;
+import bball.GameList;
 
 import java.sql.*;
 
@@ -16,6 +17,7 @@ public class Model{
         DBAccess dbAccess;
         BookList bl;
 	LeagueList ll;
+	GameList gl;
 
 	public Model(){
 		init();
@@ -24,6 +26,39 @@ public class Model{
 	public void init(){
 		createBookList();
 	}
+
+       public GameList getGameList(){
+                System.out.println("Model::getGameList");
+                return gl;
+        }
+
+       public void doDelete(String recType_in, int key){
+		dbAccess = new DBAccess();
+		dbAccess.doDelete(recType_in, key);
+       }
+
+       public void doAdd(String recType_in, String[] fields){
+		dbAccess = new DBAccess();
+		dbAccess.doAdd(recType_in, fields);
+       }
+
+       public void createGameList(String leagueName){
+                dbAccess = new DBAccess();
+                System.out.println(leagueName);
+                int leagueId = getKey("LEAGUES", "NAME", leagueName);
+                System.out.println(leagueId);
+                gl = new GameList();
+
+                DBRecord dbr = new DBRecord(dbAccess.getConnect());
+                try {
+                        ResultSet rs = dbr.doSelect("GAME", "LEAGUE_ID", leagueId);
+                        gl.load(rs);
+			dbr.DBClose();
+                } catch ( Exception eN ) {
+                        System.out.println("Error RecordSet **League (cursor next)");
+                }
+
+        }
 
 	public LeagueList getLeagueList(){
 		System.out.println("Model::getLeagueList");
@@ -41,6 +76,7 @@ public class Model{
                 try {
                         ResultSet rs = dbr.doSelect("LEAGUE", "BOOK_ID", bookId);
                         ll.load(rs);
+			dbr.DBClose();
                 } catch ( Exception eN ) {
                         System.out.println("Error RecordSet **League (cursor next)");
                 }
@@ -60,6 +96,7 @@ public class Model{
                 try {
                         ResultSet rs = dbr.doSelect("BOOKS", -1);
                         bl.load(rs);
+			dbr.DBClose();
                 } catch ( Exception eN ) {
                         System.out.println("Error RecordSet **Books (cursor next)");
                 }

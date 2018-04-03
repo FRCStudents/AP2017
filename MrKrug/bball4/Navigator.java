@@ -6,6 +6,8 @@ package bball;
  * This is a singleton design pattern.
  */
 
+import java.util.concurrent.TimeUnit;
+
 import bball.Model;
 
 import bball.BookList;
@@ -22,10 +24,13 @@ public class Navigator {
 
    private static int currentIntChoice = 0;
    private static String currentStringChoice = "";
+   private static String field001 = "";
+
    private static String[] stringArray;
 
    private static BookList bookList;
    private static LeagueList leagueList;
+   private static GameList gameList;
 
    private Navigator() {
       // Exists only to defeat instantiation.
@@ -43,15 +48,20 @@ public class Navigator {
    public static int getCommand(){
 	int hold = command;
         if(Dprint == 2){
-                System.out.println("Get Command: [" + Dprint + "]" + hold);
+                //System.out.println("Get Command: [" + Dprint + "]" + hold);
                 Dprint = 3;
         }
 	if(Dprint == 1){
-		System.out.println("Get Command: " + hold);
+		//System.out.println("Get Command: " + hold);
 		if(hold < 100){
 			Dprint = 2;
 		}
 	}
+        //try {
+        //       TimeUnit.SECONDS.sleep(1);
+        //} catch(Exception e){
+        //       System.out.println("Insomiac");
+        //}
 	return hold;
    }
 
@@ -64,12 +74,51 @@ public class Navigator {
 	return bookList;
    }
 
+   // notice: currentModelName is the database record, and
+   // 		currentIntChoice is position in the list!
+   //		we need to convert that the the ID 
+   //
+   public static void deleteItem(){
+	model.doDelete(currentModelName, getDBKey());
+	if(currentModelName.equals("GAMES")){
+		gameList.remove(currentIntChoice - 1);
+	}
+        if(currentModelName.equals("LEAGUES")){
+                leagueList.remove(currentIntChoice - 1);
+        }
+   }
+
+   public static void addItem(String[] fields){
+	model.doAdd(currentModelName, fields);
+   }
+
+   private static int getDBKey(){       
+	if(currentModelName.equals("GAMES")){
+		return gameList.get(currentIntChoice - 1).getId();
+	}
+        if(currentModelName.equals("LEAGUES")){
+                return leagueList.get(currentIntChoice - 1).getId();
+        }
+
+	return 0;
+   }
+
+   public static GameList getGameList(){
+	return gameList;
+   }
+
    public static LeagueList getLeagueList(){
 	return leagueList;
    }
   
    public static String[] getStringArray(){
 	return stringArray;
+   }
+
+   public static void createGameList(){
+	model.createGameList(currentStringChoice);
+	gameList = model.getGameList();
+	stringArray = gameList.getStringList();
    }
 
    public static void createLeagueList(){
@@ -95,11 +144,21 @@ public class Navigator {
    }
 
    public static String getCurrentStringChoice(){
+	//System.out.println("GET CurrentStringChoice: " + currentStringChoice);
 	return currentStringChoice;
    }
 
    public static void setCurrentStringChoice(String choice){
+	//System.out.println("SET CurrentStringChoice: " + choice);
 	currentStringChoice = choice;
+   }
+
+   public static void setField001(String field){
+	field001 = field;
+   }
+
+   public static String getField001(){
+	return field001;
    }
 
    private void init(){
