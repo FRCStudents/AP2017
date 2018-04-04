@@ -69,7 +69,7 @@ public class BookList {
 				bookList.add(b);
 			   }
 			} catch(Exception e){
-				System.out.println("Crash & Burn");
+				System.out.println("Crash & Burn: (load(): " + e.getMessage());
 			}
 		}
 		

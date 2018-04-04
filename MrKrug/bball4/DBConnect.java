@@ -22,6 +22,15 @@ public class DBConnect
      return this.conn;
    }
 
+   public Connection startDBCall(){
+	return openDB();
+   }
+
+   public void endDBCall(){
+	commitDB();
+	closeDB();
+   }
+
    public Connection openDB()
    {
      ballDEBUG bdBUG = new ballDEBUG();
@@ -33,7 +42,7 @@ public class DBConnect
        this.conn = DriverManager.getConnection("jdbc:sqlite:bball.db");
        bdBUG.msgPrt("got connection..." + this.conn);
      } catch ( Exception e ) {
-       bdBUG.msgPrt("crash and burn");
+       bdBUG.msgPrt("crash and burn - DBConnect::openDB exit system...");
        System.exit(0);
      }
      return this.conn;
@@ -41,21 +50,22 @@ public class DBConnect
 
    public void commitDB(){
      ballDEBUG bdBUG = new ballDEBUG();
-     bdBUG.debugOn();
+     bdBUG.debugOff();
      try {
        conn.commit();
      } catch ( Exception e ) {
-       bdBUG.msgPrt("commit: Crash & Burn");
+       bdBUG.msgPrt("commit: Crash & Burn: " + e.getMessage());
      }
    }
 
    public void closeDB(){
      ballDEBUG bdBUG = new ballDEBUG();
-     bdBUG.debugOn();
+     bdBUG.debugOff();
      try {
+       bdBUG.msgPrt("Closing the database... in DBConnect");
        conn.close();
      } catch ( Exception e ) {
-       bdBUG.msgPrt("close: Crash & Burn");
+       bdBUG.msgPrt("close: Crash & Burn: " + e.getMessage());
      }
    }
 }

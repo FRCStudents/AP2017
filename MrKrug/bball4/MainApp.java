@@ -31,18 +31,50 @@ public class MainApp implements Runnable {
                         NC.setCommand(99);
                 }
 
+                if(NC.getCommand() == 341){
+			view.goBackToBookView();
+                        NC.setCurrentModelName("BOOKS");
+                        NC.setCommand(99);
+                }
+
+		if(NC.getCommand() == 344){
+			view.getAddLeagueView();
+			NC.setCommand(99);
+		}
+
                 if(NC.getCommand() == 345){
-                        System.out.println("Adding League");
                         NC.setCurrentModelName("LEAGUES");
 			String[] fields = new String[2];
 			fields[1] = NC.getField001();
 			fields[0] = NC.getCurrentStringChoice();
                         NC.addItem(fields);
                         NC.setCommand(99);
+			view.navAddToLeague();
                 }
+
+                if(NC.getCommand() == 346){
+                        view.getChangeLeagueView();
+                        NC.setCommand(99);
+                }
+
+
+                if(NC.getCommand() == 348){
+                        NC.setCurrentModelName("LEAGUES");
+                        String[] fields = new String[5];
+
+			fields[4] = NC.getOldVal();
+			fields[3] = NC.getNewVal();
+                        fields[2] = NC.getField001();
+                        fields[1] = NC.getCurrentStringChoice();
+			fields[0] = NC.getBookName();
+
+                        NC.changeItem(fields);
+                        NC.setCommand(99);
+			view.navChangeToLeague();
+                }
+
  
 		if(NC.getCommand() == 440){
-			System.out.println("Deleting Game");
 			NC.setCurrentModelName("GAMES");
 			NC.deleteItem();
 			NC.setCommand(99);
@@ -52,6 +84,14 @@ public class MainApp implements Runnable {
 		} catch (Exception e){
 			System.out.println(e);
 		}
+
+
+                if(NC.getCommand() == 441){
+                        view.goBackToLeagueView();
+                        NC.setCurrentModelName("LEAGUES");
+                        NC.setCommand(99);
+                }
+
 		//System.out.println(NC.getCommand());
 	}
     }

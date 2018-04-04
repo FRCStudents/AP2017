@@ -19,12 +19,16 @@ public class Navigator {
    private static Navigator instance = null;
    private static String currentModelName = "";
    private static String nextModelName = "";
+   private static String bookName = "";
 
    private static int command = 999;
 
    private static int currentIntChoice = 0;
    private static String currentStringChoice = "";
    private static String field001 = "";
+
+   private static String newVal = "";
+   private static String oldVal = "";
 
    private static String[] stringArray;
 
@@ -70,8 +74,32 @@ public class Navigator {
 	command = c;
    }
 
+   public static void setNewVal(String v){
+	newVal = v;
+   }
+
+   public static void setOldVal(String o){
+	oldVal = o;
+   }
+
+   public static String getOldVal(){
+	return oldVal;
+   }
+
+   public static String getNewVal(){
+	return newVal;
+   }
+
    public static BookList getBookList(){
 	return bookList;
+   }
+
+   public static void setBookName(String bName){
+	bookName = bName;
+   }
+
+   public static String getBookName(){
+	return bookName;
    }
 
    // notice: currentModelName is the database record, and
@@ -90,6 +118,10 @@ public class Navigator {
 
    public static void addItem(String[] fields){
 	model.doAdd(currentModelName, fields);
+   }
+
+   public static void changeItem(String[] fields){
+	model.doChange(currentModelName, fields);
    }
 
    private static int getDBKey(){       
@@ -122,7 +154,7 @@ public class Navigator {
    }
 
    public static void createLeagueList(){
-	model.createLeagueList(currentStringChoice);
+	model.createLeagueList(bookName);
 	leagueList = model.getLeagueList();
 	stringArray = leagueList.getStringList();
    }

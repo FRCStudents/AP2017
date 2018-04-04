@@ -42,6 +42,11 @@ public class Model{
 		dbAccess.doAdd(recType_in, fields);
        }
 
+       public void doChange(String recType_in, String[] fields){
+                dbAccess = new DBAccess();
+                dbAccess.doChange(recType_in, fields);
+       }
+
        public void createGameList(String leagueName){
                 dbAccess = new DBAccess();
                 System.out.println(leagueName);
@@ -96,7 +101,8 @@ public class Model{
                 try {
                         ResultSet rs = dbr.doSelect("BOOKS", -1);
                         bl.load(rs);
-			dbr.DBClose();
+			dbAccess.getConnect().endDBCall();
+			//dbr.DBClose();
                 } catch ( Exception eN ) {
                         System.out.println("Error RecordSet **Books (cursor next)");
                 }

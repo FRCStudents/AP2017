@@ -56,6 +56,7 @@ public class DBRecord {
 		}
 
 		public void DBClose(){
+			//System.out.println("DBRecord::DBClose");
 			dbAccess.DBClose();
 		}
 
@@ -97,7 +98,7 @@ public class DBRecord {
 
 		public void doDelete(String recType, int key){
 			dbAccess.doDelete(recType, key);
-			System.out.println("Serious Deleting(" + key + "):" + getType());
+			//System.out.println("Serious Deleting(" + key + "):" + getType());
 		}
 
 		public void doUpdate(){

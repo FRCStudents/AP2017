@@ -36,7 +36,11 @@ import java.sql.SQLException;
     }
 
     public void DBClose(){
-    	//DBConn.commitDB();
+      	ballDEBUG bdBUG = new ballDEBUG();
+      	bdBUG.debugOff();
+      	bdBUG.msgPrt("DBAccess DBClose... closing the database here");
+
+    	DBConn.commitDB();
       	DBConn.closeDB();
     }
 
@@ -89,9 +93,14 @@ import java.sql.SQLException;
       ResultSet rs = null;
       int ky = -1;
 
+      DBConn.startDBCall();
+
       String recType = DBFix(recType_in);
       if(recType.equals("NONE")){
         System.out.println("Coding Error: record type: " + recType_in);
+	
+	DBConn.endDBCall();
+
         return -1;
       }
 
@@ -104,14 +113,17 @@ import java.sql.SQLException;
       }
 
       try {
-	System.out.println("IN getKey()... ");
+        ballDEBUG bdBUG = new ballDEBUG();
+        bdBUG.debugOff();
+        bdBUG.msgPrt("DBAccess getKey... closing the database here");
 	rs.next();
-	System.out.println("next cursor...");
 	ky = rs.getInt("ID");
-	System.out.println("KEY: " + ky);
       } catch ( Exception eT ){
 	System.out.println("Error " + recType_in + " in getKey: " + sql);
       } 
+
+      DBConn.endDBCall();
+
       return ky;
     }
 
@@ -122,6 +134,8 @@ import java.sql.SQLException;
       String sql = "";
       ResultSet rs = null;
 
+      DBConn.startDBCall();
+
       String recType = DBFix(recType_in);
       if(recType.equals("NONE")){
         System.out.println("Coding Error: record type: " + recType_in);
@@ -130,12 +144,22 @@ import java.sql.SQLException;
 
       sql = formSelect(recType, key);
       try {
+        ballDEBUG bdBUG = new ballDEBUG();
+        bdBUG.debugOff();
+        bdBUG.msgPrt("DBAccess doSelect... closing the database here");
+
         stmt = DBConn.getConnection().createStatement();
         rs = stmt.executeQuery(sql);
+
+	//DBConn.endDBCall();
+
 	return rs;
       } catch ( Exception eS ) {
         System.out.println("Error " + recType_in + " (SELECT): " + sql);
       }
+
+      //DBConn.endDBCall();
+
       return rs;
     }
 
@@ -146,20 +170,35 @@ import java.sql.SQLException;
       String sql = "";
       ResultSet rs = null;
 
+      DBConn.startDBCall();
+
       String recType = DBFix(recType_in);
       if(recType.equals("NONE")){
         System.out.println("Coding Error: record type: " + recType_in);
+
+        DBConn.endDBCall();
+
         return null;
       }
 
       sql = formSelect(recType, field, key);
       try {
+        ballDEBUG bdBUG = new ballDEBUG();
+        bdBUG.debugOff();
+        bdBUG.msgPrt("DBAccess doSelect(2)... closing the database here");
+
         stmt = DBConn.getConnection().createStatement();
         rs = stmt.executeQuery(sql);
+
+        //DBConn.endDBCall();
+
         return rs;
       } catch ( Exception eS ) {
         System.out.println("Error " + recType_in + " (SELECT): " + sql);
       }
+
+      //DBConn.endDBCall();
+
       return rs;
     }
 
@@ -194,10 +233,17 @@ import java.sql.SQLException;
         System.out.println("Coding Error: record type: " + recType_in);
       }
       try {
+        ballDEBUG bdBUG = new ballDEBUG();
+        bdBUG.debugOff();
+        bdBUG.msgPrt("DBAccess doAdd()... closing the database here");
+
         stmt = DBConn.getConnection().createStatement();
         sql = buildSQL(recType_in, fields); 
         stmt.executeUpdate(sql);
         stmt.close();
+
+	DBConn.endDBCall();
+
       } catch ( SQLException e ) {
         System.out.println(sql);
         System.out.println(e.getMessage());
@@ -205,21 +251,83 @@ import java.sql.SQLException;
       }
   
     }
+
+    private String buildUPTSQL(String recType_in, String[] fields){
+        String sql = "";
+        System.out.println(recType_in + ":" + fields[0]);
+        if(recType_in.equals("BOOKS")){
+             	sql = "UPDATE BOOKS WHERE ID = " + fields[0] + " SET NAME = " +
+                         "'" + fields[1] + "';";
+                }
+        if(recType_in.equals("LEAGUES")){
+                int parentId = getKey("BOOKS", "NAME", fields[0]);
+		int newBookId = getKey("BOOKS", "NAME", fields[2]);
+		int leagueId = getKey("LEAGUES", "NAME", fields[4]); 
+                sql = "UPDATE LEAGUES SET NAME = '" +
+                     fields[3] + "', BOOK_ID = " + newBookId + " WHERE ID = " + leagueId + " AND BOOK_ID = " + parentId + "; ";
+                }
+
+        if(recType_in.equals("GAMES")){
+                int parentId = getKey("LEAGUES", "NAME", fields[3]);
+                sql = "UPDATE GAMES WHERE ID = " + fields[0] + " SET TEAM_1 = '" + fields[1] + "', TEAM_2 = '" + 
+			fields[2] + "', GAME_DATE = '" + fields[3] + "', LEAGUE_ID = " + parentId + ";"; 
+                }
+        System.out.println(sql);
+        return sql;
+    }
+
+    public void doChange(String recType_in, String[] fields)
+    {
+      Statement stmt = null;
+      String sql = "";
+      String recType = DBFix(recType_in);
+
+      DBConn.startDBCall();
+
+      if(recType.equals("NONE")){
+        System.out.println("Coding Error: record type: " + recType_in);
+      }
+      try {
+        stmt = DBConn.getConnection().createStatement();
+        sql = buildUPTSQL(recType_in, fields);
+        stmt.executeUpdate(sql);
+        stmt.close();
+
+        DBConn.endDBCall();
+
+      } catch ( SQLException e ) {
+        System.out.println(sql);
+        System.out.println(e.getMessage());
+        System.out.println("Error " + recType_in);
+      }
+
+    }
+
  
     public void doDelete(String recType_in, int key)
     {
       Statement stmt = null;
       String sql = "";
       String recType = DBFix(recType_in);
+
+      DBConn.startDBCall();
+
       if(recType.equals("NONE")){
 	System.out.println("Coding Error: record type: " + recType_in);
       }
       try {
+        ballDEBUG bdBUG = new ballDEBUG();
+        bdBUG.debugOff();
+        bdBUG.msgPrt("DBAccess doDelete... closing the database here");
+
         stmt = DBConn.getConnection().createStatement();
         sql = "DELETE FROM " + recType + 
                        " WHERE ID = " + key + ";";
         stmt.executeUpdate(sql);
         stmt.close();
+
+	DBConn.endDBCall();
+
       } catch ( SQLException e ) {
 	System.out.println(sql);
 	System.out.println(e.getMessage());

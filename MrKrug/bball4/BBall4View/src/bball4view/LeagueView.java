@@ -16,6 +16,8 @@ public class LeagueView extends javax.swing.JFrame {
     DefaultListModel vModel = new DefaultListModel();
     Navigator NC;
     String bookName = "";
+    String leagueName = "";
+    
     String[] leagueList;
     /**
      * Creates new form LeagueView
@@ -27,8 +29,8 @@ public class LeagueView extends javax.swing.JFrame {
     public LeagueView(String[] leagueList) {
         initComponents();
         this.NC = NC;
-        this.bookName = NC.getCurrentStringChoice();
-        jLabel1.setText("Book: " + NC.getCurrentStringChoice());
+        this.bookName = NC.getBookName();
+        jLabel1.setText(NC.getBookName());
         leagueJList.setListData(leagueList);
         this.leagueList = leagueList;
     }
@@ -36,8 +38,8 @@ public class LeagueView extends javax.swing.JFrame {
     public LeagueView(Navigator NC, String[] leagueList) {
         initComponents();
         this.NC = NC;
-        jLabel1.setText("Book: " + NC.getCurrentStringChoice());
-        this.bookName = NC.getCurrentStringChoice();
+        jLabel1.setText("Book: " + NC.getBookName());
+        this.bookName = NC.getBookName();
         leagueJList.setListData(leagueList);
         this.leagueList = leagueList;
     }
@@ -53,6 +55,9 @@ public class LeagueView extends javax.swing.JFrame {
         leagueJList.setModel(vModel);
     }
 
+    public String getLeagueName(){
+          return leagueName;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -68,10 +73,12 @@ public class LeagueView extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("leagueFrame");
+        setTitle("Leagues");
 
+        leagueJList.setBorder(new javax.swing.border.MatteBorder(null));
         leagueJList.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -94,11 +101,24 @@ public class LeagueView extends javax.swing.JFrame {
         });
 
         jButton2.setText("CHANGE");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("DELETE");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Back");
+        jButton4.setToolTipText("Back to Books");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
 
@@ -114,7 +134,8 @@ public class LeagueView extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(36, 36, 36)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(22, Short.MAX_VALUE))
@@ -124,19 +145,18 @@ public class LeagueView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
+                        .addComponent(jButton4)
+                        .addGap(68, 68, 68)
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton3)
-                        .addContainerGap(52, Short.MAX_VALUE))))
+                        .addComponent(jButton3))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         pack();
@@ -144,6 +164,7 @@ public class LeagueView extends javax.swing.JFrame {
 
     private void leagueJListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_leagueJListMouseClicked
         // TODO add your handling code here:
+        leagueName = leagueJList.getSelectedValue();
         if(evt.getClickCount() == 2){
             jLabel1.setText("Opening League:");
             String choice = leagueJList.getSelectedValue();
@@ -163,9 +184,20 @@ public class LeagueView extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        new AddLeague(this.bookName, leagueList, this, NC).setVisible(true);
+        NC.setCommand(344);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        NC.setCommand(346);
+        //this.setVisible(false);
+        //new changeLeague(this.bookName, leagueList, this, NC).setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        NC.setCommand(341);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     public void setList(String[] leagueList){
         leagueJList.setListData(leagueList);
@@ -210,6 +242,7 @@ public class LeagueView extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList<String> leagueJList;
